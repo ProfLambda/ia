@@ -1,0 +1,35 @@
+{
+    "title": "Aleph Alpha",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-alephalpha.png\" alt=\"Aleph Alpha\" style=\"width: 32px; height: auto;\">",
+    "history": "Fondée en 2019 à Heidelberg, Aleph Alpha est l'alternative européenne majeure pour l'IA souveraine B2B.",
+    "mission": "Fournir des modèles d'IA souverains et transparents pour les secteurs critiques.",
+    "products": [
+        "Luminous (Famille de modèles)",
+        "IA pour administration publique"
+    ],
+    "stats": "Soutenue par SAP, Bosch et Schwarz Group.",
+    "anecdote": "Aleph Alpha parie sur 'Luminous', une IA capable d'expliquer pourquoi elle a donné une réponse, un atout majeur pour les administrations publiques et les hôpitaux qui exigent une transparence totale (Explainable AI).",
+    "sources_anecdote": [
+        {
+            "label": "Aleph Alpha: Luminous Technology",
+            "url": "https://aleph-alpha.com/luminous/"
+        },
+        {
+            "label": "Sifted: Aleph Alpha Funding",
+            "url": "https://sifted.eu/articles/aleph-alpha-series-b-500m-round"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Aleph_Alpha"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://aleph-alpha.com"
+        }
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "title": "Cohere",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-cohere.png\" alt=\"Cohere\" style=\"width: 32px; height: auto;\">",
+    "history": "Fondée par des auteurs du papier original 'Attention Is All You Need' de Google.",
+    "mission": "Permettre aux entreprises d'utiliser l'IA à grande échelle.",
+    "products": [
+        "Command R+",
+        "Embed v3",
+        "Rerank"
+    ],
+    "stats": "Basée à Toronto, leader de l'IA pour entreprises.",
+    "anecdote": "Cohere a été fondée par plusieurs auteurs du papier 'Attention Is All You Need', le texte fondateur qui a inventé l'architecture Transformer utilisée aujourd'hui par tous les modèles comme GPT-4.",
+    "sources_anecdote": [
+        {
+            "label": "Wikipedia: Cohere Founding Story",
+            "url": "https://en.wikipedia.org/wiki/Cohere"
+        },
+        {
+            "label": "ArXiv: Transformer Paper",
+            "url": "https://arxiv.org/abs/1706.03762"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Cohere"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://cohere.com"
+        }
+    ]
+}

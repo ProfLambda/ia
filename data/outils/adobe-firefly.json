@@ -1,0 +1,17 @@
+{
+    "name": "Adobe Firefly",
+    "publisher": "Adobe",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "L'IA générative éthique, entraînée sur des données libres de droits, intégrée directement dans toute la suite Creative Cloud.",
+    "tag": "Abonnement",
+    "tag_class": "badge-orange",
+    "url": "https://www.adobe.com/fr/products/firefly.html",
+    "features": [
+        "Remplissage génératif dans Photoshop",
+        "Extension de l'image (Generative Expand)",
+        "Effets de texte vectoriels IA",
+        "Contenu sûr pour un usage commercial"
+    ],
+    "icon": "assets/img/logos/logo-adobe.ico"
+}

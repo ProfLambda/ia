@@ -1,0 +1,17 @@
+{
+    "name": "Claude",
+    "publisher": "Anthropic",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "Apprécié pour son style d'écriture naturel et ses capacités d'analyse approfondie sur des volumes de texte très importants.",
+    "tag": "Freemium",
+    "tag_class": "badge-green",
+    "url": "https://claude.ai",
+    "features": [
+        "Fenêtre de contexte géante (200k tokens)",
+        "Style d'écriture plus humain et moins répétitif",
+        "Claude 3.5 Sonnet (leader actuel en code)",
+        "Sécurité et éthique intégrées nativement"
+    ],
+    "icon": "assets/img/logos/logo-anthropic.svg"
+}

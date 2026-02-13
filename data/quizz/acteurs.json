@@ -1,0 +1,320 @@
+[
+    {
+        "id": 1,
+        "theme": "Big Tech",
+        "question": "Quel acteur a choisi une approche de 'marché ouvert' en proposant les modèles de Meta, Anthropic et Mistral sur sa plateforme Bedrock ?",
+        "options": [
+            "Microsoft",
+            "Google",
+            "Amazon / AWS",
+            "Apple"
+        ],
+        "answer": 2,
+        "explanation": "Amazon (via AWS Bedrock) propose un large choix de modèles tiers, contrairement à Microsoft qui est plus étroitement lié à OpenAI.",
+        "more_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html",
+        "actor_file": "amazon.json"
+    },
+    {
+        "id": 2,
+        "theme": "Hardware",
+        "question": "Où a été fondée l'entreprise NVIDIA en 1993 ?",
+        "options": [
+            "Dans un garage",
+            "Dans un restaurant Denny's",
+            "À l'Université de Stanford",
+            "Dans les bureaux d'Intel"
+        ],
+        "answer": 1,
+        "explanation": "Jensen Huang et ses cofondateurs ont conçu NVIDIA lors de réunions dans un restaurant Denny's car le café y était à volonté.",
+        "more_url": [
+            "https://www.presse-citron.net/de-plongeur-dans-un-restaurant-a-pdg-de-nvidia-lincroyable-histoire-de-jensen-huang/",
+            "https://www.inc.com/carmine-gallo/nvidias-founder-went-from-dishwasher-to-tech-titan-learned-power-of-storytelling-to-build-a-brand.html"
+        ],
+        "actor_file": "nvidia.json"
+    },
+    {
+        "id": 3,
+        "theme": "Labs & Open Source",
+        "question": "Quelle startup surnomme-t-on souvent le 'GitHub de l'IA' ?",
+        "options": [
+            "Mistral AI",
+            "OpenAI",
+            "Hugging Face",
+            "Stability AI"
+        ],
+        "answer": 2,
+        "explanation": "Hugging Face est la plateforme de référence pour le partage de modèles, de jeux de données et d'espaces de démonstration open-source.",
+        "more_url": [
+            "https://huggingface.co/learn/llm-course/fr/chapter4/1",
+            "https://huggingface.co/"
+        ],
+        "actor_file": "huggingface.json"
+    },
+    {
+        "id": 4,
+        "theme": "Souveraineté",
+        "question": "Quelle entreprise française prône la 'souveraineté numérique européenne' avec des modèles comme Mistral Large ?",
+        "options": [
+            "Mistral AI",
+            "DeepL",
+            "Aleph Alpha",
+            "Cohere"
+        ],
+        "answer": 0,
+        "explanation": "Mistral AI, basée à Paris, est le fer de lance de l'IA européenne face aux géants américains.",
+        "more_url": "https://mistral.ai/news/mistral-large",
+        "actor_file": "mistral.json"
+    },
+    {
+        "id": 5,
+        "theme": "Hardware",
+        "question": "Quelle entreprise détient le monopole mondial de la gravure de puces IA ultra-fines (3nm) utilisées par Apple et NVIDIA ?",
+        "options": [
+            "Intel",
+            "Samsung",
+            "TSMC",
+            "AMD"
+        ],
+        "answer": 2,
+        "explanation": "TSMC, basée à Taïwan, fabrique la quasi-totalité des puces IA de pointe du monde entier.",
+        "more_url": "https://fr.wikipedia.org/wiki/TSMC",
+        "actor_file": "tsmc.json"
+    },
+    {
+        "id": 6,
+        "theme": "Souveraineté",
+        "question": "Après les sanctions américaines de 2019, quelle entreprise a construit une stack IA 100% souveraine (Puces Ascend + Modèles Pangu) ?",
+        "options": [
+            "Tencent",
+            "Alibaba",
+            "Huawei",
+            "Baidu"
+        ],
+        "answer": 2,
+        "explanation": "Huawei a pivoté pour créer un écosystème complet et indépendant des technologies américaines.",
+        "more_url": [
+            "https://www.huaweicloud.com/intl/en-us/product/pangu.html",
+            "https://en.wikipedia.org/wiki/Huawei_PanGu"
+        ],
+        "actor_file": "huawei.json"
+    },
+    {
+        "id": 7,
+        "theme": "Labs & Open Source",
+        "question": "Quel fondateur de 'licorne' IA a refusé tout investissement de capital-risque (VC) pour garder le contrôle artistique de sa vision ?",
+        "options": [
+            "Sam Altman",
+            "David Holz (Midjourney)",
+            "Emad Mostaque",
+            "Arthur Mensch"
+        ],
+        "answer": 1,
+        "explanation": "David Holz, fondateur de Midjourney, a refusé les fonds externes pour que son laboratoire reste indépendant.",
+        "more_url": [
+            "https://www.theregister.com/2022/08/01/david_holz_midjourney/",
+            "https://www.midjourney.com/"
+        ],
+        "actor_file": "midjourney.json"
+    },
+    {
+        "id": 8,
+        "theme": "Ecosystème",
+        "question": "Comment s'appelle le supercalculateur géant (100 000 GPU) construit par xAI pour entraîner Grok ?",
+        "options": [
+            "Summit",
+            "Colossus",
+            "Frontier",
+            "Lumi"
+        ],
+        "answer": 1,
+        "explanation": "Elon Musk a fait construire Colossus en un temps record (122 jours) pour donner à xAI une puissance de calcul massive.",
+        "more_url": "https://x.ai/colossus",
+        "actor_file": "xai.json"
+    },
+    {
+        "id": 9,
+        "theme": "Ecosystème",
+        "question": "Quelle entreprise technologique chinoise, fondée en 1998, est aujourd’hui l’éditeur de la super-app WeChat ?",
+        "options": [
+            "Alibaba",
+            "Tencent",
+            "Baidu",
+            "Huawei"
+        ],
+        "answer": 1,
+        "explanation": "Tencent a été fondée en 1998 ; WeChat est arrivée plus tard (2011) et fait partie centrale de son écosystème.",
+        "more_url": "https://www.tencent.com/en-us/about.html",
+        "actor_file": "tencent.json"
+    },
+    {
+        "id": 10,
+        "theme": "Big Tech",
+        "question": "Quel projet d'IA visionnaire d'Amazon utilise l'IA générative pour scanner et détecter les défauts des colis avant expédition ?",
+        "options": [
+            "Project Titan",
+            "Project Q",
+            "Project P.I.",
+            "Project Bedrock"
+        ],
+        "answer": 2,
+        "explanation": "Project P.I. (Private Investigator) permet à Amazon de réduire les retours en détectant les produits endommagés automatiquement.",
+        "more_url": "https://www.aboutamazon.fr/actualites/innovation/comment-amazon-utilise-l-ia-pour-detecter-les-produits-fragiles",
+        "actor_file": "amazon.json"
+    },
+    {
+        "id": 11,
+        "theme": "Big Tech",
+        "question": "Comment s'appelle le système d'IA personnel d'Apple qui privilégie le traitement local pour la protection de la vie privée ?",
+        "options": [
+            "Siri LLM",
+            "Apple Intelligence",
+            "iAI",
+            "MacGPT"
+        ],
+        "answer": 1,
+        "explanation": "Apple Intelligence intègre des modèles génératifs au cœur de l'iPhone et du Mac avec un fort accent sur la confidentialité.",
+        "more_url": "https://www.amazon.science/news-and-features/how-project-p-i-helps-amazon-remove-imperfect-products",
+        "actor_file": "apple.json"
+    },
+    {
+        "id": 12,
+        "theme": "Ecosystème",
+        "question": "Quel outil européen, concurrent de Google Translate, a lancé 'Write' pour améliorer le style et la grammaire via l'IA ?",
+        "options": [
+            "Reverso",
+            "DeepL",
+            "Babbel",
+            "Systran"
+        ],
+        "answer": 1,
+        "explanation": "L'allemand DeepL est reconnu pour la qualité supérieure de ses traductions et de son assistant de rédaction Write.",
+        "more_url": "https://www.deepl.com/fr/write",
+        "actor_file": "deepl.json"
+    },
+    {
+        "id": 13,
+        "theme": "Hardware",
+        "question": "Quel processeur d'IA Intel a été lancé pour concurrencer directement les GPU H100 de NVIDIA dans les data centers ?",
+        "options": [
+            "Core i9",
+            "Xeon IA",
+            "Gaudi 3",
+            "Pentium AI"
+        ],
+        "answer": 2,
+        "explanation": "Gaudi 3 est l'accélérateur d'IA d'Intel conçu pour l'entraînement et l'inférence de modèles géants.",
+        "more_url": "https://www.intel.fr/content/www/fr/fr/products/details/processors/ai-accelerators/gaudi.html",
+        "actor_file": "intel.json"
+    },
+    {
+        "id": 14,
+        "theme": "Hardware",
+        "question": "Quelle puce d'AMD utilise 192 Go de mémoire HBM3 pour rivaliser avec la puissance de NVIDIA en IA générative ?",
+        "options": [
+            "Ryzen 9",
+            "Radeon RX",
+            "Instinct MI300X",
+            "EPYC 4"
+        ],
+        "answer": 2,
+        "explanation": "L'Instinct MI300X est l'accélérateur le plus puissant d'AMD pour le calcul haute performance et l'IA.",
+        "more_url": "https://www.amd.com/fr/products/accelerators/instinct/mi300/mi300x.html",
+        "actor_file": "amd.json"
+    },
+    {
+        "id": 15,
+        "theme": "Labs & Open Source",
+        "question": "Quelle entreprise a été fondée par d'anciens cadres d'OpenAI pour créer une IA 'constitutionnelle' et plus éthique ?",
+        "options": [
+            "Cohere",
+            "Anthropic (Claude)",
+            "Mistral AI",
+            "Stability AI"
+        ],
+        "answer": 1,
+        "explanation": "Anthropic a été créée avec une vision axée sur la sécurité et l'éthique, donnant naissance à l'assistant Claude.",
+        "more_url": [
+            "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback",
+            "https://www.anthropic.com/constitution"
+        ],
+        "actor_file": "anthropic.json"
+    },
+    {
+        "id": 16,
+        "theme": "Labs & Open Source",
+        "question": "Quel modèle de langage 'Open Source' de Meta (Facebook) a démocratisé l'accès à l'IA de pointe pour les chercheurs ?",
+        "options": [
+            "Optimus",
+            "Llama",
+            "Palm",
+            "Gopher"
+        ],
+        "answer": 1,
+        "explanation": "La famille de modèles Llama de Meta est devenue le standard de l'IA ouverte (Open Weights) dans le monde entier.",
+        "more_url": "https://www.llama.com/llama-downloads/",
+        "actor_file": "meta.json"
+    },
+    {
+        "id": 17,
+        "theme": "Ecosystème",
+        "question": "Comment s'appelle l'IA de Baidu, leader de la recherche en ligne en Chine, lancée pour rivaliser avec ChatGPT ?",
+        "options": [
+            "Ernie Bot",
+            "Alibaba Bot",
+            "Dragon AI",
+            "Red Star"
+        ],
+        "answer": 0,
+        "explanation": "Ernie Bot est le modèle de langage phare de Baidu, intégré dans de nombreux services en Chine.",
+        "more_url": "https://ernie.baidu.com/",
+        "actor_file": "baidu.json"
+    },
+    {
+        "id": 18,
+        "theme": "Ecosystème",
+        "question": "Quel géant du e-commerce chinois propose les modèles 'Qwen' via sa division Cloud ?",
+        "options": [
+            "JD.com",
+            "Alibaba",
+            "TikTok/ByteDance",
+            "Pinduoduo"
+        ],
+        "answer": 1,
+        "explanation": "Alibaba Cloud est un acteur majeur de l'IA en Asie, proposant des modèles performants nommés Qwen.",
+        "more_url": [
+            "https://qwenlm.github.io/",
+            "https://github.com/QwenLM/Qwen"
+        ],
+        "actor_file": "alibaba.json"
+    },
+    {
+        "id": 19,
+        "theme": "Big Tech",
+        "question": "Quelle entreprise Microsoft a-t-elle 'vidée' de ses talents (dont Mustafa Suleyman) pour créer sa division Microsoft AI ?",
+        "options": [
+            "DeepMind",
+            "Inflection AI",
+            "Mistral AI",
+            "Twitter"
+        ],
+        "answer": 1,
+        "explanation": "Microsoft a recruté la quasi-totalité de l'équipe d'Inflection AI pour renforcer son expertise interne en IA grand public.",
+        "more_url": "https://blogs.microsoft.com/blog/2024/03/19/mustafa-suleyman-deepmind-and-inflection-co-founder-joins-microsoft-to-lead-copilot/",
+        "actor_file": "microsoft.json"
+    },
+    {
+        "id": 20,
+        "theme": "Labs & Open Source",
+        "question": "Quel nouveau modèle d'OpenAI a stupéfié le monde en 2024 avec des capacités de génération vidéo hyper-réalistes ?",
+        "options": [
+            "DALL-E 4",
+            "GPT-5",
+            "Sora",
+            "Whisper"
+        ],
+        "answer": 2,
+        "explanation": "Sora est capable de créer des vidéos complexes de 60 secondes à partir d'un simple texte, marquant une rupture technologique.",
+        "more_url": "https://openai.com/sora/",
+        "actor_file": "openai.json"
+    }
+]

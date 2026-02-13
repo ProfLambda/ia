@@ -1,0 +1,55 @@
+{
+    "title": "Microsoft",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-microsoft.png\" alt=\"Microsoft\" style=\"width: 32px; height: auto;\">",
+    "history": "Microsoft a opéré l'un des retournements stratégiques les plus impressionnants de l'histoire de la tech. Longtemps perçue comme un géant endormi par rapport à Google ou Facebook, l'entreprise s'est réinventée sous l'impulsion de Satya Nadella (CEO depuis 2014). En misant 13 milliards de dollars sur OpenAI dès 2019, Microsoft a sécurisé une avance technologique qui lui a permis d'intégrer l'IA dans tous ses produits, de Windows à Word, via sa marque 'Copilot'. <br><br>En 2024, pour consolider sa domination, Microsoft a créé une nouvelle division, 'Microsoft AI', et a recruté le co-fondateur de DeepMind, Mustafa Suleyman, pour la diriger. Cette manœuvre audacieuse montre l'ambition de Nadella : ne plus être un simple hébergeur de cloud, mais devenir le cœur battant de l'IA grand public et professionnelle mondiale. Leur vision est d'unifier l'expérience informatique autour de l'AGI, où chaque utilisateur dispose d'un assistant numérique omniscient capable d'exécuter n'importe quelle tâche complexe.",
+    "mission": "Donner à chaque individu et organisation les moyens d'accomplir davantage grâce à l'IA générative ubiquitaire et sécurisée.",
+    "leadership": "Satya Nadella (CEO), Kevin Scott (CTO), Mustafa Suleyman (CEO Microsoft AI).",
+    "products": [
+        "Microsoft Copilot (Assistant universel)",
+        "Azure OpenAI Service",
+        "GitHub Copilot",
+        "Puces Maia 100"
+    ],
+    "stats": "CA Cloud : 51,5 Mds$ (Q2 FY2026). Azure porte la croissance avec une accélération massive liée à l'IA.",
+    "anecdote": "Passionné de cricket, Satya Nadella a transformé la culture de Microsoft en passant du 'Savoir-tout' (Know-it-all) au 'Apprendre-tout' (Learn-it-all). Il passe ses temps libres à prendre des cours en ligne et à lire des dizaines de livres pour nourrir sa curiosité.",
+    "stockFact": "Microsoft est devenue en 2024 la première entreprise au monde à franchir la barre symbolique des 3 000 milliards de dollars de valorisation boursière, dépassant brièvement Apple grâce à son hégémonie sur l'IA d'entreprise.",
+    "sources_anecdote": [
+        {
+            "label": "Microsoft Blog : Mustafa Suleyman joins Microsoft",
+            "url": "https://blogs.microsoft.com/blog/2024/03/19/mustafa-suleyman-deepmind-and-inflection-co-founder-joins-microsoft-to-lead-copilot/"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Newsroom Microsoft",
+            "url": "https://news.microsoft.com/"
+        },
+        {
+            "label": "Microsoft Investor Relations",
+            "url": "https://www.microsoft.com/en-us/investor"
+        },
+        {
+            "label": "Work Trend Index 2024",
+            "url": "https://www.microsoft.com/en-us/worklab/work-trend-index/"
+        },
+        {
+            "label": "Usine Digitale: Microsoft & DeepMind Talent Drain",
+            "url": "https://www.usine-digitale.fr/article/guerre-des-talents-ia-microsoft-debauche-une-vingtaine-de-chercheurs-de-google-deepmind.N2235562"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://www.microsoft.com/ai"
+        },
+        {
+            "label": "Blog Officiel (IA)",
+            "url": "https://blogs.microsoft.com/ai/"
+        },
+        {
+            "label": "Docs Azure AI",
+            "url": "https://learn.microsoft.com/azure/ai-services/"
+        }
+    ]
+}

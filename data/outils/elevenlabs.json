@@ -1,0 +1,17 @@
+{
+    "name": "ElevenLabs",
+    "publisher": "ElevenLabs",
+    "category": "video",
+    "category_name": "Vidéo & Audio",
+    "description": "Le leader mondial de la synthèse vocale et du clonage de voix ultra-réaliste capable d'exprimer des émotions.",
+    "tag": "Freemium",
+    "tag_class": "badge-green",
+    "url": "https://elevenlabs.io",
+    "features": [
+        "Clonage de voix (Instant Voice Cloning)",
+        "Doublage de vidéo automatique multilingue",
+        "Synthèse vocale avec émotions",
+        "API pour les développeurs de jeux et d'apps"
+    ],
+    "icon": "assets/img/logos/logo-elevenlabs.ico"
+}

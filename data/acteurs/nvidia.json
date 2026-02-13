@@ -1,0 +1,55 @@
+{
+    "title": "NVIDIA",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-nvidia.svg\" alt=\"NVIDIA\" style=\"width: 32px; height: auto;\">",
+    "history": "De fabricant de cartes graphiques pour joueurs à architecte de la révolution industrielle de l'IA, le parcours de NVIDIA est sans équivalent. Fondée en 1993 par Jensen Huang dans un fast-food, l'entreprise a fait le pari risqué de l'informatique accélérée (CUDA) dès 2006. Ce pari a payé au centuple lors de l'explosion des modèles de langage, le GPU devenant le seul 'moteur' capable d'entraîner des systèmes comme GPT-4. <br><br>En 2024, Jensen Huang a dévoilé l'architecture Blackwell, qualifiée de 'redéfinition radicale de ce qu'est un ordinateur'. Blackwell n'est plus une simple puce, mais un système géant capable d'entraîner des modèles à des échelles de trillions de paramètres avec une efficacité énergétique 25 fois supérieure à la génération précédente (Hopper). La vision de NVIDIA est désormais de transformer chaque data center en une 'usine d'IA', où les données sont transformées en intelligence brute comme le pétrole l'était en énergie au siècle dernier.",
+    "mission": "Accélérer l'informatique mondiale pour résoudre les problèmes impossibles, en fournissant le processeur universel de l'ère de l'IA.",
+    "leadership": "Jensen Huang (Founder & CEO), Colette Kress (CFO).",
+    "products": [
+        "GPU B200 (Architecture Blackwell)",
+        "GPU H100/H200 (Architecture Hopper)",
+        "Plateforme CUDA",
+        "DGX SuperPOD"
+    ],
+    "stats": "CA Annuel 2025 : ~130 Mds$. Part de marché des puces IA : >80%. Valorisation : >3 200 Mds$.",
+    "anecdote": "NVIDIA a été conçue lors de réunions dans un restaurant Denny's parce que c'était 'calme et que le café était à volonté'. Jensen Huang y travaillait comme plongeur à 15 ans. En 2023, il est retourné dans ce même Denny's pour y dévoiler une plaque commémorative.",
+    "stockFact": "L'action NVIDIA a bondi de plus de 1000 % en deux ans. Sa valorisation boursière a brièvement dépassé celle de Microsoft et d'Apple réunis, devenant l'entreprise la plus puissante du monde en 2024.",
+    "sources_anecdote": [
+        {
+            "label": "Presse-Citron : L'histoire de Jensen Huang",
+            "url": "https://www.presse-citron.net/de-plongeur-dans-un-restaurant-a-pdg-de-nvidia-lincroyable-histoire-de-jensen-huang/"
+        },
+        {
+            "label": "Inc.com : From Dishwasher to Tech Titan",
+            "url": "https://www.inc.com/carmine-gallo/nvidias-founder-went-from-dishwasher-to-tech-titan-learned-power-of-storytelling-to-build-a-brand.html"
+        }
+    ],
+    "sources": [
+        {
+            "label": "NVIDIA Newsroom",
+            "url": "https://nvidianews.nvidia.com/"
+        },
+        {
+            "label": "Blackwell Architecture Paper",
+            "url": "https://www.nvidia.com/en-us/data-center/blackwell/"
+        },
+        {
+            "label": "NVIDIA Investor Relations",
+            "url": "https://investor.nvidia.com/"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel (IA)",
+            "url": "https://www.nvidia.com/ai"
+        },
+        {
+            "label": "Blog Technique NVIDIA",
+            "url": "https://developer.nvidia.com/blog/"
+        },
+        {
+            "label": "Documentation CUDA",
+            "url": "https://docs.nvidia.com/cuda/"
+        }
+    ]
+}

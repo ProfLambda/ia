@@ -1,0 +1,47 @@
+{
+    "title": "Stability AI",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-stability.png\" alt=\"Stability AI\" style=\"width: 32px; height: auto;\">",
+    "history": "Fondé en 2019 par Emad Mostaque, Stability AI a bouleversé le monde de l'IA en 2022 avec la sortie en open-source de 'Stable Diffusion'. Ce geste a permis à des millions de développeurs et d'artistes d'intégrer l'IA générative dans leurs propres outils. <br><br>L'entreprise prône une 'IA pour le peuple, par le peuple', se positionnant comme le champion de l'Open Source face aux modèles fermés des géants de la tech.",
+    "mission": "Démocratiser l'intelligence artificielle en rendant les modèles de pointe accessibles à tous, sans restriction.",
+    "leadership": "Prem Akkaraju (CEO), Jim O'Shaughnessy (Chairman).",
+    "products": [
+        "Stable Diffusion 3.5 / XL",
+        "Stable Video Diffusion",
+        "Stable Audio",
+        "Stable Fast 3D"
+    ],
+    "stats": "Valorisé à 1 milliard de dollars en 2022. On estime que 80% des images IA générées dans le monde utilisent une variante de Stable Diffusion.",
+    "anecdote": "Stability AI ne se contente pas de l'image : l'entreprise a aidé à construire des supercalculateurs communautaires, permettant à des chercheurs indépendants d'accéder à une puissance de calcul autrefois réservée aux Etats ou aux GAFAM.",
+    "sources_anecdote": [
+        {
+            "label": "Stability AI: Stable Diffusion 3.5",
+            "url": "https://stability.ai/news/introducing-stable-diffusion-3-5"
+        },
+        {
+            "label": "Stability AI: Newsroom",
+            "url": "https://stability.ai/news"
+        }
+    ],
+    "stockFact": "L'entreprise a connu des turbulences financières en 2024, menant au départ de son fondateur emblématique Emad Mostaque, soulignant le défi de rentabiliser l'IA 100% open-source.",
+    "sources": [
+        {
+            "label": "Stability AI Blog",
+            "url": "https://stability.ai/news"
+        },
+        {
+            "label": "Hugging Face Model Hub",
+            "url": "https://huggingface.co/stabilityai"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://stability.ai"
+        },
+        {
+            "label": "Stability AI Platform",
+            "url": "https://platform.stability.ai/"
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "title": "Meta AI",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-meta.svg\" alt=\"Meta\" style=\"width: 32px; height: auto;\">",
+    "history": "Meta (ex-Facebook) a pris le monde de l'IA de court en devenant le champion inattendu de l'Open Source. Sous l'influence du pionnier Yann LeCun, l'entreprise a maintenu son laboratoire de recherche FAIR ouvert, publiant ses découvertes au lieu de les garder derrière des APIs payantes. Cette stratégie culmine avec la suite Llama, qui est devenue le standard de facto de l'industrie pour les modèles ouverts. <br><br>Mark Zuckerberg a radicalement pivoté pour transformer Meta en une infrastructure IA de premier plan, investissant plus de 65 milliards de dollars en 2025 pour construire des méga-centres de données équipés de centaines de milliers de puces Nvidia H100. Leur vision est que l'intelligence artificielle doit être un bien commun, accessible librement pour permettre une innovation décentralisée, tout en espérant que cette ouverture rendra ses propres plateformes (Instagram, WhatsApp) imbattables face aux systèmes fermés d'OpenAI ou Google.",
+    "mission": "Construire des technologies d'IA puissantes et ouvertes pour permettre à chacun de se connecter, de créer et de bâtir l'avenir.",
+    "leadership": "Mark Zuckerberg (CEO), Yann LeCun (Chief AI Scientist), Chris Cox (CPO).",
+    "products": [
+        "Llama 3.2 (Multimodal)",
+        "Llama 3.1 405B (Le modèle référence)",
+        "Segment Anything",
+        "PyTorch"
+    ],
+    "stats": "Investissement Infrastructure 2025 : ~65 Mds$. Llama 3.1 405B a été entraîné sur plus de 16 000 GPU H100.",
+    "anecdote": "Yann LeCun, l'un des 'parrains de l'IA', refuse de croire que les LLMs actuels mèneront à l'intelligence humaine. Il parie sur une nouvelle architecture appelée JEPA, capable de 'comprendre le monde' par l'observation comme un enfant, plutôt que par le seul texte.",
+    "stockFact": "Le cours de Meta a connu une renaissance historique, triplant en 18 mois, car l'IA a radicalement amélioré la pertinence des publicités, prouvant aux marchés que le 'Metavers' de Zuckerberg avait désormais un moteur IA solide.",
+    "sources_anecdote": [
+        {
+            "label": "Llama Downloads",
+            "url": "https://www.llama.com/llama-downloads/"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Meta AI News",
+            "url": "https://ai.meta.com/blog/"
+        },
+        {
+            "label": "Llama Technical Report",
+            "url": "https://ai.meta.com/research/publications/the-llama-3-herd-of-models/"
+        },
+        {
+            "label": "Mark Zuckerberg AI Vision",
+            "url": "https://www.facebook.com/zuck"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Llama",
+            "url": "https://llama.meta.com"
+        },
+        {
+            "label": "Llama sur Hugging Face",
+            "url": "https://huggingface.co/meta-llama"
+        },
+        {
+            "label": "Meta AI Assistant",
+            "url": "https://www.meta.ai/"
+        }
+    ]
+}

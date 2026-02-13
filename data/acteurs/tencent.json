@@ -1,0 +1,43 @@
+{
+    "title": "Tencent",
+    "color": "#0052d9",
+    "icon": "<img src=\"assets/img/logos/logo-tencent.png\" alt=\"Tencent\" style=\"width: 32px; height: auto;\">",
+    "history": "Fondé en 1998, Tencent est le créateur de WeChat, la 'super-app' indispensable en Chine. L'entreprise est passée de la messagerie au leader mondial du jeu vidéo avant de devenir une puissance majeure de l'IA. <br><br>Grâce à son modèle 'Hunyuan' et son infrastructure cloud, Tencent intègre l'intelligence artificielle au cœur de la vie quotidienne de plus d'un milliard de personnes, de la traduction vocale au diagnostic médical par image.",
+    "mission": "Utiliser la technologie pour le bien social (Tech for Good) et améliorer la qualité de vie grâce à l'innovation.",
+    "leadership": "Pony Ma (CEO), Martin Lau (Président), Dowson Tong (CEO de Cloud & Smart Industries Group).",
+    "products": [
+        "LLM Hunyuan",
+        "Hunyuan 3D (Génération 3D)",
+        "Tencent Cloud AI",
+        "WeChat AI Integration"
+    ],
+    "stats": "Plus de 1,3 milliard d'utilisateurs sur WeChat. Hunyuan est intégré dans plus de 50 produits internes.",
+    "anecdote": "Le modèle Hunyuan de Tencent a été conçu pour être le plus 'compréhensif' de la langue et de la culture chinoise. Il est capable de gérer des contextes ultra-longs (jusqu'à 256 000 jetons), l'équivalent d'un gros roman, pour analyser des documents entiers d'un bloc.",
+    "sources_anecdote": [
+        {
+            "label": "Tencent : About",
+            "url": "https://www.tencent.com/en-us/about.html"
+        }
+    ],
+    "stockFact": "Tencent est l'une des entreprises les plus cotées d'Asie à la bourse de Hong Kong, et chaque avancée majeure dans l'intégration de l'IA dans WeChat est scrutée par les marchés comme un moteur de croissance futur.",
+    "sources": [
+        {
+            "label": "GitHub : Tencent Hunyuan",
+            "url": "https://github.com/Tencent/Hunyuan"
+        },
+        {
+            "label": "Siècle Digital: Tencent, le géant derrière WeChat",
+            "url": "https://siecledigital.fr/2019/03/19/tencent-le-geant-derriere-wechat/"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://www.tencent.com"
+        },
+        {
+            "label": "Hunyuan 3D",
+            "url": "https://3d.hunyuan.tencent.com/"
+        }
+    ]
+}

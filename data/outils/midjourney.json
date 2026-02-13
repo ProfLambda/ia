@@ -1,0 +1,17 @@
+{
+    "name": "Midjourney",
+    "publisher": "Midjourney Inc.",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "Le leader de la génération d'images pour la qualité artistique, les textures et le rendu photoréaliste.",
+    "tag": "Payant",
+    "tag_class": "badge-orange",
+    "url": "https://www.midjourney.com",
+    "features": [
+        "Qualité artistique inégalée",
+        "Version 6.1 avec gestion des textures",
+        "Mode Web (Alpha) et Discord",
+        "Outils d'édition avancés (Upscale, Inpainting)"
+    ],
+    "icon": "assets/img/logos/logo-midjourney.png"
+}

@@ -1,0 +1,32 @@
+{
+    "title": "xAI",
+    "color": "#000000",
+    "icon": "<img src=\"assets/img/logos/logo-xai.png\" alt=\"xAI\" style=\"width: 32px; height: auto;\">",
+    "history": "Lancée par Elon Musk en 2023 pour comprendre la 'véritable nature de l'univers'.",
+    "mission": "Construire une IA capable de raisonnement poussé et de vérité.",
+    "products": [
+        "Grok-1",
+        "Grok-2",
+        "Intégration sur X (Twitter)"
+    ],
+    "stats": "Utilise le supercalculateur Colossus (100k GPU H100).",
+    "anecdote": "Elon Musk a bâti Colossus, le plus grand cluster de calcul au monde (100 000 GPU NVIDIA H100), en seulement 122 jours pour entraîner Grok.",
+    "sources_anecdote": [
+        {
+            "label": "xAI : Colossus",
+            "url": "https://x.ai/colossus"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/XAI_(company)"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://x.ai"
+        }
+    ]
+}

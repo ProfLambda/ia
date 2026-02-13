@@ -1,0 +1,17 @@
+{
+    "name": "Canva Magic Studio",
+    "publisher": "Canva",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "Démocratise le design graphique en intégrant des outils IA simples pour créer des visuels professionnels en un clic.",
+    "tag": "Freemium",
+    "tag_class": "badge-green",
+    "url": "https://www.canva.com/magic-studio/",
+    "features": [
+        "Magic Media (Texte vers Image)",
+        "Gomme magique et édition de photos par IA",
+        "Génération automatique de présentations",
+        "Écriture magique pour le contenu"
+    ],
+    "icon": "assets/img/logos/logo-canva.ico"
+}

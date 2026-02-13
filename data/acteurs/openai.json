@@ -1,0 +1,55 @@
+{
+    "title": "OpenAI",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-openai.png\" alt=\"OpenAI\" style=\"width: 32px; height: auto;\">",
+    "history": "Fondée en décembre 2015 par un collectif de visionnaires (dont Sam Altman, Elon Musk et Ilya Sutskever), OpenAI est née comme un laboratoire de recherche à but non lucratif avec une mission sacrée : s'assurer que l'intelligence artificielle générale (AGI) profite à toute l'humanité. En 2019, face aux besoins colossaux en puissance de calcul, l'organisation a pivoté vers un modèle hybride de 'profit plafonné', lui permettant d'attirer des investissements record, notamment de Microsoft. <br><br>L'entreprise a connu une crise sismique en novembre 2023, lorsque le conseil d'administration a brièvement limogé Sam Altman pour 'manque de franchise'. Ce séisme a révélé des tensions profondes entre les partisans d'une accélération prudente axée sur la sécurité (portés par Ilya Sutskever) et les adeptes d'un déploiement commercial et technologique massif. Après une révolte sans précédent de 95% des employés, Altman a été réinstallé, marquant une victoire pour la vision pragmatique. Aujourd'hui, OpenAI vise 2028 pour le déclenchement d'une 'explosion d'intelligence' via l'IA capable de mener sa propre recherche scientifique de manière autonome.",
+    "mission": "Construire une intelligence artificielle générale (AGI) hautement autonome qui surpasse les humains dans la plupart des tâches économiquement précieuses, tout en restant sûre et bénéfique.",
+    "leadership": "Sam Altman (CEO), Greg Brockman (President), Jakub Pachocki (Chief Scientist).",
+    "products": [
+        "ChatGPT (800M utilisateurs hebdo)",
+        "Modèles o1 (Raisonnent avant de répondre)",
+        "GPT-4o (Multimodal natif)",
+        "Sora (Génération vidéo)"
+    ],
+    "stats": "Revenu estimé 2025 : ~13 Mds$. Valorisation : ~300 Mds$. Utilisateurs ChatGPT : >800 millions par semaine.",
+    "anecdote": "Le nom 'ChatGPT' a failli ne jamais exister. En interne, les chercheurs doutaient de l'intérêt d'un simple chatbot. Sam Altman a poussé pour un lancement public 'discret' en novembre 2022, créant sans le vouloir le service à la croissance la plus rapide de l'histoire.",
+    "stockFact": "OpenAI n'est pas cotée en bourse, mais son influence est telle que chaque annonce majeure fait bondir ou chuter l'action de Microsoft (son principal actionnaire) de plusieurs dizaines de milliards de dollars.",
+    "sources_anecdote": [
+        {
+            "label": "OpenAI : Sora",
+            "url": "https://openai.com/sora/"
+        }
+    ],
+    "sources": [
+        {
+            "label": "OpenAI Newsroom",
+            "url": "https://openai.com/news/"
+        },
+        {
+            "label": "Research: Learning to Reason (o1)",
+            "url": "https://openai.com/index/learning-to-reason-with-llms/"
+        },
+        {
+            "label": "OpenAI Charter",
+            "url": "https://openai.com/charter/"
+        },
+        {
+            "label": "Numerama: Sora Launch in France",
+            "url": "https://www.numerama.com/tech/1815598-sora-larrivee-en-france-de-lia-video-dopenai-est-enfin-officielle.html"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://openai.com"
+        },
+        {
+            "label": "ChatGPT",
+            "url": "https://chat.openai.com"
+        },
+        {
+            "label": "OpenAI API Docs",
+            "url": "https://platform.openai.com/docs/"
+        }
+    ]
+}

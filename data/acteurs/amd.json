@@ -1,0 +1,32 @@
+{
+    "title": "AMD",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-amd.svg\" alt=\"AMD\" style=\"width: 32px; height: auto;\">",
+    "history": "Concurrent majeur de NVIDIA avec sa gamme d'accélérateurs Instinct.",
+    "mission": "Soutenir l'innovation via des solutions de calcul haute performance.",
+    "products": [
+        "Instinct MI300X",
+        "Ryzen AI",
+        "ROCm (Logiciel)"
+    ],
+    "stats": "Propose une alternative open-standard à NVIDIA.",
+    "anecdote": "L'accélérateur Instinct MI300X de AMD offre une capacité de mémoire (192 Go) bien supérieure à l'H100 de NVIDIA, permettant de charger des modèles massifs plus facilement.",
+    "sources_anecdote": [
+        {
+            "label": "AMD : Instinct MI300X",
+            "url": "https://www.amd.com/fr/products/accelerators/instinct/mi300/mi300x.html"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Advanced_Micro_Devices"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://www.amd.com"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "title": "Apple",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-apple.svg\" alt=\"Apple\" style=\"width: 32px; height: auto;\">",
+    "history": "Fidèle à sa philosophie du 'mieux plutôt que premier', Apple a attendu juin 2024 pour dévoiler son offensive majeure : Apple Intelligence. Sous la direction de Tim Cook, l'entreprise a pris le contrepied de ses concurrents en misant sur une IA de proximité, s'exécutant directement sur l'iPhone, l'iPad et le Mac, plutôt que sur des serveurs distants traitant toutes les données privées des utilisateurs. <br><br>Le génie d'Apple réside dans son architecture 'Private Cloud Compute', qui permet d'envoyer les requêtes complexes sur un cloud ultra-sécurisé où les données sont supprimées instantanément après traitement, sans qu'Apple n'y ait jamais accès. Pour Apple, l'IA ne doit pas être une destination, mais une option intégrée de manière transparente dans Siri et ses applications natives (Mail, Photos, Notes). En 2025, l'entreprise ambitionne d'avoir plus de 250 millions de terminaux compatibles avec l'IA en circulation, créant ainsi le plus grand réseau d'IA 'On-device' au monde.",
+    "mission": "Intégrer l'intelligence artificielle au cœur de ses produits de manière fluide et intuitive, tout en définissant le nouveau standard mondial de la confidentialité numérique.",
+    "leadership": "Tim Cook (CEO), Craig Federighi (SVP Software Engineering), John Giannandrea (SVP Machine Learning).",
+    "products": [
+        "Apple Intelligence",
+        "Private Cloud Compute",
+        "Nouveaux Neural Engines (A18 Pro/M4)",
+        "Siri Agentique"
+    ],
+    "stats": "Objectif 2025 : 250M de terminaux IA actifs. Valorisation : ~3 400 Mds$. Privacy-as-a-Product.",
+    "anecdote": "Lors de la présentation d'Apple Intelligence, Tim Cook a martelé que l'IA devait être 'pour le reste d'entre nous', faisant écho au slogan original du Macintosh en 1984. C'est une vision où la technologie s'adapte à l'humain, et non l'inverse.",
+    "stockFact": "L'annonce de l'intégration de ChatGPT dans Siri a d'abord inquiété les puristes, mais a rassuré les marchés, prouvant qu'Apple savait s'allier aux meilleurs tout en gardant le contrôle sur l'expérience utilisateur.",
+    "sources_anecdote": [
+        {
+            "label": "Amazon Science : Project P.I. (Detecting Imperfect Products)",
+            "url": "https://www.amazon.science/news-and-features/how-project-p-i-helps-amazon-remove-imperfect-products"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Apple Newsroom",
+            "url": "https://www.apple.com/newsroom/"
+        },
+        {
+            "label": "Private Cloud Compute Security",
+            "url": "https://security.apple.com/blog/private-cloud-compute/"
+        },
+        {
+            "label": "Apple Intelligence WWDC24",
+            "url": "https://www.apple.com/apple-intelligence/"
+        }
+    ],
+    "links": [
+        {
+            "label": "Apple AI Official",
+            "url": "https://www.apple.com/apple-intelligence/"
+        },
+        {
+            "label": "Developer Docs (Core ML)",
+            "url": "https://developer.apple.com/machine-learning/"
+        }
+    ]
+}

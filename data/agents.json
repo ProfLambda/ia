@@ -1,0 +1,62 @@
+{
+    "jules": {
+        "name": "Jules",
+        "type": "Agent au Développement (GitHub)",
+        "origin": "Google DeepMind",
+        "description": "Jules est l'un des premiers agents d'IA véritablement autonomes pour le développement logiciel. Il ne se contente pas de suggérer du code, il résout des problèmes de bout en bout.",
+        "capabilities": [
+            "Analyse automatique des tickets GitHub (Issues)",
+            "Détection et correction autonome de bugs",
+            "Écriture et exécution de tests unitaires",
+            "Création de Pull Requests prêtes à fusionner",
+            "Support multilingue (Python, JS, C++, etc.)"
+        ],
+        "workflow": [
+            "1. Réception d'un ticket (ex: 'Fix memory leak in X')",
+            "2. Exploration autonome du dépôt de code",
+            "3. Développement de la solution",
+            "4. Vérification via les pipelines CI/CD",
+            "5. Soumission du code aux humains"
+        ],
+        "links": [
+            {
+                "label": "Annonce Officielle (Google Blog)",
+                "url": "https://blog.google/technology/developers/google-jules-agent/"
+            },
+            {
+                "label": "DeepMind : Our Research",
+                "url": "https://deepmind.google/about/"
+            }
+        ]
+    },
+    "antigravity": {
+        "name": "Antigravity",
+        "type": "IDE Agentique de Nouvelle Génération",
+        "origin": "Google",
+        "description": "Antigravity est l'évolution de l'environnement de développement (IDE). Il transforme le rôle du développeur d'écrivain de code en orchestrateur d'agents.",
+        "capabilities": [
+            "Pilotage de flottes d'agents spécialisés",
+            "Génération de projets entiers par la pensée stratégique",
+            "Interconnexion native avec l'écosystème Google Cloud",
+            "Interface de contrôle haut niveau (Abstraite)",
+            "Optimisation en temps réel de l'architecture logicielle"
+        ],
+        "workflow": [
+            "1. Définition des objectifs métier",
+            "2. Déploiement des agents spécialisés (Front, Back, Infra)",
+            "3. Supervision de l'assemblage automatique du projet",
+            "4. Validation stratégique par l'humain",
+            "5. Déploiement continu automatisé"
+        ],
+        "links": [
+            {
+                "label": "Site Officiel (Antigravity)",
+                "url": "https://antigravity.google/"
+            },
+            {
+                "label": "Documentation Technique",
+                "url": "https://antigravity.google/docs"
+            }
+        ]
+    }
+}

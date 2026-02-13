@@ -1,0 +1,40 @@
+{
+    "title": "Hugging Face",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-huggingface.svg\" alt=\"Hugging Face\" style=\"width: 32px; height: auto;\">",
+    "history": "Le 'GitHub de l'IA', une plateforme de collaboration open-source.",
+    "mission": "Démocratiser l'IA de haute qualité via l'open source.",
+    "products": [
+        "Transformers Library",
+        "Hub de Modèles",
+        "Spaces"
+    ],
+    "stats": "Héberge plus de 500 000 modèles d'IA.",
+    "anecdote": "Le logo de Hugging Face est né d'un simple emoji 🤗. La startup a commencé comme un 'chatbot compagnon pour ados' avant de devenir la plateforme indispensable où le monde entier partage ses modèles d'IA.",
+    "sources_anecdote": [
+        {
+            "label": "Hugging Face : LLM Course",
+            "url": "https://huggingface.co/learn/llm-course/fr/chapter4/1"
+        },
+        {
+            "label": "Hugging Face Official",
+            "url": "https://huggingface.co/"
+        },
+        {
+            "label": "Wikipedia: Hugging Face",
+            "url": "https://en.wikipedia.org/wiki/Hugging_Face"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Hugging_Face"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://huggingface.co"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "title": "Huawei",
+    "color": "#e30b0b",
+    "icon": "<img src=\"assets/img/logos/logo-huawei.svg\" alt=\"Huawei\" style=\"width: 32px; height: auto;\">",
+    "history": "Fondé en 1987 à Shenzhen, Huawei est devenu un géant mondial des télécoms avant d'être frappé par des sanctions américaines massives en 2019. Loin de s'effondrer, l'entreprise a pivoté pour construire une stack IA 100% souveraine. <br><br>Avec ses puces 'Ascend' et ses modèles 'Pangu', Huawei est aujourd'hui le fer de lance de l'indépendance technologique chinoise, offrant une alternative complète à l'écosystème NVIDIA/CUDA.",
+    "mission": "Apporter le numérique à chaque personne, foyer et organisation pour un monde intelligent et entièrement connecté.",
+    "leadership": "Ren Zhengfei (Fondateur), Sabrina Meng (CFO/Rotating Chair).",
+    "products": [
+        "Puces IA Ascend 910B/C",
+        "Modèles Pangu 5.5 (718B params)",
+        "Framework MindSpore",
+        "Huawei Cloud AI"
+    ],
+    "stats": "Pangu-Weather prédit la météo 10 000 fois plus vite que les méthodes traditionnelles. Plus de 3 milliards de CA pour la division Cloud.",
+    "anecdote": "Sous pression des sanctions, Huawei a dû réinventer sa propre architecture logicielle (CANN) pour remplacer CUDA. Aujourd'hui, des modèles comme GLM-4 sont entièrement entraînés sur du matériel Huawei, prouvant que la Chine peut se passer des puces américaines.",
+    "sources_anecdote": [
+        {
+            "label": "Huawei Cloud : Pangu",
+            "url": "https://www.huaweicloud.com/intl/en-us/product/pangu.html"
+        },
+        {
+            "label": "Wikipedia : Huawei PanGu",
+            "url": "https://en.wikipedia.org/wiki/Huawei_PanGu"
+        }
+    ],
+    "stockFact": "Huawei n'est pas coté en bourse et appartient à ses employés via un programme d'actionnariat unique, ce qui lui permet d'investir massivement en R&D sans pression court-termiste des marchés.",
+    "sources": [
+        {
+            "label": "Huawei Cloud AI",
+            "url": "https://www.huaweicloud.com/intl/en-us/product/pangu.html"
+        },
+        {
+            "label": "Huawei Newsroom",
+            "url": "https://www.huawei.com/en/news"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://www.huawei.com/en/"
+        },
+        {
+            "label": "Huawei Cloud Global",
+            "url": "https://www.huaweicloud.com/intl/en-us/"
+        }
+    ]
+}

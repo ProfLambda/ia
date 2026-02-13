@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="og:title" content="Concepts de l'IA - Démystification par ProfLambda" />
+	<meta property="og:description"
+		content="Du Machine Learning à l'IA Générative : apprenez les concepts clés de l'IA avec ProfLambda." />
+	<meta property="og:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="twitter:title" content="Concepts de l'IA - Démystification par ProfLambda" />
+	<meta property="twitter:description"
+		content="Du Machine Learning à l'IA Générative : apprenez les concepts clés de l'IA avec ProfLambda." />
+	<meta property="twitter:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+	<title>Cours IA & Gemini</title>
+	<link rel="stylesheet" href="css/cours_ia.css" />
+	<link rel="stylesheet" href="css/navigation.css" />
+	<style>
+		@import url("css/fonts.css");
+
+		/* Hero Override for Course Theme */
+		.hero {
+			background:
+				linear-gradient(to bottom,
+					rgba(15, 23, 42, 0.7),
+					rgba(15, 23, 42, 0.9)),
+				url("assets/img/heroes/hero-ai.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Nature Background -->
+	<div class="organic-bg">
+		<div class="blob"></div>
+		<div class="blob"></div>
+		<div class="blob"></div>
+	</div>
+
+	<!-- Navigation Placeholder -->
+	<div id="nav-placeholder"></div>
+
+	<!-- Hero Section -->
+	<section class="hero"
+		style="min-height: 40vh; padding-top: 100px; background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('assets/img/heroes/hero-concepts.jpg');">
+		<div class="container">
+			<span class="badge badge-green" style="margin-bottom: 1rem">Fondamentaux</span>
+			<h1>Comprendre les concepts de l'IA</h1>
+			<p style="max-width: 600px; margin: 1.5rem auto">
+				Du Machine Learning à l'IA Générative : démystifions les termes techniques derrière la magie.
+			</p>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<main class="container">
+		<!-- Concepts Sections -->
+		<section id="concepts-fondamentaux" style="margin-bottom: 6rem; margin-top: 4rem;">
+
+			<!-- IA Générative vs Prédictive -->
+			<div class="glass-panel" style="padding: 3rem; margin-bottom: 3rem;">
+				<div class="split-layout"
+					style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+					<div>
+						<span class="badge badge-orange" style="margin-bottom: 1rem">La grande distinction</span>
+						<h2>Générative vs Prédictive</h2>
+						<p>C'est la différence entre <strong>analyser</strong> et <strong>créer</strong>.</p>
+						<ul style="list-style: none; padding: 0; margin-top: 1.5rem;">
+							<li style="margin-bottom: 1rem;">
+								<strong>🔹 IA Prédictive :</strong> Analyse des données passées pour prédire un futur
+								probable (ex: score de crédit, météo, recommandations Netflix).
+							</li>
+							<li>
+								<strong>✨ IA Générative :</strong> Utilise ses connaissances pour créer de nouveaux
+								contenus originaux (texte, image, code, musique).
+							</li>
+						</ul>
+					</div>
+					<div
+						style="background: var(--bg-color); border-radius: var(--radius-md); padding: 2rem; border: 1px solid rgba(0,0,0,0.05);">
+						<h4 style="margin-top: 0;">Analogie simple</h4>
+						<p style="font-style: italic; color: var(--text-secondary);">
+							"L'IA prédictive est comme un arbitre qui juge une action. L'IA générative est comme
+							l'artiste qui peint une nouvelle scène."
+						</p>
+					</div>
+				</div>
+				<div style="margin-top: 3rem; text-align: center;">
+					<img src="assets/img/ia/generative_vs_predictive.png" alt="Comparaison IA Générative vs Prédictive"
+						style="width: 100%; max-width: 900px; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+				</div>
+
+				<div class="grid" style="margin-top: 3rem; grid-template-columns: 1fr 1fr; gap: 2rem;">
+					<div
+						style="background: rgba(59, 130, 246, 0.05); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(59, 130, 246, 0.1);">
+						<h4 style="color: #3b82f6; margin-top: 0;">Exemples IA Prédictive</h4>
+						<ul style="list-style: none; padding: 0; margin-bottom: 0;">
+							<li style="margin-bottom: 0.8rem;">🌡️ <strong>Météo :</strong> Prévoir la température de
+								demain.</li>
+							<li style="margin-bottom: 0.8rem;">💳 <strong>Banque :</strong> Détecter une transaction
+								frauduleuse.</li>
+							<li style="margin-bottom: 0.8rem;">🎬 <strong>Netflix :</strong> Recommander un film selon
+								vos goûts.</li>
+							<li style="margin-bottom: 0;">📧 <strong>Spam :</strong> Filtrer les emails indésirables.
+							</li>
+						</ul>
+					</div>
+					<div
+						style="background: rgba(245, 158, 11, 0.05); padding: 2rem; border-radius: var(--radius-md); border: 1px solid rgba(245, 158, 11, 0.1);">
+						<h4 style="color: #f59e0b; margin-top: 0;">Exemples IA Générative</h4>
+						<ul style="list-style: none; padding: 0; margin-bottom: 0;">
+							<li style="margin-bottom: 0.8rem;">✍️ <strong>ChatGPT :</strong> Écrire un poème ou un
+								email.</li>
+							<li style="margin-bottom: 0.8rem;">🎨 <strong>Midjourney :</strong> Créer une image de
+								paysage.</li>
+							<li style="margin-bottom: 0.8rem;">💻 <strong>Copilot :</strong> Générer du code
+								informatique.</li>
+							<li style="margin-bottom: 0;">🎵 <strong>Suno :</strong> Composer une musique originale.
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Les LLM -->
+			<div class="grid">
+				<div class="card">
+					<div class="badge badge-blue" style="margin-bottom: 1rem;">LLM</div>
+					<h3>Large Language Models</h3>
+					<p>Des modèles entraînés sur des quantités massives de texte pour "prédire le mot suivant".</p>
+				</div>
+				<div class="card">
+					<div class="badge badge-green" style="margin-bottom: 1rem;">Multimodalité</div>
+					<h3>Multimodalité</h3>
+					<p>La capacité d'un modèle à traiter et générer différents types de données (texte + image + son).
+					</p>
+				</div>
+				<div class="card">
+					<div class="badge badge-orange" style="margin-bottom: 1rem;">Hallucinations</div>
+					<h3>Hallucinations</h3>
+					<p>Le phénomène où l'IA génère des informations fausses mais très convaincantes.</p>
+				</div>
+			</div>
+
+			<!-- Niveaux d'intelligence -->
+			<div style="margin-top: 4rem; text-align: center;">
+				<h2>Vers l'AGI ?</h2>
+				<p style="max-width: 700px; margin: 0 auto;">
+					Aujourd'hui, nous utilisons une <strong>IA "étroite"</strong> (spécialisée).
+					Le Graal de la recherche est l'<strong>AGI</strong> (Artificial General Intelligence),
+					une IA capable d'égaler l'intelligence humaine sur n'importe quelle tâche.
+				</p>
+			</div>
+
+		</section>
+	</main>
+
+	<!-- Footer Placeholder -->
+	<div id="footer-placeholder"></div>
+	<script src="js/components.js"></script>
+</body>
+
+</html>

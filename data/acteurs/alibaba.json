@@ -1,0 +1,39 @@
+{
+    "title": "Alibaba Cloud",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-alibaba.svg\" alt=\"Alibaba\" style=\"width: 32px; height: auto;\">",
+    "history": "Géant de l'e-commerce et du cloud en Asie, développeur de modèles massifs.",
+    "mission": "Faciliter les affaires partout dans le monde.",
+    "products": [
+        "Tongyi Qianwen (Qwen)",
+        "ModelScope (Hub)"
+    ],
+    "stats": "Qwen est l'un des modèles open-source les plus performants au monde.",
+    "anecdote": "Alibaba Cloud a surpris la communauté internationale avec Qwen, un modèle open-source qui rivalise avec Llama 3 de Meta, prouvant que les géants asiatiques sont désormais auto-suffisants en IA de pointe.",
+    "sources_anecdote": [
+        {
+            "label": "Qwen : Site Officiel",
+            "url": "https://qwenlm.github.io/"
+        },
+        {
+            "label": "GitHub : QwenLM",
+            "url": "https://github.com/QwenLM/Qwen"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Alibaba_Cloud"
+        }
+    ],
+    "links": [
+        {
+            "label": "Model Hub (ModelScope)",
+            "url": "https://www.modelscope.cn/home"
+        },
+        {
+            "label": "Alibaba Cloud AI",
+            "url": "https://www.alibabacloud.com/product/ai"
+        }
+    ]
+}

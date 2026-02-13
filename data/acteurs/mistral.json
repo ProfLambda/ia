@@ -1,0 +1,51 @@
+{
+    "title": "Mistral AI",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-mistral.svg\" alt=\"Mistral\" style=\"width: 32px; height: auto;\">",
+    "history": "C'est l'histoire d'un vent de révolte venu d'Europe. Fondée en avril 2023 par trois prodiges (Arthur Mensch d'ex-DeepMind, Guillaume Lample et Timothée Lacroix d'ex-Meta), Mistral AI a pour ambition de briser le duopole américain. En seulement quelques mois, la startup parisienne a prouvé que des modèles plus petits et plus efficaces (Open Weights) pouvaient égaler les géants de la Silicon Valley. <br><br>La vision de Mistral est celle d'une 'souveraineté numérique'. En publiant les poids de leurs modèles (comme Mistral 7B), ils permettent aux entreprises européennes de garder le contrôle total sur leurs données et leur technologie, sans dépendre d'une infrastructure étrangère opaque. En 2026, l'entreprise a franchi une étape historique avec un plan d'investissement massif dans une 'stack IA 100% européenne', positionnant la France comme le cœur de l'IA sur le vieux continent.",
+    "mission": "Démocratiser l'IA de pointe via des modèles ouverts, efficaces et transparents, tout en garantissant l'indépendance technologique de l'Europe.",
+    "leadership": "Arthur Mensch (CEO), Guillaume Lample (Chief Scientist), Timothée Lacroix (CTO).",
+    "products": [
+        "Mistral Large 2 (Performance GPT-4)",
+        "Pixtral (Multimodal)",
+        "Mistral 7B & 8x7B",
+        "Le Chat (Interface grand public)"
+    ],
+    "stats": "Valorisation ~14 Mds$. Levée de fonds record : 2 Mds€ en une seule ronde. Près de 350 employés.",
+    "anecdote": "Le logo de Mistral (un petit flocon en forme de 'M') cache un clin d'œil à l'efficacité énergétique : leur premier modèle 7B était si optimisé qu'il 'consommait moins' que ses concurrents pour des résultats supérieurs.",
+    "stockFact": "ASML, le géant néerlandais des puces, détient 11% de Mistral AI. C'est un mariage stratégique rare entre le hardware et le software pour sécuriser l'avenir de l'IA sur le vieux continent.",
+    "sources_anecdote": [
+        {
+            "label": "Mistral AI : Mistral Large",
+            "url": "https://mistral.ai/news/mistral-large"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Site Officiel",
+            "url": "https://mistral.ai"
+        },
+        {
+            "label": "Blog Technique",
+            "url": "https://mistral.ai/news/"
+        },
+        {
+            "label": "Hugging Face Mistral",
+            "url": "https://huggingface.co/mistralai"
+        }
+    ],
+    "links": [
+        {
+            "label": "La Plateforme (API)",
+            "url": "https://console.mistral.ai/"
+        },
+        {
+            "label": "Le Chat",
+            "url": "https://chat.mistral.ai/"
+        },
+        {
+            "label": "GitHub Mistral",
+            "url": "https://github.com/mistralai"
+        }
+    ]
+}

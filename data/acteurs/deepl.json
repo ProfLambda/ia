@@ -1,0 +1,32 @@
+{
+    "title": "DeepL",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-deepl.svg\" alt=\"DeepL\" style=\"width: 32px; height: auto;\">",
+    "history": "Champion allemand de la traduction par IA, réputé pour sa précision.",
+    "mission": "Briser les barrières linguistiques grâce à l'IA.",
+    "products": [
+        "DeepL Translator",
+        "DeepL Write",
+        "DeepL Pro"
+    ],
+    "stats": "Licorne basée à Cologne.",
+    "anecdote": "Dans de nombreux tests de 'blind tests', DeepL est systématiquement jugé plus précis et naturel que Google Translate, grâce à son architecture neuronale optimisée pour les nuances linguistiques européennes.",
+    "sources_anecdote": [
+        {
+            "label": "DeepL Write",
+            "url": "https://www.deepl.com/fr/write"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/DeepL_Translator"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://www.deepl.com"
+        }
+    ]
+}

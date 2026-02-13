@@ -1,0 +1,46 @@
+{
+    "title": "Midjourney",
+    "color": "#000000",
+    "icon": "<img src=\"assets/img/logos/logo-midjourney.png\" alt=\"Midjourney\" style=\"width: 32px; height: auto;\">",
+    "history": "Fondé en 2021 par David Holz (cofondateur de Leap Motion) à San Francisco, Midjourney est un laboratoire de recherche indépendant. Contrairement à ses concurrents financés par des milliards de dollars de capital-risque, Midjourney s'est développé de manière organique et autonome. <br><br>L'entreprise a révolutionné la génération d'images par IA en plaçant la communauté au cœur de son expérience via Discord, créant un espace de création collective sans précédent.",
+    "mission": "Explorer de nouveaux médiums de pensée et étendre les pouvoirs d'imagination de l'espèce humaine.",
+    "leadership": "David Holz (Fondateur).",
+    "products": [
+        "Midjourney v6.1 (Modèle actuel)",
+        "Midjourney Web (Alpha)",
+        "Discord Bot"
+    ],
+    "stats": "Plus de 21 millions de membres sur Discord (plus grand serveur au monde). Rentable dès 2022 avec seulement 11 employés.",
+    "anecdote": "Midjourney est l'une des rares 'licornes' de l'IA à n'avoir jamais levé de fonds externes. David Holz a refusé les investisseurs pour garder un contrôle total sur sa vision artistique et technologique.",
+    "sources_anecdote": [
+        {
+            "label": "The Register : David Holz Interview",
+            "url": "https://www.theregister.com/2022/08/01/david_holz_midjourney/"
+        },
+        {
+            "label": "Midjourney Official",
+            "url": "https://www.midjourney.com/"
+        }
+    ],
+    "stockFact": "Midjourney est une entreprise privée non cotée. Sa valeur est estimée à plusieurs milliards de dollars sur la base de ses revenus (plus de 200M$ de revenus récurrents annuels).",
+    "sources": [
+        {
+            "label": "Midjourney Documentation",
+            "url": "https://docs.midjourney.com/"
+        },
+        {
+            "label": "Contrary Research: Midjourney",
+            "url": "https://www.contrary.com/research/midjourney"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://www.midjourney.com"
+        },
+        {
+            "label": "Discord Community",
+            "url": "https://discord.gg/midjourney"
+        }
+    ]
+}

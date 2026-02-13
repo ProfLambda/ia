@@ -1,0 +1,176 @@
+[
+    {
+        "id": "ex-001",
+        "title": "Le Prompt Inversé",
+        "level": "Niveau 1",
+        "level_class": "badge-green",
+        "description": "Donnez un texte généré par une IA à Gemini et demandez-lui de deviner quel prompt précis, incluant le rôle et le contexte, aurait pu produire ce résultat exact.",
+        "tags": [
+            {
+                "label": "Prompt Engineering",
+                "link": "gemini.html#prompts"
+            },
+            {
+                "label": "Analyse",
+                "link": "concepts.html"
+            }
+        ]
+    },
+    {
+        "id": "ex-002",
+        "title": "Détection de Biais",
+        "level": "Niveau 2",
+        "level_class": "badge-orange",
+        "description": "Demandez à l'IA de rédiger deux descriptions d'un métier (ex: chirurgien ou infirmier), l'une avec un biais de genre et l'autre neutre. Comparez les adjectifs utilisés.",
+        "tags": [
+            {
+                "label": "Éthique",
+                "link": "concepts.html#hallucinations"
+            },
+            {
+                "label": "Biais",
+                "link": "concepts.html"
+            }
+        ]
+    },
+    {
+        "id": "ex-003",
+        "title": "La Méthode R.O.C.A.",
+        "level": "Niveau 1",
+        "level_class": "badge-green",
+        "description": "Appliquez la structure : Rôle, Objectif, Contexte, Attentes. Transformez un prompt vague 'Fais un résumé' en un prompt ROCA ultra-efficace pour une étude de cas.",
+        "tags": [
+            {
+                "label": "Méthodologie",
+                "link": "gemini.html#roca"
+            },
+            {
+                "label": "Structure",
+                "link": "gemini.html"
+            }
+        ]
+    },
+    {
+        "id": "ex-004",
+        "title": "Critique d'Hallucination",
+        "level": "Niveau 3",
+        "level_class": "badge-accent",
+        "description": "Demandez à Gemini de citer des sources sur un sujet très pointu ou récent. Identifiez les sources réelles et celles qui sont inventées (hallucinations), puis expliquez pourquoi l'IA a fait l'erreur.",
+        "tags": [
+            {
+                "label": "Vérification",
+                "link": "concepts.html#hallucinations"
+            },
+            {
+                "label": "Esprit Critique",
+                "link": "ressources.html#faq"
+            }
+        ]
+    },
+    {
+        "id": "ex-005",
+        "title": "Analyse de Code",
+        "level": "Niveau 2",
+        "level_class": "badge-orange",
+        "description": "Fournissez une fonction JavaScript simple mais contenant une petite erreur logique. Demandez à Gemini de la trouver, de l'expliquer et de proposer une optimisation.",
+        "tags": [
+            {
+                "label": "Développement",
+                "link": "outils.html#dev"
+            },
+            {
+                "label": "Logique",
+                "link": "concepts.html"
+            }
+        ]
+    },
+    {
+        "id": "ex-006",
+        "title": "Création de Persona",
+        "level": "Niveau 2",
+        "level_class": "badge-orange",
+        "description": "Créez un persona détaillé (âge, métier, objectifs, peurs) et demandez à l'IA d'interagir avec vous en incarnant ce personnage pour simuler un entretien d'embauche ou un coaching.",
+        "tags": [
+            {
+                "label": "Personnalisation",
+                "link": "gemini.html"
+            },
+            {
+                "label": "Simulations",
+                "link": "outils.html"
+            }
+        ]
+    },
+    {
+        "id": "ex-007",
+        "title": "Simulation d'Entretien (RH)",
+        "level": "Niveau 2",
+        "level_class": "badge-orange",
+        "description": "En tant que Chargé de RH, demandez à l'IA d'incarner un candidat difficile pour un poste clé. Utilisez la simulation pour tester votre grille d'entretien et identifier les biais potentiels dans vos questions.",
+        "tags": [
+            {
+                "label": "Management",
+                "link": "ressources.html"
+            },
+            {
+                "label": "Simulations",
+                "link": "outils.html"
+            }
+        ]
+    },
+    {
+        "id": "ex-008",
+        "title": "Plan d'Action Commercial",
+        "level": "Niveau 3",
+        "level_class": "badge-accent",
+        "description": "Directeur Commercial : Fournissez les chiffres de vente du trimestre et demandez à Gemini de générer une stratégie de relance structurée (Méthode ROCA) pour les secteurs en baisse, incluant des scripts d'appels.",
+        "tags": [
+            {
+                "label": "Management",
+                "link": "ressources.html"
+            },
+            {
+                "label": "Méthodologie",
+                "link": "gemini.html#roca"
+            }
+        ]
+    },
+    {
+        "id": "ex-009",
+        "title": "Optimisation de Campagne Pub",
+        "level": "Niveau 2",
+        "level_class": "badge-orange",
+        "description": "Responsable Pub : Donnez 3 concepts de publicités Facebook et demandez à l'IA de les critiquer selon les principes du copywriting AIDA. Demandez ensuite de générer 5 variantes de titres percutants.",
+        "tags": [
+            {
+                "label": "Marketing",
+                "link": "ressources.html"
+            },
+            {
+                "label": "Prompt Engineering",
+                "link": "gemini.html#prompts"
+            }
+        ]
+    },
+    {
+        "id": "ex-010",
+        "title": "Site de Présentation Simple",
+        "level": "Niveau 2",
+        "level_class": "badge-orange",
+        "description": "Créez une page web simple (HTML/CSS) pour présenter un projet. Demandez à l'IA de générer une structure sémantique propre, un design moderne 'glassmorphism' et de commenter chaque section pour comprendre la logique.",
+        "tags": [
+            {
+                "label": "Développement",
+                "link": "outils.html#dev"
+            },
+            {
+                "label": "Structure",
+                "link": "gemini.html"
+            },
+            {
+                "label": "Exemple",
+                "link": "#"
+            }
+        ]
+    }
+]

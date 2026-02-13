@@ -1,0 +1,36 @@
+{
+    "title": "IBM",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-ibm.svg\" alt=\"IBM\" style=\"width: 32px; height: auto;\">",
+    "history": "Pionnier de l'IA avec Deep Blue et Watson. Aujourd'hui focalisé sur l'IA d'entreprise.",
+    "mission": "Être le partenaire de confiance pour l'IA hybride et le cloud.",
+    "products": [
+        "watsonx.ai",
+        "watsonx.data",
+        "Granite Models"
+    ],
+    "stats": "Plus de 100 ans d'existence.",
+    "anecdote": "IBM a marqué l'histoire de l'IA deux fois : en 1997 avec Deep Blue battant Kasparov aux échecs, et en 2011 avec Watson gagnant au jeu Jeopardy! devant les champions humains.",
+    "sources_anecdote": [
+        {
+            "label": "Wikipedia: Watson Jeopardy! Challenge",
+            "url": "https://en.wikipedia.org/wiki/Watson_(computer)#Jeopardy!"
+        },
+        {
+            "label": "Wikipedia: Deep Blue",
+            "url": "https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/IBM"
+        }
+    ],
+    "links": [
+        {
+            "label": "IBM watsonx",
+            "url": "https://www.ibm.com/watsonx"
+        }
+    ]
+}

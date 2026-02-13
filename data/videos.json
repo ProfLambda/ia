@@ -1,0 +1,106 @@
+[
+    {
+        "title": "Gemini : les modèles d’IA les plus performants jamais conçus par Google",
+        "url": "https://www.youtube.com/watch?v=jV1vkHv4zq8",
+        "thumbnail": "https://img.youtube.com/vi/jV1vkHv4zq8/hqdefault.jpg",
+        "description": "Découvrez les capacités multimodales de Gemini à travers une démonstration officielle.",
+        "channel": "Google DeepMind",
+        "category": "Innovations"
+    },
+    {
+        "title": "Présentation de Gemini 2.0 : notre modèle d’IA le plus performant à ce jour",
+        "url": "https://www.youtube.com/watch?v=Fs0t6SdODd8",
+        "thumbnail": "https://img.youtube.com/vi/Fs0t6SdODd8/hqdefault.jpg",
+        "description": "Découvrez une nouvelle étape de l’IA avec Gemini 2.0, et ses progrès en raisonnement et en multimodalité.",
+        "channel": "Google DeepMind",
+        "category": "Innovations"
+    },
+    {
+        "title": "Les 4 étapes pour entraîner un LLM",
+        "url": "https://www.youtube.com/watch?v=YcIbZGTRMjI",
+        "thumbnail": "https://img.youtube.com/vi/YcIbZGTRMjI/hqdefault.jpg",
+        "description": "David Louapre détaille le processus d’entraînement des grands modèles de langage, du pré-entraînement au RLHF.",
+        "channel": "ScienceÉtonnante",
+        "category": "Science"
+    },
+    {
+        "title": "Du canon à la Lune : la découverte de la gravité",
+        "url": "https://www.youtube.com/watch?v=tdelUss-5hY",
+        "thumbnail": "https://img.youtube.com/vi/tdelUss-5hY/hqdefault.jpg",
+        "description": "Une exploration passionnante de la gravitation, de Galilée à Newton, et de ses célèbres expériences de pensée.",
+        "channel": "ScienceÉtonnante",
+        "category": "Science"
+    },
+    {
+        "title": "L’ARN aux origines de la vie sur Terre ? — Le monde à ARN",
+        "url": "https://www.youtube.com/watch?v=CsQNF9s78Nc",
+        "thumbnail": "https://img.youtube.com/vi/CsQNF9s78Nc/hqdefault.jpg",
+        "description": "Plongez dans l’hypothèse du « monde à ARN » pour comprendre comment la vie aurait pu émerger sur Terre.",
+        "channel": "ScienceÉtonnante",
+        "category": "Science"
+    },
+    {
+        "title": "L'IA N°1 MONDIALE pour les VIDEOS est sortie (Seedance 2.0)",
+        "url": "https://www.youtube.com/watch?v=Ty3XRCS-Tyc",
+        "thumbnail": "https://img.youtube.com/vi/Ty3XRCS-Tyc/hqdefault.jpg",
+        "description": "Découvrez Seedance 2.0, le nouveau modèle de génération vidéo de ByteDance qui bouscule le secteur.",
+        "channel": "Vision IA",
+        "category": "Innovations"
+    },
+    {
+        "title": "DeepSeek DÉTRUIT encore OpenAI et Google : la méthode \"MHC\"",
+        "url": "https://www.youtube.com/watch?v=ZQcAavtxotw",
+        "thumbnail": "https://img.youtube.com/vi/ZQcAavtxotw/hqdefault.jpg",
+        "description": "Exploration des dernières avancées de DeepSeek et de leur impact sur les géants de l'IA.",
+        "channel": "Vision IA",
+        "category": "Innovations"
+    },
+    {
+        "title": "GÉNÉRATION IA - L'arrivée de l'IA générative dans l'industrie audiovisuelle",
+        "url": "https://www.youtube.com/watch?v=nVh_UrSuZs4",
+        "thumbnail": "https://img.youtube.com/vi/nVh_UrSuZs4/hqdefault.jpg",
+        "description": "Une analyse des impacts de l'IA générative sur le secteur de l'audiovisuel, incluant les aspects éthiques et légaux.",
+        "channel": "Creative Seeds",
+        "category": "Industrie"
+    },
+    {
+        "title": "Révolution de l’IA en Fintech | Randstad Canada",
+        "url": "https://www.youtube.com/watch?v=StqCCf6RJQo",
+        "thumbnail": "https://img.youtube.com/vi/StqCCf6RJQo/hqdefault.jpg",
+        "description": "Découvrez comment l’intelligence artificielle et l’apprentissage automatique transforment les secteurs des finances et de la comptabilité.",
+        "channel": "Randstad Canada",
+        "category": "Industrie"
+    },
+    {
+        "title": "Les LLM Expliqués (SIMPLEMENT) en 3min",
+        "url": "https://www.youtube.com/watch?v=1RRHr3dFogQ",
+        "thumbnail": "https://img.youtube.com/vi/1RRHr3dFogQ/hqdefault.jpg",
+        "description": "Une explication concise et pédagogique sur le fonctionnement des Large Language Models (LLM).",
+        "channel": "Shubham SHARMA",
+        "category": "Science"
+    },
+    {
+        "title": "Pourquoi tu te sens largué avec l'IA (c'est normal)",
+        "url": "https://www.youtube.com/watch?v=G1GX_CHVq6M",
+        "thumbnail": "https://img.youtube.com/vi/G1GX_CHVq6M/hqdefault.jpg",
+        "description": "Une méthode concrète pour sortir du bruit de l'IA et enfin l'utiliser efficacement.",
+        "channel": "Shubham SHARMA",
+        "category": "Science"
+    },
+    {
+        "title": "Le Cinéma ne sera plus jamais le même.",
+        "url": "https://www.youtube.com/watch?v=bbcsgl8WX_g",
+        "thumbnail": "https://img.youtube.com/vi/bbcsgl8WX_g/hqdefault.jpg",
+        "description": "Exploration de l'IA dans l'animation 3D et les VFX : comment les nouveaux outils démocratisent la production cinématographique.",
+        "channel": "ATOM",
+        "category": "Industrie"
+    },
+    {
+        "title": "Comment l'IA va changer la musique (et comment en profiter)",
+        "url": "https://www.youtube.com/watch?v=02355261-835-4529-9254-111211121112",
+        "thumbnail": "https://img.youtube.com/vi/02355261-835-4529-9254-111211121112/hqdefault.jpg",
+        "description": "Découvrez comment l'IA transforme la création musicale et comment vous pouvez utiliser ces nouveaux outils pour composer.",
+        "channel": "ATOM",
+        "category": "Industrie"
+    }
+]

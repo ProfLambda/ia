@@ -1,0 +1,35 @@
+{
+    "title": "Qualcomm",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-qualcomm.png\" alt=\"Qualcomm\" style=\"width: 32px; height: auto;\">",
+    "history": "Leader des puces mobiles, Qualcomm intègre désormais des NPU (Neural Processing Units) puissants dans ses processeurs Snapdragon pour l'IA générative locale.",
+    "mission": "Connecter intelligemment le monde entier.",
+    "products": [
+        "Snapdragon 8 Gen 3 (IA On-device)",
+        "Snapdragon X Elite (PC IA)"
+    ],
+    "stats": "Équipe la grande majorité des smartphones Android premium.",
+    "anecdote": "Qualcomm a été l'un des premiers à intégrer un NPU (Neural Processing Unit) dédié sur mobile, permettant à nos smartphones de générer des images ou de traduire en temps réel sans connexion internet.",
+    "sources_anecdote": [
+        {
+            "label": "Qualcomm: On-Device AI",
+            "url": "https://www.qualcomm.com/products/technology/artificial-intelligence"
+        },
+        {
+            "label": "Qualcomm: Snapdragon X Era",
+            "url": "https://www.qualcomm.com/news/releases/2024/05/qualcomm-and-global-pc-ecosystem-usher-in-a-new-era-of-the-pc-wi"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Qualcomm"
+        }
+    ],
+    "links": [
+        {
+            "label": "Qualcomm AI",
+            "url": "https://www.qualcomm.com/products/technology/artificial-intelligence"
+        }
+    ]
+}

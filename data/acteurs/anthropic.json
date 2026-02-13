@@ -1,0 +1,55 @@
+{
+    "title": "Anthropic",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-anthropic.png\" alt=\"Anthropic\" style=\"width: 32px; height: auto;\">",
+    "history": "Anthropic est née d'une dissidence idéologique en 2021. Frustrés par ce qu'ils considéraient comme une dérive commerciale prématurée d'OpenAI au détriment de la sécurité, Dario Amodei (ancien VP Research) et sa sœur Daniela (VP Safety) ont quitté l'organisation pour fonder leur propre laboratoire. Leur conviction : l'IA doit être 'alignée' sur les valeurs humaines avant d'être surpuissante. <br><br>Pour y parvenir, ils ont inventé une méthode révolutionnaire : l'IA Constitutionnelle. Au lieu d'apprendre uniquement par des humains, le modèle (Claude) se supervise lui-même en suivant une liste de principes éthiques écrits (une 'Constitution'). Ce positionnement a attiré des investissements massifs de Google et Amazon (8 Mds$), qui voient en Anthropic une alternative plus fiable et prévisible. Leur vision pour 2027 est de transformer Claude en un 'collaborateur d'élite' capable de résoudre de manière autonome des défis globaux complexes.",
+    "mission": "Construire des systèmes d'IA fiables, interprétables et orientés vers la sécurité humaine via des méthodes d'alignement explicites.",
+    "leadership": "Dario Amodei (CEO), Daniela Amodei (President).",
+    "products": [
+        "Claude 3.5 Sonnet (Leader codage)",
+        "Claude 3 Opus (Raisonnement complexe)",
+        "Claude Haiku",
+        "Team Plan & Enterprise"
+    ],
+    "stats": "Revenu projeté 2025 : 2,2 Mds$. Valorisation : ~183 Mds$. Plus de 18 millions d'utilisateurs actifs mensuels.",
+    "anecdote": "Le split avec OpenAI a été si brutal que les fondateurs d'Anthropic ont emmené avec eux une grande partie de l'équipe travaillant sur la sécurité de GPT-3. Depuis, une rivalité discrète mais féroce oppose les deux laboratoires sur la question de la 'sensibilité' des modèles.",
+    "stockFact": "L'investissement d'Amazon dans Anthropic est le plus gros investissement externe de l'histoire du géant de l'e-commerce, prouvant l'importance stratégique du laboratoire face à l'alliance Microsoft/OpenAI.",
+    "sources_anecdote": [
+        {
+            "label": "Anthropic : Constitutional AI",
+            "url": "https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback"
+        },
+        {
+            "label": "Anthropic : The Constitution",
+            "url": "https://www.anthropic.com/constitution"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Anthropic Newsroom",
+            "url": "https://www.anthropic.com/news"
+        },
+        {
+            "label": "Core Views on AI Safety",
+            "url": "https://www.anthropic.com/research"
+        },
+        {
+            "label": "Constitutional AI Paper",
+            "url": "https://arxiv.org/abs/2212.08073"
+        }
+    ],
+    "links": [
+        {
+            "label": "Claude.ai",
+            "url": "https://claude.ai"
+        },
+        {
+            "label": "Console Anthropic",
+            "url": "https://console.anthropic.com/"
+        },
+        {
+            "label": "Documentation API",
+            "url": "https://docs.anthropic.com/"
+        }
+    ]
+}

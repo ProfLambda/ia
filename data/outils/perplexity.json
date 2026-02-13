@@ -1,0 +1,17 @@
+{
+    "name": "Perplexity",
+    "publisher": "Perplexity AI",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "Le moteur de recherche du futur qui répond à vos questions en citant ses sources en temps réel sur le web.",
+    "tag": "Freemium",
+    "tag_class": "badge-green",
+    "url": "https://www.perplexity.ai",
+    "features": [
+        "Recherche web hybride et IA",
+        "Citations de sources vérifiables",
+        "Mode 'Pro' pour des recherches complexes",
+        "Synthèse instantanée de l'actualité"
+    ],
+    "icon": "assets/img/logos/logo-perplexity.ico"
+}

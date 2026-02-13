@@ -1,0 +1,138 @@
+{
+    "Prompt Engineering": {
+        "savoir": "Comprendre que l'IA ne 'pense' pas mais prédit statistiquement la suite d'un texte. La précision de l'entrée (input) détermine la qualité de la sortie (output).",
+        "maitriser": "L'utilisation de verbes d'action précis, la délimitation des instructions et l'itération (affinement progressif).",
+        "mise_en_place": [
+            "Définir toujours un rôle ('Tu es un expert en...')",
+            "Utiliser des délimiteurs (### ou \"\"\") pour séparer les instructions du contenu textuel.",
+            "Spécifier le format de sortie attendu (JSON, liste à puces, ton formel)."
+        ]
+    },
+    "Analyse": {
+        "savoir": "Savoir identifier la structure d'un argument et repérer les patterns de langage utilisés par les modèles d'IA.",
+        "maitriser": "La lecture critique et la déconstruction d'un texte complexe en points clés.",
+        "mise_en_place": [
+            "Extraire les composants principaux du texte.",
+            "Identifier les mots-clés qui influencent la direction de la réponse.",
+            "Comparer le résultat avec l'intention initiale du prompt."
+        ]
+    },
+    "Éthique": {
+        "savoir": "Les modèles d'IA sont entraînés sur des données humaines qui contiennent des préjugés historiques et sociaux.",
+        "maitriser": "L'identification des contenus sensibles, discriminatoires ou dangereux.",
+        "mise_en_place": [
+            "Tester les limites du modèle sur des sujets sensibles.",
+            "Analyser si la réponse favorise un groupe ou une opinion spécifique.",
+            "Apprendre à rédiger des 'gardes-fous' dans les prompts."
+        ]
+    },
+    "Biais": {
+        "savoir": "Un biais est une distorsion systématique. En IA, il provient souvent du déséquilibre des données d'entraînement.",
+        "maitriser": "La capacité à repérer les stéréotypes de genre, d'origine ou de profession.",
+        "mise_en_place": [
+            "Comparer des réponses générées pour des sujets identiques avec un seul paramètre modifié.",
+            "Demander explicitement à l'IA d'être neutre et factuelle.",
+            "Chercher les omissions (ce que l'IA ne cite pas)."
+        ]
+    },
+    "Méthodologie": {
+        "savoir": "Une approche structurée produit des résultats reproductibles et fiables.",
+        "maitriser": "L'application de frameworks de prompting (comme ROCA).",
+        "mise_en_place": [
+            "Toujours commencer par le contexte global avant la tâche spécifique.",
+            "Décomposer une tâche complexe en sous-étapes logiques.",
+            "Valider chaque étape avant de passer à la suivante."
+        ]
+    },
+    "Structure": {
+        "savoir": "La hiérarchie de l'information aide l'IA à prioriser les instructions importantes.",
+        "maitriser": "L'organisation visuelle du prompt pour une meilleure compréhension machine.",
+        "mise_en_place": [
+            "Utiliser des titres, des listes et des blocs de code.",
+            "Placer les instructions les plus critiques à la fin du prompt (effet de récence).",
+            "Utiliser des variables ou des placeholders (ex : [CONTENU])."
+        ]
+    },
+    "Vérification": {
+        "savoir": "L'IA peut affirmer des choses fausses with beaucoup d'assurance.",
+        "maitriser": "Le fact-checking croisé et la recherche de sources indépendantes.",
+        "mise_en_place": [
+            "Demander à l'IA de justifier chaque affirmation.",
+            "Vérifier manuellement les liens et les noms propres cités.",
+            "Utiliser l'IA pour 'auto-critiquer' sa propre réponse."
+        ]
+    },
+    "Esprit Critique": {
+        "savoir": "L'IA est un outil, pas une autorité. Son contenu doit être questionné systématiquement.",
+        "maitriser": "Le discernement entre une opinion générée et un fait établi.",
+        "mise_en_place": [
+            "Comparer les réponses de plusieurs modèles (Gemini vs ChatGPT).",
+            "Analyser la source probable des connaissances du modèle.",
+            "Ne jamais déléguer une décision finale à l'IA sans supervision."
+        ]
+    },
+    "Développement": {
+        "savoir": "L'IA est excellente pour générer du code mais peut introduire des bugs logiques ou des failles de sécurité.",
+        "maitriser": "La lecture de code, le debugging et les principes de programmation.",
+        "mise_en_place": [
+            "Demander des commentaires explicatifs pour chaque bloc de code généré.",
+            "Vérifier la conformité aux standards actuels (ex: pas de innerHTML).",
+            "Tester le code dans un environnement contrôlé avant intégration."
+        ]
+    },
+    "Logique": {
+        "savoir": "Le raisonnement étape par étape (Chain of Thought) améliore drastiquement les performances de l'IA.",
+        "maitriser": "La construction d'arbres de décision et la suite logique de pensée.",
+        "mise_en_place": [
+            "Forcer l'IA à 'réfléchir à voix haute' avant de répondre.",
+            "Utiliser des connecteurs logiques (Si... Alors... Sinon...).",
+            "Vérifier la cohérence entre le début et la fin de la réponse."
+        ]
+    },
+    "Personnalisation": {
+        "savoir": "L'IA peut adapter son ton, son style et son expertise si on lui fournit des instructions de persona précises.",
+        "maitriser": "La création de fiches contextuelles et de portraits-robots pour guider le modèle.",
+        "mise_en_place": [
+            "Définir des traits de caractère (empathique, autoritaire, pédagogique).",
+            "Préciser ce que l'IA ignore vs ce qu'elle sait (limites du savoir).",
+            "Utiliser des consignes de formatage spécifiques au personnage (ex: 'Tutoyez l'interlocuteur')."
+        ]
+    },
+    "Simulations": {
+        "savoir": "L'IA est un partenaire idéal pour simuler des scénarios du monde réel sans risques (entretiens, négociations).",
+        "maitriser": "La mise en place de jeux de rôle interactifs où l'IA prend l'initiative.",
+        "mise_en_place": [
+            "Expliquer le scénario de départ à l'IA.",
+            "Lui demander de poser des questions une par une au lieu de tout déballer.",
+            "Lui demander un débriefing critique à la fin de la simulation."
+        ]
+    },
+    "Marketing": {
+        "savoir": "L'IA transforme le marketing en passant de la segmentation de masse à l'hyper-personnalisation en temps réel.",
+        "maitriser": "Les techniques de copywriting (AIDA, PAS), l'analyse de sentiment et la génération de contenu créatif.",
+        "mise_en_place": [
+            "Définir une cible ultra-précise (Ideal Customer Profile).",
+            "Demander des variantes de titres basées sur des leviers psychologiques.",
+            "Utiliser l'IA pour auditer la cohérence de marque sur différents canaux."
+        ]
+    },
+    "Management": {
+        "savoir": "L'IA est un assistant de gestion qui aide à la prise de décision, à l'organisation et à la communication interne.",
+        "maitriser": "La synthèse d'informations complexes, la planification stratégique et la médiation assistée.",
+        "mise_en_place": [
+            "Transformer des notes brutes en compte-rendu actionnable.",
+            "Simuler des retours d'employés pour préparer des annonces difficiles.",
+            "Utiliser des frameworks comme l'analyse SWOT assistée par Gemini."
+        ]
+    },
+    "Exemple": {
+        "savoir": "Un prompt exemplaire doit être structuré par couches : Rôle, Contexte, Contraintes de Design et Exigences Techniques.",
+        "maitriser": "L'art de guider l'IA vers un résultat complexe en une seule passe (One-shot Prompting).",
+        "mise_en_place": [
+            "Prompt Suggeré (Expert) : 'Tu es un Designer UI/UX et Développeur Creative Front-end de classe mondiale. Créé un site web de présentation single-page ultra-moderne pour une agence de design nommée Zarbix Creative. STRUCTURE : Hero Section (titre puissant, CTA), Services (3 cartes expertes), Portfolio (grille de 4 projets), Témoignages et Contact. DESIGN : Dark-mode premium (#0f172a / gris sidéral) avec esthétique Glassmorphism (verre dépoli), accents dégradés Violet/Bleu. Animations subtiles au hover et smooth scroll. TECHNIQUE : HTML5 sémantique, CSS3 moderne et responsive. Commente ton code pour expliquer chaque choix technique.'",
+            "Copie ce prompt dans Gemini et observe la qualité de la structure générée.",
+            "Demande ensuite : 'Applique maintenant une animation d'entrée saccadée (stagger effect) sur les cartes de service.'",
+            "Enfin, demande-lui de transformer le formulaire de contact en une modale interactive."
+        ]
+    }
+}

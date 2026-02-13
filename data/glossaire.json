@@ -1,0 +1,38 @@
+[
+    {
+        "term": "Algorithme",
+        "definition": "Une suite d'instructions précises permettant de résoudre un problème ou d'accomplir une tâche."
+    },
+    {
+        "term": "Deep Learning",
+        "definition": "Sous-domaine de l'IA utilisant des réseaux de neurones artificiels pour imiter le cerveau humain (apprentissage profond)."
+    },
+    {
+        "term": "Fine-tuning",
+        "definition": "Processus d'ajustement d'un modèle pré-entraîné sur des données spécifiques pour une tâche précise (ajustement fin)."
+    },
+    {
+        "term": "Token",
+        "definition": "L'unité de base traitée par un LLM (environ 0.75 mot ou 4 caractères en moyenne en français)."
+    },
+    {
+        "term": "LLM (Large Language Model)",
+        "definition": "Modèle de langage entraîné sur de gigantesques volumes de données textuelles pour prédire la suite d'une séquence."
+    },
+    {
+        "term": "Prompt",
+        "definition": "L'instruction ou la consigne textuelle donnée à une IA pour générer un résultat spécifique."
+    },
+    {
+        "term": "Hallucination",
+        "definition": "Phénomène par lequel une IA génère une réponse factuellement fausse tout en paraissant très sûre d'elle-même."
+    },
+    {
+        "term": "AGI (IA Générale)",
+        "definition": "Le niveau théorique d'IA capable de comprendre ou d'apprendre n'importe quelle tâche intellectuelle qu'un humain peut réaliser."
+    },
+    {
+        "term": "Multimodalité",
+        "definition": "Capacité d'un modèle à traiter plusieurs types de données simultanément (texte, image, son, vidéo)."
+    }
+]

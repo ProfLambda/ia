@@ -1,0 +1,31 @@
+{
+    "title": "TSMC",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-tsmc.png\" alt=\"TSMC\" style=\"width: 32px; height: auto;\">",
+    "history": "Le fabricant mondial de presque toutes les puces IA (NVIDIA, Apple, AMD).",
+    "mission": "Être le fondeur de confiance de l'industrie mondiale des semi-conducteurs.",
+    "products": [
+        "Gravure 3nm / 2nm",
+        "Packaging CoWoS"
+    ],
+    "stats": "Basée à Taïwan, point de passage crucial de la chaîne IA.",
+    "anecdote": "Morris Chang a fondé TSMC en pariant que les entreprises de puces finiraient par abandonner leurs usines pour devenir 'fabless', transformant Taïwan en pivot incontournable de la tech mondiale.",
+    "sources_anecdote": [
+        {
+            "label": "Wikipedia : TSMC",
+            "url": "https://fr.wikipedia.org/wiki/TSMC"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/TSMC"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://www.tsmc.com"
+        }
+    ]
+}

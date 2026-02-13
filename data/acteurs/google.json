@@ -1,0 +1,57 @@
+{
+    "title": "Google DeepMind",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-deepmind.svg\" alt=\"DeepMind\" style=\"width: 32px; height: auto;\">",
+    "history": "L'histoire de DeepMind est celle d'une quête scientifique sans précédent. Fondée à Londres en 2010 par Demis Hassabis, Shane Legg et Mustafa Suleyman, la startup a sidéré le monde en 2016 lorsque son programme AlphaGo a battu le champion mondial Lee Sedol, prouvant que l'IA pouvait maîtriser l'intuition. Rachetée par Google pour 500 millions de dollars, elle a fusionné en 2023 avec Google Brain pour former 'Google DeepMind', le bras armé d'Alphabet dans la guerre contre OpenAI. <br><br>Sous la direction de Demis Hassabis, le laboratoire a pivoté de l'apprentissage par le jeu vers la résolution de problèmes scientifiques fondamentaux. Leur réussite la plus éclatante, AlphaFold, a résolu un défi vieux de 50 ans en biologie en prédisant la structure de 200 millions de protéines, ce qui a valu à Hassabis le Prix Nobel de Chimie en 2024. Leur vision actuelle avec Gemini est de créer une IA 'multimodale native' capable de raisonner simultanément sur du texte, des images, du son et des heures de vidéo dans un seul flux de pensée.",
+    "mission": "Résoudre l'intelligence de manière responsable pour faire progresser la science et l'humanité, en utilisant l'IA pour décoder les secrets de la nature.",
+    "leadership": "Demis Hassabis (CEO & Co-founder), Jeff Dean (Chief Scientist).",
+    "products": [
+        "Gemini 1.5 Pro (Fenêtre de contexte de 2M tokens)",
+        "AlphaFold 3 (Révolution biologique)",
+        "Imagen 3 (Génération d'images)",
+        "Jules (Agent au développement)",
+        "Antigravity (IDE Agentique)",
+        "Vertex AI (Cloud)"
+    ],
+    "stats": "AlphaFold a prédit la structure de plus de 200 millions de protéines. Gemini 1.5 Pro peut analyser 600 000 lignes de code d'un bloc.",
+    "anecdote": "Demis Hassabis était un génie des échecs à 12 ans et a co-conçu le jeu culte 'Theme Park' à seulement 17 ans. Lors du rachat par Google, les fondateurs ont exigé la création d'un comité d'éthique secret pour s'assurer que leurs découvertes ne soient jamais utilisées à des fins militaires.",
+    "stockFact": "Alphabet (Google) a connu un regain de confiance boursière spectaculaire en 2024 après le lancement de Gemini 1.5, prouvant aux investisseurs que le géant de Mountain View avait enfin rattrapé son retard sur ChatGPT.",
+    "sources_anecdote": [
+        {
+            "label": "BBC: Demis Hassabis Interview",
+            "url": "https://www.bbc.com/sounds/play/m001v9r6"
+        },
+        {
+            "label": "DeepMind: About Our Research",
+            "url": "https://deepmind.google/about/"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Google DeepMind Blog",
+            "url": "https://deepmind.google/blog/"
+        },
+        {
+            "label": "Inside the Nobel Prize 2024",
+            "url": "https://www.nobelprize.org/prizes/chemistry/2024/summary/"
+        },
+        {
+            "label": "Gemini Research Paper",
+            "url": "https://arxiv.org/abs/2403.05530"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://deepmind.google"
+        },
+        {
+            "label": "Google AI News",
+            "url": "https://blog.google/technology/ai/"
+        },
+        {
+            "label": "Gemini Chat",
+            "url": "https://gemini.google.com"
+        }
+    ]
+}

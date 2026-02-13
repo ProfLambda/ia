@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="og:title" content="Les 26 Acteurs de l'IA - L'écosystème par ProfLambda" />
+	<meta property="og:description"
+		content="Découvrez les laboratoires et entreprises qui façonnent le futur de l'IA. Un panorama complet par ProfLambda." />
+	<meta property="og:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="twitter:title" content="Les 26 Acteurs de l'IA - L'écosystème par ProfLambda" />
+	<meta property="twitter:description"
+		content="Découvrez les laboratoires et entreprises qui façonnent le futur de l'IA. Un panorama complet par ProfLambda." />
+	<meta property="twitter:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+	<title>Cours IA & Gemini</title>
+	<link rel="stylesheet" href="css/cours_ia.css" />
+	<link rel="stylesheet" href="css/navigation.css" />
+	<style>
+		@import url("css/fonts.css");
+
+		/* Hero Override for Course Theme */
+		.hero {
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+
+		@media (max-width: 768px) {
+			#modal-grid {
+				grid-template-columns: 1fr !important;
+				gap: 2rem !important;
+			}
+
+			.modal {
+				width: 95% !important;
+				padding: 1.5rem !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Nature Background -->
+	<div class="organic-bg">
+		<div class="blob"></div>
+		<div class="blob"></div>
+		<div class="blob"></div>
+	</div>
+
+	<!-- Navigation -->
+	<!-- Navigation Placeholder -->
+	<div id="nav-placeholder"></div>
+
+	<!-- Hero Section -->
+	<section class="hero"
+		style="min-height: 40vh; padding-top: 100px; background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('assets/img/heroes/hero-acteurs.jpg');">
+		<div class="container">
+			<span class="badge badge-orange" style="margin-bottom: 1rem">Écosystème</span>
+			<h1>Les 26 Acteurs Majeurs de l'IA</h1>
+			<p style="max-width: 600px; margin: 0.5rem auto 1.5rem auto; font-style: italic; opacity: 0.8;">
+				( à l'heure ou l'on se parle ! )
+			</p>
+			<p style="max-width: 600px; margin: 1.5rem auto">
+				Découvrez les laboratoires de recherche et les entreprises qui dirigent la révolution technologique
+				actuelle.
+			</p>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<main class="container">
+		<!-- Actors Grid -->
+		<section id="acteurs-liste" style="margin-bottom: 6rem; margin-top: 4rem;">
+
+			<!-- SECTION 1: BIG TECH & CLOUD -->
+			<div class="category-header"
+				style="margin-bottom: 2rem; border-left: 4px solid var(--primary-color); padding-left: 1rem;">
+				<h2 style="margin-bottom: 0.5rem;">Big Tech (IA + Cloud + Produits)</h2>
+				<p style="color: var(--text-secondary); font-size: 0.95rem;">Les géants qui intègrent l'IA dans nos
+					outils quotidiens et fournissent l'infrastructure cloud mondiale.</p>
+			</div>
+			<div class="grid" style="margin-bottom: 4rem;">
+				<!-- Microsoft -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-microsoft.png" alt="Microsoft"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Microsoft</h3>
+					<p>Leader du cloud IA avec Azure et partenaire stratégique d'OpenAI via Copilot.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('microsoft')">En savoir plus</button>
+				</div>
+				<!-- Google DeepMind -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-deepmind.svg" alt="Google DeepMind"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Google DeepMind</h3>
+					<p>Le cerveau de Google, créateur de Gemini et pionnier de la recherche scientifique via l'IA.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('google')">En savoir plus</button>
+				</div>
+				<!-- Meta AI -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-meta.svg" alt="Meta AI"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Meta AI</h3>
+					<p>Champion de l'Open Source avec Llama, rendant l'IA accessible à tous les développeurs.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('meta')">En savoir plus</button>
+				</div>
+				<!-- Amazon AWS -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-amazon.svg" alt="Amazon AWS"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Amazon / AWS</h3>
+					<p>Fournit l'infrastructure de calcul et des services IA modulaires pour les entreprises.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('amazon')">En savoir plus</button>
+				</div>
+				<!-- Apple -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-apple.svg" alt="Apple"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Apple</h3>
+					<p>Focalisé sur l'IA embarquée et la protection de la vie privée des utilisateurs.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('apple')">En savoir plus</button>
+				</div>
+				<!-- IBM -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-ibm.svg" alt="IBM"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>IBM</h3>
+					<p>Expert en IA pour entreprises avec watsonx, axé sur la gouvernance et les données.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="openModal('ibm')">En
+						savoir plus</button>
+				</div>
+			</div>
+
+			<!-- SECTION 2: LABORATOIRES & EDITEURS (LABS) -->
+			<div class="category-header"
+				style="margin-bottom: 2rem; border-left: 4px solid var(--accent-orange); padding-left: 1rem;">
+				<h2 style="margin-bottom: 0.5rem;">Laboratoires & Éditeurs (Labs)</h2>
+				<p style="color: var(--text-secondary); font-size: 0.95rem;">Les innovateurs qui conçoivent les modèles
+					de langage les plus performants au monde.</p>
+			</div>
+			<div class="grid" style="margin-bottom: 4rem;">
+				<!-- OpenAI -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-openai.svg" alt="OpenAI"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>OpenAI</h3>
+					<p>Précurseur de l'IA générative moderne avec ChatGPT et les modèles GPT.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('openai')">En savoir plus</button>
+				</div>
+				<!-- Anthropic -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #f7f0e9; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-anthropic.svg" alt="Anthropic"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Anthropic</h3>
+					<p>Créateur de Claude, une IA conçue pour être plus sûre, honnête et inoffensive.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('anthropic')">En savoir plus</button>
+				</div>
+				<!-- xAI -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-xai.png" alt="xAI"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>xAI</h3>
+					<p>Le laboratoire d'Elon Musk, créateur de Grok, axé sur la compréhension de l'univers.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="openModal('xai')">En
+						savoir plus</button>
+				</div>
+				<!-- Cohere -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-cohere.png" alt="Cohere"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Cohere</h3>
+					<p>Spécialiste de l'IA pour entreprises, offrant des modèles de langage optimisés pour le RAG.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('cohere')">En savoir plus</button>
+				</div>
+				<!-- Mistral AI -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-mistral.svg" alt="Mistral AI"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Mistral AI</h3>
+					<p>Le fleuron français, réputé pour l'efficacité et l'ouverture de ses modèles.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('mistral')">En savoir plus</button>
+				</div>
+			</div>
+
+			<!-- SECTION 3: INFRASTRUCTURE & MATERIEL -->
+			<div class="category-header"
+				style="margin-bottom: 2rem; border-left: 4px solid #76B900; padding-left: 1rem;">
+				<h2 style="margin-bottom: 0.5rem;">Matériel & Infrastructure</h2>
+				<p style="color: var(--text-secondary); font-size: 0.95rem;">Les indispensables qui fabriquent la
+					puissance de calcul nécessaire à l'IA.</p>
+			</div>
+			<div class="grid" style="margin-bottom: 4rem;">
+				<!-- NVIDIA -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-nvidia.svg" alt="NVIDIA"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>NVIDIA</h3>
+					<p>Le leader incontesté des puces IA (GPU) qui alimentent presque tout l'écosystème.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('nvidia')">En savoir plus</button>
+				</div>
+				<!-- AMD -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-amd.svg" alt="AMD"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>AMD</h3>
+					<p>Le principal challenger de Nvidia avec ses accélérateurs Instinct MI300.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;" onclick="openModal('amd')">En
+						savoir plus</button>
+				</div>
+				<!-- Intel -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-intel.svg" alt="Intel"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Intel</h3>
+					<p>Se repositionne sur l'IA avec ses processeurs Xeon et ses accélérateurs Gaudi.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('intel')">En savoir plus</button>
+				</div>
+				<!-- TSMC -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-tsmc.webp" alt="TSMC"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>TSMC</h3>
+					<p>Le fondeur taïwanais qui fabrique les puces physiques de NVIDIA et Apple.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('tsmc')">En savoir plus</button>
+				</div>
+				<!-- Qualcomm -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-qualcomm.svg" alt="Qualcomm"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Qualcomm</h3>
+					<p>Leader des puces mobiles, pionnier de l'IA générative directement sur smartphone.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('qualcomm')">En savoir plus</button>
+				</div>
+				<!-- Oracle -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-oracle.svg" alt="Oracle"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Oracle</h3>
+					<p>Fournisseur de cloud critique pour l'IA, hébergeant les clusters géants comme celui de xAI.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('oracle')">En savoir plus</button>
+				</div>
+			</div>
+
+			<!-- SECTION 4: ECOSYSTEMES & CREATION -->
+			<div class="category-header"
+				style="margin-bottom: 2rem; border-left: 4px solid var(--accent-blue); padding-left: 1rem;">
+				<h2 style="margin-bottom: 0.5rem;">Écosystèmes & Plateformes</h2>
+				<p style="color: var(--text-secondary); font-size: 0.95rem;">Les plateformes de collaboration et les
+					spécialistes de l'IA créative.</p>
+			</div>
+			<div class="grid" style="margin-bottom: 4rem;">
+				<!-- Hugging Face -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-huggingface.svg" alt="Hugging Face"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Hugging Face</h3>
+					<p>La plateforme centrale de l'open source où tous les modèles sont partagés.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('huggingface')">En savoir plus</button>
+				</div>
+				<!-- Midjourney -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-midjourney.png" alt="Midjourney"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Midjourney</h3>
+					<p>Le leader incontesté de la génération d'images artistiques haute qualité.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('midjourney')">En savoir plus</button>
+				</div>
+				<!-- Stability AI -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-stability.png" alt="Stability AI"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Stability AI</h3>
+					<p>Créateur de Stable Diffusion, pionnier de la génération d'image open-source.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('stabilityai')">En savoir plus</button>
+				</div>
+			</div>
+
+			<!-- SECTION 5: ACTEURS MONDIAUX & SOUVERAINS -->
+			<div class="category-header"
+				style="margin-bottom: 2rem; border-left: 4px solid #F59E0B; padding-left: 1rem;">
+				<h2 style="margin-bottom: 0.5rem;">Acteurs Mondiaux & IA Souveraine</h2>
+				<p style="color: var(--text-secondary); font-size: 0.95rem;">Les puissances régionales et les
+					spécialistes de domaines spécifiques.</p>
+			</div>
+			<div class="grid" style="margin-bottom: 4rem;">
+				<!-- Baidu -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-baidu.svg" alt="Baidu"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Baidu</h3>
+					<p>Le leader de l'IA en Chine avec son modèle Ernie Bot et le cloud intelligent.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('baidu')">En savoir plus</button>
+				</div>
+				<!-- Alibaba -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-alibaba.svg" alt="Alibaba"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Alibaba Cloud</h3>
+					<p>Développe la famille de modèles Qwen, parmi les plus performants en open source.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('alibaba')">En savoir plus</button>
+				</div>
+				<!-- Huawei -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-huawei.svg" alt="Huawei"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Huawei</h3>
+					<p>Construit une stack IA complète (puces + modèles) pour l'indépendance chinoise.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('huawei')">En savoir plus</button>
+				</div>
+				<!-- DeepL -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-deepl.svg" alt="DeepL"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>DeepL</h3>
+					<p>La pépite allemande de la traduction, surpassant souvent Google par sa précision.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('deepl')">En savoir plus</button>
+				</div>
+				<!-- Aleph Alpha -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-alephalpha.png" alt="Aleph Alpha"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Aleph Alpha</h3>
+					<p>L'alternative européenne pour l'IA souveraine et sécurisée pour les entreprises.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('alephalpha')">En savoir plus</button>
+				</div>
+				<!-- Tencent -->
+				<div class="card">
+					<div class="card-media ratio-16-9"
+						style="background: #ffffff; display: flex; align-items: center; justify-content: center;">
+						<img src="assets/img/logos/logo-tencent.png" alt="Tencent"
+							style="width: auto; height: 100px; max-width: 95%;">
+					</div>
+					<h3>Tencent</h3>
+					<p>Intègre l'IA dans l'écosystème WeChat et les services numériques asiatiques.</p>
+					<button class="btn btn-primary" style="width: 100%; margin-top: 1rem;"
+						onclick="openModal('tencent')">En savoir plus</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Modals -->
+	<div id="modal-overlay" class="modal-overlay" onclick="closeModal()">
+		<div class="modal glass-panel" onclick="event.stopPropagation()"
+			style="max-width: 900px; background: #ffffff; border: 1px solid rgba(0,0,0,0.1); color: var(--text-primary);">
+			<div class="modal-header" style="border-bottom: 1px solid rgba(0,0,0,0.05); padding-bottom: 1.5rem;">
+				<div style="display: flex; align-items: center; gap: 1rem;">
+					<div id="modal-icon"
+						style="width: 40px; height: 100px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+					</div>
+					<h2 id="modal-title" style="margin: 0; color: #0f172a;">Titre</h2>
+				</div>
+				<button class="close-modal" onclick="closeModal()" style="color: #64748b;">×</button>
+			</div>
+
+			<div class="modal-body" style="max-height: 70vh; overflow-y: auto; padding-top: 1.5rem;">
+				<div id="modal-grid" style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem;">
+					<!-- Left Column: History & Mission -->
+					<div>
+						<h4
+							style="text-transform: uppercase; font-size: 0.8rem; color: var(--primary-dark); margin-bottom: 1rem;">
+							Histoire & Vision</h4>
+						<div id="modal-history" style="line-height: 1.7; color: #334155;"></div>
+
+						<h4
+							style="text-transform: uppercase; font-size: 0.8rem; color: var(--primary-dark); margin: 2rem 0 1rem;">
+							Mission</h4>
+						<div id="modal-mission" style="line-height: 1.7; color: #334155; margin-bottom: 2rem;"></div>
+
+						<div id="modal-anecdote-container"
+							style="background: #f1f5f9; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent-color);">
+							<h4
+								style="text-transform: uppercase; font-size: 0.8rem; color: var(--accent-color); margin-top: 0; margin-bottom: 0.5rem;">
+								✨ Le saviez-vous ?</h4>
+							<div id="modal-anecdote"
+								style="font-size: 0.95rem; font-style: italic; line-height: 1.6; color: #475569;"></div>
+							<div id="modal-anecdote-sources"
+								style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;"></div>
+						</div>
+					</div>
+
+					<!-- Right Column: Products & Info -->
+					<div>
+						<h4
+							style="text-transform: uppercase; font-size: 0.8rem; color: var(--primary-dark); margin-bottom: 1rem;">
+							Dirigeants</h4>
+						<div id="modal-leadership" style="font-weight: 600; color: #1e293b; margin-bottom: 1.5rem;">
+						</div>
+
+						<h4
+							style="text-transform: uppercase; font-size: 0.8rem; color: var(--primary-dark); margin-bottom: 1rem;">
+							Produits Phares</h4>
+						<ul id="modal-products"
+							style="margin: 0; padding-left: 1.2rem; color: #334155; line-height: 1.6;"></ul>
+
+						<h4
+							style="text-transform: uppercase; font-size: 0.8rem; color: var(--primary-dark); margin: 2rem 0 1rem;">
+							Chiffres & Bourse</h4>
+						<div id="modal-stats" style="font-size: 0.9rem; color: #334155; margin-bottom: 1rem;"></div>
+						<div id="modal-stock"
+							style="font-size: 0.85rem; color: #64748b; padding: 0.5rem; background: #f8fafc; border-radius: 4px;">
+						</div>
+
+						<h4
+							style="text-transform: uppercase; font-size: 0.8rem; color: var(--primary-dark); margin: 2rem 0 1rem;">
+							Sources</h4>
+						<div id="modal-sources" style="display: flex; flex-wrap: wrap; gap: 0.5rem;"></div>
+					</div>
+				</div>
+			</div>
+
+			<div
+				style="margin-top: 2rem; text-align: right; border-top: 1px solid rgba(0,0,0,0.05); padding-top: 1.5rem;">
+				<button class="btn btn-secondary" onclick="closeModal()">Fermer</button>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/acteurs/main.js"></script>
+
+	<!-- Footer Placeholder -->
+	<div id="footer-placeholder"></div>
+	<script src="js/components.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+{
+    "title": "Baidu",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-baidu.svg\" alt=\"Baidu\" style=\"width: 32px; height: auto;\">",
+    "history": "Le 'Google chinois', leader de l'IA en Asie.",
+    "mission": "Rendre le monde complexe plus simple par la technologie.",
+    "products": [
+        "Ernie Bot (LLM)",
+        "Baidu Cloud AI",
+        "Apollo (Auto-conduite)"
+    ],
+    "stats": "Plus de 200 millions d'utilisateurs pour Ernie.",
+    "anecdote": "Baidu a été la première grande entreprise tech au monde à lancer un concurrent sérieux à ChatGPT. Son modèle Ernie Bot a franchi le cap des 200 millions d'utilisateurs en avril 2024, affirmant la souveraineté technologique de la Chine.",
+    "sources_anecdote": [
+        {
+            "label": "Ernie Bot",
+            "url": "https://ernie.baidu.com/"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Baidu"
+        }
+    ],
+    "links": [
+        {
+            "label": "Ernie Bot (Web)",
+            "url": "https://yiyan.baidu.com/"
+        },
+        {
+            "label": "Baidu AI Cloud",
+            "url": "https://cloud.baidu.com/"
+        }
+    ]
+}

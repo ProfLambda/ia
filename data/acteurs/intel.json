@@ -1,0 +1,47 @@
+{
+    "title": "Intel",
+    "color": "#0071c5",
+    "icon": "<img src=\"assets/img/logos/logo-intel.svg\" alt=\"Intel\" style=\"width: 32px; height: auto;\">",
+    "history": "Fondé en 1968 par Gordon Moore et Robert Noyce, Intel a dominé l'ère du microprocesseur pendant des décennies. Après avoir manqué le tournant du mobile, le géant de Santa Clara fait aujourd'hui le pari massif de l'IA. <br><br>Sous la direction de Pat Gelsinger, Intel investit des dizaines de milliards de dollars pour redevenir un fondeur de premier plan et concurrencer NVIDIA avec ses accélérateurs Gaudi et ses processeurs Xeon optimisés pour l'IA générative.",
+    "mission": "Créer une technologie capable de changer le monde et d'améliorer la vie de chaque personne sur Terre, en rendant l'IA omniprésente et accessible.",
+    "leadership": "Pat Gelsinger (CEO), David Zinsner (CFO), Sandra Rivera (Executive VP).",
+    "products": [
+        "Processeurs Xeon (IA Server)",
+        "Accélérateurs Gaudi 3",
+        "Puces Core Ultra (IA PC)",
+        "OpenVINO (Kit de dev IA)"
+    ],
+    "stats": "Lancer de Gaudi 3 en 2024. Objectif : fournir 100M d'unités de processeurs Core Ultra d'ici fin 2025.",
+    "anecdote": "La fameuse 'Loi de Moore', qui prédit que le nombre de transistors sur une puce double tous les deux ans, a été formulée par l'un des cofondateurs d'Intel en 1965. Aujourd'hui, Intel se bat pour prouver que cette loi est toujours d'actualité dans l'ère de l'IA.",
+    "sources_anecdote": [
+        {
+            "label": "Intel : Gaudi 3",
+            "url": "https://www.intel.fr/content/www/fr/fr/products/details/processors/ai-accelerators/gaudi.html"
+        },
+        {
+            "label": "Alternatives à Nvidia (LeMagIT)",
+            "url": "https://www.lemagit.fr/actualites/366619382/Puces-IA-dix-fournisseurs-proposent-une-alternative-a-Nvidia"
+        }
+    ],
+    "stockFact": "Intel a reçu jusqu'à 8,5 milliards de dollars de subventions directes du gouvernement américain via le 'CHIPS Act' pour construire de nouvelles usines de puces IA sur le sol américain.",
+    "sources": [
+        {
+            "label": "Intel Newsroom",
+            "url": "https://www.intel.com/content/www/us/en/newsroom/home.html"
+        },
+        {
+            "label": "Intel AI Solutions",
+            "url": "https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html"
+        }
+    ],
+    "links": [
+        {
+            "label": "Site Officiel",
+            "url": "https://www.intel.com"
+        },
+        {
+            "label": "Gaudi 3 Product",
+            "url": "https://www.intel.com/content/www/us/en/products/details/processors/ai-accelerators/gaudi-3.html"
+        }
+    ]
+}

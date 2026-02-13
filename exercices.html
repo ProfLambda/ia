@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="og:title" content="Exercices IA Pratiques - S'entraîner avec ProfLambda" />
+	<meta property="og:description"
+		content="Mettez vos connaissances à l'épreuve avec des exercices concrets et des scénarios réels conçus par ProfLambda." />
+	<meta property="og:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="twitter:title" content="Exercices IA Pratiques - S'entraîner avec ProfLambda" />
+	<meta property="twitter:description"
+		content="Mettez vos connaissances à l'épreuve avec des exercices concrets et des scénarios réels conçus par ProfLambda." />
+	<meta property="twitter:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+	<title>Cours IA & Gemini</title>
+	<link rel="stylesheet" href="css/cours_ia.css" />
+	<link rel="stylesheet" href="css/navigation.css" />
+	<style>
+		@import url("css/fonts.css");
+
+		/* Hero Override for Course Theme */
+		.hero {
+			background:
+				linear-gradient(to bottom,
+					rgba(15, 23, 42, 0.7),
+					rgba(15, 23, 42, 0.9)),
+				url("assets/img/heroes/hero-ai.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Nature Background -->
+	<div class="organic-bg">
+		<div class="blob"></div>
+		<div class="blob"></div>
+		<div class="blob"></div>
+	</div>
+
+	<!-- Navigation Placeholder -->
+	<div id="nav-placeholder"></div>
+
+	<!-- Hero Section -->
+	<section class="hero"
+		style="min-height: 40vh; padding-top: 100px; background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url('assets/img/heroes/hero-logiciels.jpg');">
+		<div class="container">
+			<span class="badge badge-accent" style="margin-bottom: 1rem">Pratique</span>
+			<h1>Exercices Pratiques</h1>
+			<p style="max-width: 600px; margin: 1.5rem auto">
+				Mettez vos connaissances à l'épreuve avec des scénarios réels et des projets concrets.
+			</p>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<main class="container">
+		<!-- Exercices Content -->
+		<section id="exercices-content" style="margin-bottom: 6rem; margin-top: 4rem;">
+			<div id="exercices">
+				<h2 style="text-align: center; margin-bottom: 2rem;">📝 Liste des Exercices</h2>
+				<div id="exercices-grid" class="grid">
+					<!-- Chargé dynamiquement -->
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Modal Cours (Apparaît au clic sur un tag) -->
+	<div id="course-modal" class="modal-overlay">
+		<div class="modal-content glass-panel"
+			style="max-width: 600px; padding: 0; background: #ffffff; overflow: hidden; display: flex; flex-direction: column; max-height: 90vh;">
+			<div
+				style="background: var(--primary-color); padding: 2rem; color: white; position: relative; flex-shrink: 0;">
+				<button class="modal-close" id="close-course-modal"
+					style="position: absolute; color: white; top: 1.5rem; right: 1.5rem; background: rgba(255,255,255,0.15); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; border: 1px solid rgba(255,255,255,0.2); transition: all 0.2s; cursor: pointer; padding: 0; line-height: 0;">&times;</button>
+				<span class="badge" id="course-tag-badge"
+					style="background: rgba(255,255,255,0.2); color: white; border: 1px solid rgba(255,255,255,0.3); margin-bottom: 1rem;">Cours</span>
+				<h2 id="course-title" style="margin: 0; font-size: 2rem;">Thématique</h2>
+			</div>
+
+			<div style="padding: 2.5rem; overflow-y: auto; flex: 1;">
+				<div class="course-section" style="margin-bottom: 2rem;">
+					<h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary-dark);">
+						<span style="font-size: 1.2rem;">🧠</span> Ce qu'il faut savoir
+					</h4>
+					<p id="course-savoir" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);">
+					</p>
+				</div>
+
+				<div class="course-section" style="margin-bottom: 2rem;">
+					<h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--secondary-dark);">
+						<span style="font-size: 1.2rem;">🛠️</span> Ce qu'il faut maîtriser
+					</h4>
+					<p id="course-maitriser"
+						style="font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);"></p>
+				</div>
+
+				<div class="course-section">
+					<h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--accent-dark);">
+						<span style="font-size: 1.2rem;">🚀</span> Mise en place pratique
+					</h4>
+					<ul id="course-steps"
+						style="padding-left: 1.2rem; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.8;">
+						<!-- Liste d'étapes -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Footer Placeholder -->
+	<div id="footer-placeholder"></div>
+	<script src="js/components.js"></script>
+	<script src="js/ressources/main.js"></script>
+</body>
+
+</html>

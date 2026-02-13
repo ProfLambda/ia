@@ -1,0 +1,17 @@
+{
+    "name": "ChatGPT",
+    "publisher": "OpenAI",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "Le compagnon IA le plus polyvalent pour la rédaction, la synthèse de documents complexes et le brainstorming créatif.",
+    "tag": "Freemium",
+    "tag_class": "badge-green",
+    "url": "https://chatgpt.com",
+    "features": [
+        "Modèles GPT-4o haut de gamme",
+        "Génération d'images avec DALL-E",
+        "Analyse de données et vision par ordinateur",
+        "Mode vocal avancé"
+    ],
+    "icon": "assets/img/logos/logo-openai.svg"
+}

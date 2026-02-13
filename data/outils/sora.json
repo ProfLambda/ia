@@ -1,0 +1,17 @@
+{
+    "name": "Sora",
+    "publisher": "OpenAI",
+    "category": "video",
+    "category_name": "Vidéo & Audio",
+    "description": "Le futur modèle de vidéo d'OpenAI capable de créer des scènes complexes et réalistes jusqu'à une minute.",
+    "tag": "Bientôt",
+    "tag_class": "badge-blue",
+    "url": "https://openai.com/sora",
+    "features": [
+        "Vidéos haute définition d'une minute",
+        "Compréhension profonde des lois physiques",
+        "Cohérence temporelle parfaite",
+        "Génération multi-prises de vue"
+    ],
+    "icon": "assets/img/logos/logo-openai.svg"
+}

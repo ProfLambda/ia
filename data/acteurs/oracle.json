@@ -1,0 +1,35 @@
+{
+    "title": "Oracle",
+    "color": "#ffffff",
+    "icon": "<img src=\"assets/img/logos/logo-oracle.svg\" alt=\"Oracle\" style=\"width: 32px; height: auto;\">",
+    "history": "Géant de la donnée, proposant des infrastructures cloud optimisées pour l'IA (OCI).",
+    "mission": "Aider les gens à voir les données de nouvelles manières.",
+    "products": [
+        "OCI AI Services",
+        "Generative AI Service"
+    ],
+    "stats": "Utilisé par xAI pour ses clusters de calcul.",
+    "anecdote": "Larry Ellison, le fondateur d'Oracle, est un ami proche d'Elon Musk. C'est sur l'infrastructure cloud d'Oracle (OCI) que tourne Colossus, le supercalculateur géant de xAI, car Oracle offre la meilleure connectivité réseau pour les clusters de GPU.",
+    "sources_anecdote": [
+        {
+            "label": "Oracle News: xAI's Grok on OCI",
+            "url": "https://www.oracle.com/news/announcement/xai-oracle-cloud-infrastructure-2024-06-17/"
+        },
+        {
+            "label": "Business Insider: Ellison and Musk",
+            "url": "https://www.businessinsider.com/larry-ellison-elon-musk-friendship-oracle-tesla-spacex-2022-10"
+        }
+    ],
+    "sources": [
+        {
+            "label": "Wikipedia",
+            "url": "https://en.wikipedia.org/wiki/Oracle_Corporation"
+        }
+    ],
+    "links": [
+        {
+            "label": "Oracle AI",
+            "url": "https://www.oracle.com/ai/"
+        }
+    ]
+}

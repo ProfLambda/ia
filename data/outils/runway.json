@@ -1,0 +1,17 @@
+{
+    "name": "Runway Gen-3",
+    "publisher": "Runway",
+    "category": "video",
+    "category_name": "Vidéo & Audio",
+    "description": "Le pionnier de la génération de vidéo par IA, offrant des outils de création cinématographique de pointe.",
+    "tag": "Version d'essai",
+    "tag_class": "badge-green",
+    "url": "https://runwayml.com",
+    "features": [
+        "Gen-3 Alpha (Image/Texte vers Vidéo)",
+        "Motion Brush pour animer des zones précises",
+        "Remplacement d'objets en vidéo par IA",
+        "Lissage et ralentis intelligents"
+    ],
+    "icon": "assets/img/logos/logo-runway.ico"
+}
