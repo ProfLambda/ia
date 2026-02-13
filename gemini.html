@@ -1,0 +1,648 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Guide Expert : Maîtriser Google Gemini</title>
+	<link rel="stylesheet" href="css/cours_ia.css" />
+	<link rel="stylesheet" href="css/navigation.css" />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="og:title" content="Guide Gemini - Optimisez vos prompts avec ProfLambda" />
+	<meta property="og:description"
+		content="Guide complet sur l'outil de Google : prompts, cas d'usage et astuces pédagogiques par ProfLambda." />
+	<meta property="og:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="twitter:title" content="Guide Gemini - Optimisez vos prompts avec ProfLambda" />
+	<meta property="twitter:description"
+		content="Guide complet sur l'outil de Google : prompts, cas d'usage et astuces pédagogiques par ProfLambda." />
+	<meta property="twitter:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+	<style>
+		@import url("css/fonts.css");
+
+		.hero {
+			background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url("C:/Users/Bio/.gemini/antigravity/brain/baf7e3d1-96b4-44b7-823d-ad3adec5c744/hero_gemini_fix_v2.png");
+			background-size: cover;
+			background-position: center;
+			min-height: 50vh;
+			padding-top: 120px;
+		}
+
+		.nav-jump {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			margin-top: 2rem;
+			justify-content: center;
+		}
+
+		.jump-link {
+			background: rgba(255, 255, 255, 0.1);
+			backdrop-filter: blur(5px);
+			padding: 0.6rem 1.2rem;
+			border-radius: 50px;
+			color: white;
+			text-decoration: none;
+			font-size: 0.85rem;
+			font-weight: 500;
+			border: 1px solid rgba(255, 255, 255, 0.2);
+			transition: all 0.3s;
+		}
+
+		.jump-link:hover {
+			background: var(--primary-color);
+			transform: translateY(-2px);
+		}
+
+		.model-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+			gap: 2rem;
+			margin: 4rem 0;
+		}
+
+		.expert-block {
+			background: #0f172a;
+			color: #e2e8f0;
+			border-radius: 1.5rem;
+			padding: 3rem;
+			margin: 4rem 0;
+			border: 1px solid rgba(255, 255, 255, 0.1);
+			box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+		}
+
+		.crtf-box {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			gap: 1.5rem;
+			margin-top: 2rem;
+		}
+
+		.crtf-item {
+			background: rgba(255, 255, 255, 0.05);
+			padding: 1.5rem;
+			border-radius: 1rem;
+			border-left: 4px solid var(--accent-color);
+		}
+
+		.crtf-letter {
+			font-size: 2rem;
+			font-weight: 900;
+			color: var(--accent-color);
+			display: block;
+			margin-bottom: 0.5rem;
+		}
+
+		.workspace-table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 2rem;
+			background: rgba(255, 255, 255, 0.03);
+			border-radius: 1rem;
+			overflow: hidden;
+		}
+
+		.workspace-table th,
+		.workspace-table td {
+			padding: 1.2rem;
+			text-align: left;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+		}
+
+		.workspace-table th {
+			background: rgba(0, 0, 0, 0.02);
+			font-weight: 700;
+		}
+
+		.agent-card {
+			border-top: 5px solid var(--secondary-color);
+		}
+
+		.deep-dive {
+			background: linear-gradient(135deg, #eff6ff 0%, #faf5ff 100%);
+			border-radius: 2rem;
+			padding: 3rem;
+			margin: 4rem 0;
+		}
+
+		.agent-btn-jules:hover {
+			background-color: #10b981 !important;
+			color: white !important;
+		}
+
+		.agent-btn-antigravity:hover {
+			background-color: #6366f1 !important;
+			color: white !important;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="organic-bg">
+		<div class="blob"></div>
+		<div class="blob"></div>
+		<div class="blob"></div>
+	</div>
+
+	<div id="nav-placeholder"></div>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="container" style="text-align: center;">
+			<span class="badge badge-blue">GUIDE ULTIME</span>
+			<h1 style="font-size: 3.5rem; margin-bottom: 1rem;">L'Univers Google Gemini</h1>
+			<p style="max-width: 700px; margin: 0 auto; font-size: 1.2rem; opacity: 0.9;">
+				De Workspace aux agents autonomes : Maîtrisez l'intelligence artificielle la plus puissante de Google.
+			</p>
+
+			<div class="nav-jump">
+				<a href="#modeles" class="jump-link">Les Modèles</a>
+				<a href="#workspace" class="jump-link">Espace Travail</a>
+				<a href="#crtf" class="jump-link">Framework CRTF</a>
+				<a href="#gems" class="jump-link">Les Gems</a>
+				<a href="#agents" class="jump-link">Agents & Futur</a>
+				<a href="#deepdive" class="jump-link">Deep Dive</a>
+			</div>
+		</div>
+	</section>
+
+	<main class="container" style="margin-top: 40px;">
+
+		<!-- 1. Les Modèles -->
+		<section id="modeles" class="glass-panel" style="padding: 3rem; margin-bottom: 4rem;">
+			<div style="text-align: center; margin-bottom: 3rem;">
+				<span class="chapter-badge"
+					style="background: #dbeafe; color: #1e40af; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold;">NIVEAU
+					1</span>
+				<h2 style="font-size: 2.5rem; margin-top: 1rem;">Une Intelligence, Trois Visages</h2>
+				<p>Google a conçu Gemini pour s'adapter à chaque usage, du smartphone au data center.</p>
+			</div>
+
+			<div class="model-grid">
+				<div class="card" style="border-left: 5px solid #3b82f6;">
+					<h3 style="color: #3b82f6;">Gemini Flash</h3>
+					<p class="badge" style="background: #eff6ff; color: #1d4ed8;">VITESSE & VOLUME</p>
+					<p style="margin-top: 1rem;">Le modèle "sprinter". Ultra-rapide, il gère une fenêtre de contexte
+						massive (1M tokens). Idéal pour résumer 50 documents ou analyser 1h de vidéo en un clin d'œil.
+					</p>
+				</div>
+				<div class="card" style="border-left: 5px solid #8b5cf6; background: rgba(139, 92, 246, 0.02);">
+					<h3 style="color: #8b5cf6;">Gemini Pro / Ultra</h3>
+					<p class="badge" style="background: #f5f3ff; color: #6d28d9;">RAISONNEMENT EXPERT</p>
+					<p style="margin-top: 1rem;">Le cerveau de la famille (Advanced). Capable de coder des logiciels
+						complexes, de résoudre des problèmes mathématiques de haut niveau et de débattre
+						stratégiquement.</p>
+				</div>
+				<div class="card" style="border-left: 5px solid #10b981;">
+					<h3 style="color: #10b981;">Gemini Nano</h3>
+					<p class="badge" style="background: #ecfdf5; color: #047857;">LOCAL & PRIVÉ</p>
+					<p style="margin-top: 1rem;">L'IA qui vit dans votre poche. Elle tourne directement sur votre Pixel
+						ou Samsung S24 sans connexion internet, pour résumer vos notes vocales ou vos SMS.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- 2. Workspace -->
+		<section id="workspace" style="margin-bottom: 6rem;">
+			<h2 style="text-align: center; margin-bottom: 1rem;">Gemini dans votre Quotidien</h2>
+			<p style="text-align: center; color: var(--text-secondary); margin-bottom: 3rem;">L'IA s'infuse dans tous
+				les outils Google que vous utilisez déjà.</p>
+
+			<div class="glass-panel" style="padding: 2rem; overflow-x: auto;">
+				<table class="workspace-table">
+					<thead>
+						<tr>
+							<th>Application</th>
+							<th>Le Super-Pouvoir</th>
+							<th>Exemple Concret</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><strong>📩 Gmail</strong></td>
+							<td>"Help me Write" / Résumés</td>
+							<td>Résumer un fil de 40 emails éparpillés en 3 points d'action clairs.</td>
+						</tr>
+						<tr>
+							<td><strong>📄 Google Docs</strong></td>
+							<td>Rédaction & Reformulation</td>
+							<td>Transformer une prise de note brouillonne en un rapport formel structuré.</td>
+						</tr>
+						<tr>
+							<td><strong>📊 Sheets</strong></td>
+							<td>Classification de données</td>
+							<td>"Analyse ces avis clients et classe-les par sentiment : Positif ou Négatif."</td>
+						</tr>
+						<tr>
+							<td><strong>📽️ Slides / Vids</strong></td>
+							<td>Génération créative</td>
+							<td>Créer des visuels uniques ou des vidéos de formation à partir d'un script écrit.</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+
+		<!-- 3. CRTF Framework -->
+		<section id="crtf" class="expert-block">
+			<span class="badge badge-accent">EXPERT ONLY</span>
+			<h2 style="color: white; font-size: 2.5rem; margin-top: 1rem;">Oubliez les prompts vagues</h2>
+			<p style="color: #94a3b8; font-size: 1.1rem;">Pour des résultats de niveau professionnel, utilisez le
+				Framework <strong>C.R.T.F</strong> :</p>
+
+			<div class="crtf-box">
+				<div class="crtf-item">
+					<span class="crtf-letter">C</span>
+					<strong>CONTEXTE</strong>
+					<p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">"Je suis un entrepreneur qui lance
+						une marque de café éthique..."</p>
+				</div>
+				<div class="crtf-item" style="border-left-color: #60a5fa;">
+					<span class="crtf-letter" style="color: #60a5fa;">R</span>
+					<strong>RÔLE</strong>
+					<p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">"Tu es un copywriter senior
+						spécialisé dans le storytelling..."</p>
+				</div>
+				<div class="crtf-item" style="border-left-color: #34d399;">
+					<span class="crtf-letter" style="color: #34d399;">T</span>
+					<strong>TÂCHE</strong>
+					<p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">"Rédige 3 slogans accrocheurs et une
+						bio Instagram de 150 caractères."</p>
+				</div>
+				<div class="crtf-item" style="border-left-color: #f472b6;">
+					<span class="crtf-letter" style="color: #f472b6;">F</span>
+					<strong>FORMAT</strong>
+					<p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">"Présente le tout sous forme de
+						liste à puces avec des emojis."</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- 3b. Bibliothèque de Prompts -->
+		<section id="prompt-library" style="margin-bottom: 6rem;">
+			<h2 style="text-align: center; margin-bottom: 3rem;">Bibliothèque de Prompts Experts</h2>
+			<div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 2rem;">
+
+				<!-- Prompt 1: Marketing -->
+				<div class="glass-panel" style="padding: 2rem; position: relative;">
+					<div class="badge badge-blue" style="margin-bottom: 1rem;">STRATÉGIE MARKETING</div>
+					<h4 style="margin-bottom: 1rem;">Lancement de Produit</h4>
+					<div
+						style="background: rgba(0,0,0,0.03); padding: 1.5rem; border-radius: 0.8rem; font-family: monospace; font-size: 0.85rem; line-height: 1.5; border-left: 3px solid #3b82f6;">
+						"Tu es un consultant en stratégie marketing senior. CONTEXTE : Je lance une application mobile
+						de bien-être par abonnement ciblant les 25-35 ans urbains stressés. TÂCHE : Identifie 5 canaux
+						d'acquisition prioritaires sous-évalués et propose une accroche publicitaire pour chacun. FORMAT
+						: Rapport structuré avec justification pour chaque canal."
+					</div>
+					<button class="jump-link"
+						style="margin-top: 1rem; width: 100%; border: none; cursor: pointer; background: var(--primary-color);"
+						onclick="copyToClipboard(this)">Copier le prompt</button>
+				</div>
+
+				<!-- Prompt 2: Développement -->
+				<div class="glass-panel" style="padding: 2rem; position: relative;">
+					<div class="badge badge-green" style="margin-bottom: 1rem;">DÉVELOPPEMENT & SÉCURITÉ</div>
+					<h4 style="margin-bottom: 1rem;">Audit de Code Critique</h4>
+					<div
+						style="background: rgba(0,0,0,0.03); padding: 1.5rem; border-radius: 0.8rem; font-family: monospace; font-size: 0.85rem; line-height: 1.5; border-left: 3px solid #10b981;">
+						"Agis en tant qu'Ingénieur DevSecOps. CONTEXTE : J'ai une API Node.js qui reçoit des fichiers
+						volumineux. TÂCHE : Analyse cette fonction de gestion d'upload (coller le code) pour repérer les
+						failles de sécurité (XSS, Injection) et les goulots d'étranglement de performance. FORMAT :
+						Liste d'optimisations avec exemples de code corrigé."
+					</div>
+					<button class="jump-link"
+						style="margin-top: 1rem; width: 100%; border: none; cursor: pointer; background: var(--secondary-color);"
+						onclick="copyToClipboard(this)">Copier le prompt</button>
+				</div>
+
+				<!-- Prompt 3: Création -->
+				<div class="glass-panel" style="padding: 2rem; position: relative;">
+					<div class="badge badge-accent" style="margin-bottom: 1rem;">CRÉATIVITÉ & STORYTELLING</div>
+					<h4 style="margin-bottom: 1rem;">World Building Narratif</h4>
+					<div
+						style="background: rgba(0,0,0,0.03); padding: 1.5rem; border-radius: 0.8rem; font-family: monospace; font-size: 0.85rem; line-height: 1.5; border-left: 3px solid var(--accent-color);">
+						"Tu es un auteur de science-fiction primé spécialisé dans le cyberpunk. CONTEXTE : Nous sommes
+						en 2140, l'IA gère les émotions humaines via des puces sous-cutanées. TÂCHE : Rédige le premier
+						chapitre d'une nouvelle où le protagoniste découvre un bug dans son filtre de 'bonheur'. FORMAT
+						: Style narratif immersif, ton mélancolique, focalisation interne."
+					</div>
+					<button class="jump-link"
+						style="margin-top: 1rem; width: 100%; border: none; cursor: pointer; background: var(--accent-color);"
+						onclick="copyToClipboard(this)">Copier le prompt</button>
+				</div>
+
+				<!-- Prompt 4: Recherche -->
+				<div class="glass-panel" style="padding: 2rem; position: relative;">
+					<div class="badge badge-orange" style="margin-bottom: 1rem;">ANALYSE DE DONNÉES</div>
+					<h4 style="margin-bottom: 1rem;">Synthèse de Recherche</h4>
+					<div
+						style="background: rgba(0,0,0,0.03); padding: 1.5rem; border-radius: 0.8rem; font-family: monospace; font-size: 0.85rem; line-height: 1.5; border-left: 3px solid #f59e0b;">
+						"Tu es un expert en Analyse de Données et Recherche Académique. CONTEXTE : J'ai ces trois études
+						contradictoires sur l'impact de l'IA sur l'attention des mineurs (fournir résumés). TÂCHE :
+						Synthétise les points de convergence et les zones de friction irrésolues. FORMAT : Tableau
+						comparatif suivi d'une conclusion nuancée basée sur les faits."
+					</div>
+					<button class="jump-link"
+						style="margin-top: 1rem; width: 100%; border: none; cursor: pointer; background: #f59e0b;"
+						onclick="copyToClipboard(this)">Copier le prompt</button>
+				</div>
+
+			</div>
+		</section>
+
+		<!-- 4. Les Gems -->
+		<section id="gems" style="margin-bottom: 6rem;">
+			<div class="split-layout"
+				style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+				<div>
+					<span class="badge badge-orange">PERSONNALISATION</span>
+					<h2 style="margin-top: 1rem;">Créez vos propres "Gems"</h2>
+					<p style="margin: 1.5rem 0; line-height: 1.7;">Les Gems sont des versions personnalisées de Gemini.
+						Au lieu de répéter votre contexte à chaque fois, vous créez un assistant qui possède une
+						<strong>mémoire permanente</strong> de vos préférences, de votre style et de vos connaissances
+						business.
+					</p>
+					<ul style="list-style: none; padding: 0;">
+						<li style="margin-bottom: 1rem;">💎 <strong>Brand Voice</strong> : Votre expert en com' qui
+							connaît votre charte par cœur.</li>
+						<li style="margin-bottom: 1rem;">💎 <strong>Code Reviewer</strong> : Un senior qui vérifie vos
+							bugs selon vos standards.</li>
+						<li>💎 <strong>Coach Perso</strong> : Un mentor qui suit vos objectifs et vos progrès réels.
+						</li>
+					</ul>
+				</div>
+				<div class="glass-panel"
+					style="padding: 0; border: 2px dashed rgba(245, 158, 11, 0.3); overflow: hidden; aspect-ratio: 3/2; position: relative;">
+					<div id="gems-carousel" style="width: 100%; height: 100%; position: relative;">
+						<div class="carousel-slide active"
+							style="background-image: url('assets/img/ia/brand_voice.png');"></div>
+						<div class="carousel-slide" style="background-image: url('assets/img/ia/code_reviewer.png');">
+						</div>
+						<div class="carousel-slide" style="background-image: url('assets/img/ia/coach_perso.png');">
+						</div>
+					</div>
+					<style>
+						.carousel-slide {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background-size: cover;
+							background-position: center;
+							opacity: 0;
+							transition: opacity 1s ease-in-out;
+						}
+
+						.carousel-slide.active {
+							opacity: 1;
+						}
+					</style>
+				</div>
+			</div>
+		</section>
+
+		<!-- 5. Agents & Futur -->
+		<section id="agents" style="margin-bottom: 6rem;">
+			<div style="text-align: center; margin-bottom: 4rem;">
+				<span class="chapter-badge"
+					style="background: #d1fae5; color: #065f46; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold;">NIVEAU
+					3 : 2025+</span>
+				<h2 style="font-size: 2.5rem; margin-top: 1rem;">Le Futur : Les Agents Autonomes</h2>
+				<p>L'IA ne se contente plus de parler, elle commence à **agir** à votre place.</p>
+			</div>
+
+			<div class="grid">
+				<div class="card agent-card" style="border-top-color: #10b981;">
+					<h3 style="display: flex; align-items: center; gap: 0.5rem;">
+						<span style="font-size: 1.5rem;">🤖</span> Jules (Agent GitHub)
+					</h3>
+					<p style="margin: 1.2rem 0;">Jules n'est pas un chatbot, c'est un employé virtuel. Vous lui donnez
+						une tâche sur GitHub, il clone votre code, travaille seul, fait ses tests et vous propose une
+						solution finie (Pull Request).</p>
+					<div
+						style="background: rgba(0,0,0,0.03); padding: 1rem; border-radius: 0.5rem; font-size: 0.85rem; margin-bottom: 1.5rem;">
+						<strong>Usage :</strong> Maintenance de code asynchrone sans intervention humaine.
+					</div>
+					<button class="btn btn-secondary agent-btn-jules"
+						style="width: 100%; border-color: #10b981; color: #10b981;" onclick="openAgentModal('jules')">En
+						savoir plus</button>
+				</div>
+				<div class="card agent-card" style="border-top-color: #6366f1;">
+					<h3 style="display: flex; align-items: center; gap: 0.5rem;">
+						<span style="font-size: 1.5rem;">🚀</span> Antigravity
+					</h3>
+					<p style="margin: 1.2rem 0;">L'évolution ultime de l'IDE. C'est une interface "agentique" où vous ne
+						codez plus ligne par ligne, mais où vous pilotez une escouade d'agents qui construisent des
+						projets entiers pour vous.</p>
+					<div
+						style="background: rgba(0,0,0,0.03); padding: 1rem; border-radius: 0.5rem; font-size: 0.85rem; margin-bottom: 1.5rem;">
+						<strong>Usage :</strong> Orchestration de projet complexe par la pensée stratégique.
+					</div>
+					<button class="btn btn-secondary agent-btn-antigravity"
+						style="width: 100%; border-color: #6366f1; color: #6366f1;"
+						onclick="openAgentModal('antigravity')">En savoir plus</button>
+				</div>
+			</div>
+
+			<!-- Agent Modal -->
+			<div id="agent-modal" class="modal-overlay">
+				<div class="modal"
+					style="max-width: 800px; padding: 0; overflow: hidden; display: flex; flex-direction: column; max-height: 90vh;">
+					<div id="agent-modal-header" style="padding: 2.5rem; color: white; position: relative;">
+						<button class="close-modal" onclick="closeAgentModal()"
+							style="position: absolute; top: 1.5rem; right: 1.5rem; color: white; background: rgba(0,0,0,0.2); border-radius: 50%; width: 40px; height: 40px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button>
+						<span id="agent-badge" class="badge"
+							style="background: rgba(255,255,255,0.2); color: white; margin-bottom: 1rem;">AGENT</span>
+						<h2 id="agent-name" style="margin: 0; color: white; font-size: 2.5rem;">Nom de l'Agent</h2>
+						<p id="agent-type" style="margin-top: 0.5rem; opacity: 0.9; font-weight: 500;">Type d'agent</p>
+					</div>
+					<div style="padding: 2.5rem; overflow-y: auto; background: white;">
+						<div class="split-layout" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem;">
+							<div>
+								<h4 style="color: var(--text-primary); margin-bottom: 1rem;">Description</h4>
+								<p id="agent-description"
+									style="line-height: 1.7; color: var(--text-secondary); margin-bottom: 2rem;">
+									Description détaillée...</p>
+
+								<h4 style="color: var(--text-primary); margin-bottom: 1rem;">Capacités Clés</h4>
+								<ul id="agent-capabilities"
+									style="padding-left: 1.2rem; color: var(--text-secondary); line-height: 1.6;">
+									<!-- JS inject -->
+								</ul>
+							</div>
+							<div class="glass-panel" style="padding: 1.5rem; background: #f8fafc;">
+								<h4 style="color: var(--text-primary); margin-bottom: 1rem;">Fiche Technique</h4>
+								<div style="font-size: 0.9rem;">
+									<p><strong>Origine :</strong> <span id="agent-origin">Google</span></p>
+									<hr style="margin: 1rem 0; opacity: 0.1;">
+									<h5 style="margin-bottom: 0.5rem;">Workflow :</h5>
+									<ol id="agent-workflow"
+										style="padding-left: 1.2rem; font-size: 0.85rem; color: var(--text-secondary);">
+										<!-- JS inject -->
+									</ol>
+								</div>
+								<div id="agent-links"
+									style="margin-top: 2rem; display: flex; flex-direction: column; gap: 0.8rem;">
+									<!-- JS inject -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- 6. Deep Dive Approfondi -->
+		<section id="deepdive" class="deep-dive">
+			<h2 style="color: #1e3a8a; margin-bottom: 2rem;">🧠 Pour aller encore plus loin</h2>
+			<div class="grid" style="gap: 3rem;">
+				<div>
+					<h4 style="color: #1e40af;">Le Pouvoir des Fenêtres de Contexte</h4>
+					<p style="font-size: 0.95rem; line-height: 1.6; color: #334155;">Gemini 1.5 Pro peut lire jusqu'à
+						**2 millions de tokens**. Imaginez pouvoir charger 10 ans de rapports financiers ou 200 000
+						lignes de code d'un coup. L'IA n'oublie rien de ce que vous avez chargé au début de la
+						conversation.</p>
+				</div>
+				<div>
+					<h4 style="color: #1e40af;">NotebookLM : Votre Assistant de Recherche</h4>
+					<p style="font-size: 0.95rem; line-height: 1.6; color: #334155;">Un outil révolutionnaire basé sur
+						Gemini. Importez vos propres sources (PDF, Docs, YouTube) et NotebookLM devient un expert de
+						**vos** données. Il peut même générer un podcast audio de synthèse qui résume vos recherches.
+					</p>
+				</div>
+				<div>
+					<h4 style="color: #1e40af;">Confidentialité & Entreprise</h4>
+					<p style="font-size: 0.95rem; line-height: 1.6; color: #334155;">Contrairement à la version grand
+						public, **Gemini Enterprise** (via Vertex AI sur Google Cloud) garantit que vos données ne sont
+						jamais utilisées pour entraîner les modèles globaux. Vos secrets restent chez vous.</p>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	</footer>
+
+	<script>
+		// Carousel Logic
+		let currentSlide = 0;
+		const slides = document.querySelectorAll('.carousel-slide');
+		if (slides.length > 0) {
+			setInterval(() => {
+				slides[currentSlide].classList.remove('active');
+				currentSlide = (currentSlide + 1) % slides.length;
+				slides[currentSlide].classList.add('active');
+			}, 5000);
+		}
+
+		function copyToClipboard(btn) {
+			const promptText = btn.previousElementSibling.textContent.trim().replace(/^"|"$/g, '');
+			navigator.clipboard.writeText(promptText).then(() => {
+				const oldText = btn.textContent;
+				btn.textContent = 'Copié !';
+				btn.style.opacity = '0.7';
+				setTimeout(() => {
+					btn.textContent = oldText;
+					btn.style.opacity = '1';
+				}, 2000);
+			});
+		}
+
+		// Agent Modal Logic
+		let agentsData = null;
+
+		async function loadAgentsData() {
+			if (agentsData) return agentsData;
+			try {
+				const response = await fetch('data/agents.json');
+				agentsData = await response.json();
+				return agentsData;
+			} catch (error) {
+				console.error("Erreur chargement agents:", error);
+				return null;
+			}
+		}
+
+		async function openAgentModal(agentKey) {
+			const data = await loadAgentsData();
+			if (!data || !data[agentKey]) return;
+
+			const agent = data[agentKey];
+			const modal = document.getElementById('agent-modal');
+			const header = document.getElementById('agent-modal-header');
+
+			// Appliquer la couleur selon l'agent
+			const color = agentKey === 'jules' ? '#10b981' : '#6366f1';
+			header.style.backgroundColor = color;
+
+			// Remplir les données
+			document.getElementById('agent-name').textContent = agent.name;
+			document.getElementById('agent-type').textContent = agent.type;
+			document.getElementById('agent-description').textContent = agent.description;
+			document.getElementById('agent-origin').textContent = agent.origin;
+
+			// Capacités
+			const capList = document.getElementById('agent-capabilities');
+			capList.innerHTML = '';
+			agent.capabilities.forEach(cap => {
+				const li = document.createElement('li');
+				li.textContent = cap;
+				li.style.marginBottom = '0.5rem';
+				capList.appendChild(li);
+			});
+
+			// Workflow
+			const workList = document.getElementById('agent-workflow');
+			workList.innerHTML = '';
+			agent.workflow.forEach(step => {
+				const li = document.createElement('li');
+				li.textContent = step;
+				li.style.marginBottom = '0.8rem';
+				workList.appendChild(li);
+			});
+
+			// Liens avec Label de Source
+			const linkContainer = document.getElementById('agent-links');
+			linkContainer.innerHTML = '<h5 style="margin-bottom: 0.5rem; font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">🔗 Sources & Documentation</h5>';
+			agent.links.forEach(link => {
+				const a = document.createElement('a');
+				a.href = link.url;
+				a.className = 'btn';
+				a.style.backgroundColor = 'white';
+				a.style.border = `1px solid ${color}`;
+				a.style.color = color;
+				a.style.fontSize = '0.8rem';
+				a.textContent = link.label;
+				if (link.url !== '#') a.target = '_blank';
+				linkContainer.appendChild(a);
+			});
+
+			modal.classList.add('open');
+			document.body.style.overflow = 'hidden';
+		}
+
+		function closeAgentModal() {
+			const modal = document.getElementById('agent-modal');
+			modal.classList.remove('open');
+			document.body.style.overflow = '';
+		}
+
+		// Fermeture au clic extérieur
+		window.onclick = function (event) {
+			const modal = document.getElementById('agent-modal');
+			if (event.target == modal) {
+				closeAgentModal();
+			}
+		}
+	</script>
+	<script src="js/components.js"></script>
+</body>
+
+</html>

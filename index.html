@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="og:title" content="Cours IA & Gemini - Apprendre avec ProfLambda" />
+	<meta property="og:description"
+		content="Découvrez les fondamentaux de l'IA et l'usage expert de Gemini avec les outils pédagogiques de ProfLambda." />
+	<meta property="og:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="twitter:title" content="Cours IA & Gemini - Apprendre avec ProfLambda" />
+	<meta property="twitter:description"
+		content="Découvrez les fondamentaux de l'IA et l'usage expert de Gemini avec les outils pédagogiques de ProfLambda." />
+	<meta property="twitter:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+	<title>Cours IA & Gemini</title>
+	<link rel="stylesheet" href="css/cours_ia.css" />
+	<link rel="stylesheet" href="css/navigation.css" />
+	<style>
+		@import url("css/fonts.css");
+
+		/* Hero Override for Course Theme */
+		.hero {
+			background:
+				linear-gradient(to bottom,
+					rgba(15, 23, 42, 0.7),
+					rgba(15, 23, 42, 0.9)),
+				url("assets/img/heroes/hero-index.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+			position: relative;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Nature Background -->
+	<div class="organic-bg">
+		<div class="blob"></div>
+		<div class="blob"></div>
+		<div class="blob"></div>
+	</div>
+
+	<!-- Navigation Placeholder -->
+	<div id="nav-placeholder"></div>
+
+	<!-- Hero Section -->
+	<section class="hero">
+		<div class="container">
+			<span class="badge badge-green" style="margin-bottom: 1rem">Support de cours interactif</span>
+			<h1>Comprendre l'Intelligence Artificielle.<br />Maîtriser demain.</h1>
+			<p style="max-width: 600px; margin: 1.5rem auto">Bienvenue dans ce cours dédié aux fondamentaux de l'IA et à
+				l'usage expert de Gemini. Explorez les concepts, les outils et les bonnes pratiques.</p>
+			<div style="
+						display: flex;
+						gap: 1rem;
+						justify-content: center;
+						margin-top: 2rem;
+					">
+				<a href="gemini.html" class="btn btn-primary" style="padding: 1rem 2rem; font-size: 1.1rem">
+					Découvrir Gemini
+				</a>
+				<button class="btn btn-secondary" onclick="
+							document
+								.getElementById('plan')
+								.scrollIntoView({ behavior: 'smooth' })
+						">Explorer le plan</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- Main Content -->
+	<main class="container">
+		<!-- Intro Section -->
+		<section id="intro" style="margin-bottom: 6rem; text-align: center; margin-top: 4rem;">
+			<div style="max-width: 800px; margin: 0 auto">
+				<span class="badge badge-orange" style="margin-bottom: 1rem">Introduction</span>
+				<h2>L'IA n'est plus une option.</h2>
+				<p>
+					Dans un monde en mutation rapide, comprendre les mécanismes de l'Intelligence Artificielle
+					est devenu essentiel. Ce site a pour vocation d'être votre compagnon d'apprentissage,
+					depuis les concepts de base jusqu'à l'utilisation avancée des derniers modèles comme Gemini.
+				</p>
+			</div>
+		</section>
+
+		<!-- Plan Grid -->
+		<section id="plan" style="margin-bottom: 6rem">
+			<div style="text-align: center; margin-bottom: 3rem">
+				<h2>Structure du cours</h2>
+				<p>Naviguez à travers les différentes sections pour approfondir vos connaissances.</p>
+			</div>
+
+			<div class="grid">
+				<!-- Page 1: Acteurs -->
+				<div class="card" onclick="window.location.href='acteurs.html'" style="cursor: pointer;">
+					<div class="card-media ratio-16-9"
+						style="padding: 0; background: var(--primary-color); display: flex; align-items: center; justify-content: center;">
+						<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+							<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+							<circle cx="9" cy="7" r="4"></circle>
+							<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+							<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+						</svg>
+					</div>
+					<h3>Acteurs Majeurs</h3>
+					<p>Découvrez les entreprises et organisations qui façonnent le futur de l'IA.</p>
+				</div>
+
+				<!-- Page 2: Concepts -->
+				<div class="card" onclick="window.location.href='concepts.html'" style="cursor: pointer;">
+					<div class="card-media ratio-16-9"
+						style="padding: 0; background: var(--secondary-color); display: flex; align-items: center; justify-content: center;">
+						<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+							<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+							<path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+						</svg>
+					</div>
+					<h3>Concepts & Types</h3>
+					<p>IA générative, prédictive, LLM... Apprenez à distinguer les grandes familles.</p>
+				</div>
+
+				<!-- Page 3: Gemini -->
+				<div class="card" onclick="window.location.href='gemini.html'" style="cursor: pointer;">
+					<div class="card-media ratio-16-9"
+						style="padding: 0; background: var(--accent-color); display: flex; align-items: center; justify-content: center;">
+						<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+							<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+						</svg>
+					</div>
+					<h3>Spécial Gemini</h3>
+					<p>Un guide complet sur l'outil de Google : prompts, cas d'usage et astuces.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Newsletter / Update -->
+		<section style="margin-bottom: 6rem; text-align: center">
+			<div style="max-width: 600px; margin: 0 auto">
+				<h2>Contenu évolutif</h2>
+				<p>Ce site est enrichi chaque mois avec de nouvelles fiches et exercices.</p>
+				<div class="glass-panel" style="padding: 2rem;">
+					<span class="badge badge-green">Nouveautés à venir</span>
+					<ul style="list-style: none; padding: 0; margin-top: 1rem; text-align: left;">
+						<li style="margin-bottom: 0.5rem;">🔹 Module sur l'IA et l'éthique</li>
+						<li style="margin-bottom: 0.5rem;">🔹 Atelier pratique : créer son premier agent</li>
+						<li style="margin-bottom: 0.5rem;">🔹 Comparatif détaillé des LLM (2025)</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Footer Placeholder -->
+	<div id="footer-placeholder"></div>
+	<script src="js/components.js"></script>
+</body>
+
+</html>

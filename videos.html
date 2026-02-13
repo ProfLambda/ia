@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intelligence Artificielle en Vidéo - Cours IA</title>
+    <link rel="stylesheet" href="css/cours_ia.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/ProfLambda/cours_ia" />
+    <meta property="og:title" content="L'IA en Vidéo - La médiathèque de ProfLambda" />
+    <meta property="og:description"
+        content="Une sélection des meilleures vidéos pour comprendre les enjeux et les outils de l'IA par ProfLambda." />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://github.com/ProfLambda/cours_ia" />
+    <meta property="twitter:title" content="L'IA en Vidéo - La médiathèque de ProfLambda" />
+    <meta property="twitter:description"
+        content="Une sélection des meilleures vidéos pour comprendre les enjeux et les outils de l'IA par ProfLambda." />
+    <meta property="twitter:image" content="https://avatars.githubusercontent.com/u/234212850?v=4" />
+
+    <style>
+        @import url("css/fonts.css");
+
+        .hero {
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)),
+                url("assets/img/heroes/hero-videos.jpg"),
+                linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            background-size: cover;
+            background-position: center;
+            min-height: 40vh;
+            padding-top: 100px;
+        }
+
+        .cookie-warning {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .cookie-warning {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        /* Modal Video Player */
+        .video-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .video-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            width: 95%;
+            max-width: 1400px;
+            position: relative;
+            background: #000;
+            aspect-ratio: 16 / 9;
+            border-radius: 1.5rem;
+            overflow: visible;
+            box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-content iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 1.5rem;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -2.5rem;
+            right: -2.5rem;
+            width: 5rem;
+            height: 5rem;
+            background: #ef4444;
+            border: 4px solid white;
+            color: white;
+            font-size: 3rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10001;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+            line-height: 1;
+            padding-bottom: 8px;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.15) rotate(90deg);
+            background: #dc2626;
+            box-shadow: 0 0 30px rgba(239, 68, 68, 0.6);
+        }
+
+        @media (max-width: 1200px) {
+            .modal-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .close-modal {
+                top: 0.5rem;
+                right: 0.5rem;
+                width: 2.5rem;
+                height: 2.5rem;
+                font-size: 1.5rem;
+                background: rgba(239, 68, 68, 0.8);
+                border-width: 2px;
+            }
+        }
+
+        /* Tabs Styles */
+        .btn-tab {
+            background: rgba(255, 255, 255, 0.5);
+            color: var(--text-secondary);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: 600;
+        }
+
+        .btn-tab:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+        }
+
+        .btn-tab.active {
+            background: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            border-color: var(--primary-dark);
+        }
+
+        .section-fade-in {
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="organic-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <div id="nav-placeholder"></div>
+
+    <section class="hero">
+        <div class="container" style="text-align: center;">
+            <span class="badge badge-accent">MEDIATHEQUE</span>
+            <h1 style="font-size: 3rem; margin-top: 1rem;">L'IA en images</h1>
+            <p style="max-width: 700px; margin: 0 auto; opacity: 0.9;">
+                Une sélection des meilleures vidéos pour comprendre les enjeux et les outils de l'intelligence
+                artificielle.
+            </p>
+        </div>
+    </section>
+
+    <main class="container" style="margin-top: 4rem;">
+
+        <!-- Note sur les cookies Google -->
+        <div class="cookie-warning glass-panel">
+            <div style="font-size: 2rem;">🍪</div>
+            <div>
+                <h4 style="margin: 0; color: var(--primary-dark);">Note sur la confidentialité</h4>
+                <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary); line-height: 1.4;">
+                    L'affichage des vignettes et la lecture des vidéos dépendent des services de <strong>YouTube
+                        (Google)</strong>.
+                    En consultant cette page, des cookies tiers peuvent être déposés par Google pour assurer le
+                    fonctionnement du lecteur et l'analyse d'audience.
+                </p>
+            </div>
+        </div>
+
+        <!-- Filtres de Tri -->
+        <div class="filter-tabs glass-panel"
+            style="margin-bottom: 3rem; display: flex; justify-content: center; gap: 1rem; padding: 1rem;">
+            <button class="btn btn-tab active" data-sort="category" style="flex: 1; max-width: 200px;">🚀
+                Thématiques</button>
+            <button class="btn btn-tab" data-sort="channel" style="flex: 1; max-width: 200px;">📺 Chaînes</button>
+        </div>
+
+        <!-- Container pour les vidéos (injectées par JS) -->
+        <div id="videos-container">
+            <div style="text-align: center; padding: 4rem;">
+                <p>Chargement de la bibliothèque vidéo...</p>
+            </div>
+        </div>
+
+        <!-- Étiquettes des Chaînes YouTube -->
+        <section style="margin-top: 4rem; padding-bottom: 2rem; text-align: center;">
+            <h3 style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 1.5rem; opacity: 0.7;">📺 Sources
+                & Chaînes</h3>
+            <div id="channels-footer"
+                style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; max-width: 900px; margin: 0 auto;">
+                <!-- Injecté par JS -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Lecteur Vidéo -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div id="playerContainer" style="width: 100%; height: 100%;"></div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script src="js/videos/main.js"></script>
+</body>
+
+</html>
