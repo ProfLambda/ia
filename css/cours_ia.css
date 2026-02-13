@@ -1,5 +1,5 @@
 :root {
-    /* Spring & Sun Palette - Light & Airy */
+    /* --- Palette de Couleurs (Spring & Sun - Light & Airy) --- */
     --bg-color: #fdfdfd;
     /* Warm White / Cream */
     --text-primary: #1e293b;
@@ -13,30 +13,35 @@
     /* Deep Amber */
     --secondary-color: #84cc16;
     /* Grass Green */
+    --secondary-dark: #65a30d;
+    /* Darker Green */
     --accent-color: #38bdf8;
     /* Sky Blue */
+    --accent-light: #7dd3fc;
+    /* Light Blue */
     --danger-color: #ef4444;
     /* Alert Red */
 
-    /* Light Glassmorphism */
+    /* --- Glassmorphism --- */
     --glass-bg: rgba(255, 255, 255, 0.7);
     /* Frosted White */
     --glass-border: 1px solid rgba(255, 255, 255, 0.5);
     --glass-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
 
+    /* --- Dimensions & Spacing --- */
     --radius-sm: 12px;
     --radius-md: 20px;
     --radius-lg: 30px;
     /* Softer, rounder corners */
 
+    /* --- Transitions --- */
     --tr-speed: 0.3s;
+    --ease-bounce: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.resize-animation-stopper * {
-    animation: none !important;
-    transition: none !important;
-}
-
+/* =========================================
+   RESET & BASE STYLES
+   ========================================= */
 *,
 *::before,
 *::after {
@@ -60,191 +65,14 @@ main {
     width: 100%;
 }
 
-/* --- Footer --- */
-footer {
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-    background: rgba(15, 23, 42, 0.8);
-    padding: 4rem 0 2rem;
-    margin-top: 4rem;
-    position: relative;
-    z-index: 10;
-    width: 100%;
+.resize-animation-stopper * {
+    animation: none !important;
+    transition: none !important;
 }
 
-/* --- Modal (Restored) --- */
-.modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(8px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3000;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.modal-overlay.open {
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal {
-    background: #1e293b;
-    width: 90%;
-    max-width: 500px;
-    border-radius: var(--radius-md);
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-    transform: scale(0.95) translateY(10px);
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    position: relative;
-    color: var(--text-primary);
-}
-
-.modal-overlay.open .modal {
-    transform: scale(1) translateY(0);
-}
-
-.modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.modal-header h3 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-
-/* Close Modal "X" Icon */
-.modal-header .close-modal {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: var(--text-secondary);
-    transition: 0.2s;
-    padding: 0.5rem;
-    line-height: 1;
-}
-
-.modal-header .close-modal:hover {
-    color: var(--primary-color);
-    /* Updated to new primary */
-    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
-    transform: rotate(90deg);
-}
-
-/* Ensure buttons inside modal footer don't rotate if they have close-modal class */
-button.close-modal.btn {
-    transform: none !important;
-}
-
-/* --- Animated Industrial Background --- */
-/* --- Animated Industrial Background --- */
-.organic-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
-    overflow: hidden;
-    background: var(--bg-color);
-    /* Use variable */
-}
-
-.blob {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(80px);
-    opacity: 0.4;
-    animation: floating 20s infinite ease-in-out alternate;
-}
-
-/* ... blob children kept via view context or manual ... */
-
-/* --- Typography --- */
-h1 {
-    font-size: 3.5rem;
-    line-height: 1.1;
-    color: var(--text-primary);
-    /* Solid color for readability */
-}
-
-
-.blob:nth-child(1) {
-    width: 60vw;
-    height: 60vw;
-    background: var(--primary-color);
-    /* Amber */
-    top: -10%;
-    left: -10%;
-    animation-duration: 25s;
-    opacity: 0.15;
-    /* Softer opacity for light mode */
-}
-
-.blob:nth-child(2) {
-    width: 50vw;
-    height: 50vw;
-    background: var(--secondary-color);
-    /* Lime */
-    bottom: -10%;
-    right: -10%;
-    animation-duration: 30s;
-    animation-delay: -5s;
-    opacity: 0.15;
-}
-
-.blob:nth-child(3) {
-    width: 40vw;
-    height: 40vw;
-    background: var(--accent-color);
-    /* Sky Blue */
-    top: 40%;
-    left: 30%;
-    animation-duration: 22s;
-    animation-delay: -2s;
-    opacity: 0.15;
-}
-
-@keyframes floating {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-
-    100% {
-        transform: translate(30px, -30px) scale(1.1);
-    }
-}
-
-/* --- Glassmorphism Utilities --- */
-.glass-panel {
-    background: var(--glass-bg);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: var(--glass-border);
-    border-radius: var(--radius-md);
-    box-shadow: var(--glass-shadow);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-}
-
-/* --- Typography --- */
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
 h1,
 h2,
 h3,
@@ -260,8 +88,6 @@ h6 {
 h1 {
     font-size: 3.5rem;
     line-height: 1.1;
-    color: var(--text-primary);
-    /* Solid color for readability */
 }
 
 h2 {
@@ -271,94 +97,40 @@ h2 {
     margin-top: 3rem;
 }
 
-/* ... p and a styles ... */
-
-
-@media (max-width: 768px) {
-
-    /* Grid Stacking */
-    .split-layout {
-        grid-template-columns: 1fr !important;
-        gap: 3rem !important;
-        text-align: left;
-        /* Better readability than center */
-    }
-
-    .split-layout h2 {
-        font-size: 2rem !important;
-        /* Reduce massive font size */
-        margin-top: 1rem;
-    }
-
-    .split-layout ul {
-        padding-left: 0;
-    }
-
-    .hero h1 {
-        font-size: 2.5rem;
-    }
+h3 {
+    font-size: 1.5rem;
+    margin: 0;
 }
 
-
-
-
-@media (max-width: 600px) {
-    .container {
-        padding: 0 1.5rem;
-    }
-
-    .hero {
-        padding-top: 100px;
-        min-height: 100vh;
-        padding-bottom: 4rem;
-    }
-
-    .glass-panel {
-        padding: 2rem 1.5rem !important;
-    }
-
-    footer .container>div {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-        align-items: center !important;
-    }
-
-    .card-media.ratio-16-9 {
-        aspect-ratio: 4/3;
-        /* Taller images on mobile */
-    }
+/* =========================================
+   LAYOUT & CONTAINERS
+   ========================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
 }
 
-
-/* --- Hero Section --- */
-.hero {
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding-top: 100px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #1e293b;
-    position: relative;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
 }
 
-.hero h1 {
-    color: #ffffff;
-    /* White text on dark background */
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+/* Glassmorphism Generic Class */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: var(--glass-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--glass-shadow);
 }
 
-.hero p {
-    color: #f8fafc;
-    /* Light grey text */
-    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* --- Buttons --- */
+/* =========================================
+   BUTTONS
+   ========================================= */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -373,14 +145,15 @@ h2 {
     font-size: 0.95rem;
     letter-spacing: 0.02em;
     text-decoration: none;
-    /* Ensure no underline for links */
+    /* No underline for links */
 }
 
+/* Primary Button (Amber) */
 .btn-primary {
     background: var(--primary-dark);
     color: #fff !important;
-    /* Force text color */
     box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+    /* Note: check if blue shadow is intended for amber button? Kept from original */
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -392,11 +165,11 @@ h2 {
     color: #fff !important;
 }
 
+/* Secondary Button (Ghost/White) */
 .btn-secondary {
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: #ffffff;
-    /* White text for dark backgrounds */
 }
 
 .btn-secondary:hover {
@@ -406,9 +179,9 @@ h2 {
     border-color: rgba(255, 255, 255, 0.5);
 }
 
+/* Green Button */
 .btn-green {
     background: var(--secondary-color);
-    /* Lime green */
     color: #fff !important;
     box-shadow: 0 0 15px rgba(132, 204, 22, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -417,13 +190,14 @@ h2 {
 .btn-green:hover {
     transform: translateY(-1px);
     box-shadow: 0 0 25px rgba(132, 204, 22, 0.5);
-    background: #65a30d;
-    /* Darker lime */
+    background: var(--secondary-dark);
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
     color: #fff !important;
 }
 
-/* --- Forms (Compact & Dark) --- */
+/* =========================================
+   FORMS
+   ========================================= */
 .form-group {
     margin-bottom: 1rem;
 }
@@ -451,17 +225,6 @@ h2 {
     color: rgba(255, 255, 255, 0.5);
 }
 
-/* Newsletter specific override */
-.newsletter-input {
-    color: var(--text-primary) !important;
-    /* Dark text for light background */
-}
-
-.newsletter-input::placeholder {
-    color: var(--text-secondary) !important;
-    /* Grey placeholder */
-}
-
 .form-control:focus {
     outline: none;
     border-color: var(--primary-color);
@@ -469,6 +232,16 @@ h2 {
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
 
+/* Newsletter Specifics */
+.newsletter-input {
+    color: var(--text-primary) !important;
+}
+
+.newsletter-input::placeholder {
+    color: var(--text-secondary) !important;
+}
+
+/* Toggle Switch */
 .switch {
     position: relative;
     display: inline-block;
@@ -516,14 +289,9 @@ input:checked+.slider:before {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
-/* --- Cards Grid & Aspect Ratios --- */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin: 1.5rem 0;
-}
-
+/* =========================================
+   CARDS & MEDIA
+   ========================================= */
 .card {
     padding: 1.5rem;
     transition: transform var(--tr-speed), box-shadow var(--tr-speed);
@@ -536,11 +304,9 @@ input:checked+.slider:before {
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-    background: #ffffff;
     border-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Custom Aspect Ratios */
 .card-media {
     width: 100%;
     background-color: #e5e5e5;
@@ -576,11 +342,13 @@ input:checked+.slider:before {
 
 .card-overlay h3 {
     color: white;
-    margin: 0;
     font-size: 1.1rem;
+    margin: 0;
 }
 
-/* --- Badges --- */
+/* =========================================
+   BADGES
+   ========================================= */
 .badge {
     display: inline-block;
     padding: 0.25rem 0.6rem;
@@ -612,11 +380,89 @@ input:checked+.slider:before {
 
 .badge-accent {
     background: rgba(56, 189, 248, 0.1);
-    color: #7dd3fc;
+    color: var(--accent-light);
     border-color: rgba(56, 189, 248, 0.2);
 }
 
-/* --- Toast (Dark Theme) --- */
+/* =========================================
+   MODAL COMPONENT
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s var(--ease-bounce);
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #1e293b;
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95) translateY(10px);
+    transition: all 0.3s var(--ease-bounce);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    position: relative;
+    color: var(--text-primary);
+}
+
+.modal-overlay.open .modal {
+    transform: scale(1) translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-header .close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: 0.2s;
+    padding: 0.5rem;
+    line-height: 1;
+}
+
+.modal-header .close-modal:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+    transform: rotate(90deg);
+}
+
+/* Prevent footer buttons from rotating if they share the class */
+button.close-modal.btn {
+    transform: none !important;
+}
+
+/* =========================================
+   TOAST NOTIFICATIONS
+   ========================================= */
 #toast-container {
     bottom: 2rem;
     right: 2rem;
@@ -661,7 +507,99 @@ input:checked+.slider:before {
     color: #3b82f6;
 }
 
-/* --- Footer --- */
+/* =========================================
+   HERO & BACKGROUND ANIMATIONS
+   ========================================= */
+/* Hero Section */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #1e293b;
+    position: relative;
+}
+
+.hero h1 {
+    color: #ffffff;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    color: #f8fafc;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Organic Background Blobs */
+.organic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: var(--bg-color);
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: floating 20s infinite ease-in-out alternate;
+}
+
+.blob:nth-child(1) {
+    width: 60vw;
+    height: 60vw;
+    background: var(--primary-color);
+    top: -10%;
+    left: -10%;
+    animation-duration: 25s;
+    opacity: 0.15;
+}
+
+.blob:nth-child(2) {
+    width: 50vw;
+    height: 50vw;
+    background: var(--secondary-color);
+    bottom: -10%;
+    right: -10%;
+    animation-duration: 30s;
+    animation-delay: -5s;
+    opacity: 0.15;
+}
+
+.blob:nth-child(3) {
+    width: 40vw;
+    height: 40vw;
+    background: var(--accent-color);
+    top: 40%;
+    left: 30%;
+    animation-duration: 22s;
+    animation-delay: -2s;
+    opacity: 0.15;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
 footer {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     background: rgba(255, 255, 255, 0.4);
@@ -672,7 +610,45 @@ footer {
     width: 100%;
 }
 
-/* --- Logo Animation --- */
+/* =========================================
+   QUIZZ PAGE SPECIFICS
+   ========================================= */
+.quizz-hero {
+    background: linear-gradient(135deg, rgba(30, 27, 75, 0.85) 0%, rgba(30, 41, 59, 0.75) 100%), url('../assets/img/heroes/hero-quizz.jpg?v=final');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 60px;
+    color: white;
+    text-align: center;
+    box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.quizz-container {
+    max-width: 800px;
+    margin: -40px auto 60px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.quizz-card {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.progress-container {
+    margin-bottom: 30px;
+}
+
+/* =========================================
+   LOGO ANIMATION
+   ========================================= */
 #lelogo {
     overflow: visible !important;
 }
@@ -683,22 +659,18 @@ footer {
     transition: all 0.3s ease-in-out;
 }
 
-/* Hover Effects - Trigger on Top Nav Hover */
 .top-nav:hover #lelogo polygon {
     animation: bounce-logo-top 0.8s ease-in-out;
 }
 
 .top-nav:hover #lelogo polyline:nth-of-type(2) {
-    /* Middle Layer */
     animation: bounce-logo-mid 0.8s ease-in-out 0.1s;
 }
 
 .top-nav:hover #lelogo polyline:nth-of-type(1) {
-    /* Bottom Layer */
     animation: bounce-logo-bot 0.8s ease-in-out 0.2s;
 }
 
-/* Keyframes */
 @keyframes bounce-logo-top {
 
     0%,
@@ -716,7 +688,7 @@ footer {
 
     85% {
         transform: translateY(-1px);
-        color: #ffffff
+        color: #ffffff;
     }
 }
 
@@ -737,7 +709,7 @@ footer {
 
     85% {
         transform: translateY(-1px);
-        color: #109116
+        color: #109116;
     }
 }
 
@@ -758,6 +730,57 @@ footer {
 
     85% {
         transform: translateY(-1px);
-        color: #ff0000
+        color: #ff0000;
+    }
+}
+
+/* =========================================
+   MEDIA QUERIES
+   ========================================= */
+@media (max-width: 768px) {
+    .split-layout {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+        text-align: left;
+    }
+
+    .split-layout h2 {
+        font-size: 2rem !important;
+        margin-top: 1rem;
+    }
+
+    .split-layout ul {
+        padding-left: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .hero {
+        padding-top: 100px;
+        min-height: 100vh;
+        padding-bottom: 4rem;
+    }
+
+    .glass-panel {
+        padding: 2rem 1.5rem !important;
+    }
+
+    footer .container>div {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        align-items: center !important;
+    }
+
+    .card-media.ratio-16-9 {
+        aspect-ratio: 4/3;
     }
 }

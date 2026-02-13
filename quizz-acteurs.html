@@ -10,7 +10,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://github.com/ProfLambda/cours_ia" />
+    <meta property="og:url" content="https://proflambda.github.io/ia/" />
     <meta property="og:title" content="Quizz Acteurs IA - Testez-vous avec ProfLambda" />
     <meta property="og:description"
         content="Êtes-vous incollable sur l'écosystème mondial de l'IA ? Faites le test de ProfLambda !" />
@@ -18,7 +18,7 @@
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://github.com/ProfLambda/cours_ia" />
+    <meta property="twitter:url" content="https://proflambda.github.io/ia/" />
     <meta property="twitter:title" content="Quizz Acteurs IA - Testez-vous avec ProfLambda" />
     <meta property="twitter:description"
         content="Êtes-vous incollable sur l'écosystème mondial de l'IA ? Faites le test de ProfLambda !" />
@@ -30,10 +30,14 @@
         rel="stylesheet">
     <style>
         .quizz-hero {
-            background: linear-gradient(135deg, var(--primary-dark) 0%, #1e1b4b 100%);
+            /* Mise à jour v2 : Gradient ajusté et cache-busting */
+            background: linear-gradient(135deg, rgba(30, 27, 75, 0.85) 0%, rgba(30, 41, 59, 0.75) 100%), url('assets/img/heroes/hero-quizz.jpg?v=final');
+            background-size: cover;
+            background-position: center;
             padding: 100px 0 60px;
             color: white;
             text-align: center;
+            box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.2);
         }
 
         .quizz-container {

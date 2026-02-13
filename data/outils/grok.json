@@ -1,0 +1,17 @@
+{
+    "name": "Grok",
+    "publisher": "xAI",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "L'IA développée par xAI (Elon Musk), réputée pour son humour, son franc-parler et son accès en temps réel aux données de X (Twitter).",
+    "tag": "Premium (X Premium)",
+    "tag_class": "badge-orange",
+    "url": "https://x.ai/",
+    "features": [
+        "Accès temps réel aux news de X",
+        "Personnalité audacieuse",
+        "Modèle Grok-2 ultra-performant",
+        "Génération d'images intégrée"
+    ],
+    "icon": "assets/img/logos/logo-xai.png"
+}

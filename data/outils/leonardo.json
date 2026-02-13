@@ -1,0 +1,17 @@
+{
+    "name": "Leonardo.ai",
+    "publisher": "Leonardo.ai",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "Une plateforme de création artistique complète offrant des modèles variés (Phoenix, XL) et des outils d'édition puissants.",
+    "tag": "Gratuit (150 j./jour)",
+    "tag_class": "badge-green",
+    "url": "https://leonardo.ai",
+    "features": [
+        "Modèles spécialisés (RPG, Cinema, etc.)",
+        "Canvas Editor pour l'outpainting",
+        "Génération en temps réel",
+        "Contrôle total sur les styles"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

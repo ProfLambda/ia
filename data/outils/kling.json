@@ -1,0 +1,17 @@
+{
+    "name": "Kling AI",
+    "publisher": "Kuaishou",
+    "category": "video",
+    "category_name": "Vidéo & Audio",
+    "description": "Un puissant générateur de vidéo chinois désormais accessible mondialement, capable de créer des scènes hyper-réalistes jusqu'à 2 minutes.",
+    "tag": "Version d'essai",
+    "tag_class": "badge-green",
+    "url": "https://klingai.com",
+    "features": [
+        "Vidéos ultra-longues (jusqu'à 2 min)",
+        "Réalisme cinématographique",
+        "Mouvements complexes et cohérents",
+        "Mode Pro disponible"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

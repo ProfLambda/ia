@@ -1,0 +1,17 @@
+{
+    "name": "Hunyuan-3D",
+    "publisher": "Tencent",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "La première plateforme tout-en-un pour la création 3D par IA : générez des modèles, des textures et des animations à partir de texte ou d'images.",
+    "tag": "Gratuit / Open Source",
+    "tag_class": "badge-green",
+    "url": "https://3d.hunyuan.tencent.com/",
+    "features": [
+        "Text-to-3D et Image-to-3D haute fidélité",
+        "Génération d'animations 3D automatiques",
+        "Création de textures à partir de sketchs",
+        "Modèles basse polygamie optimisés (Low-poly)"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

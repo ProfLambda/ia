@@ -73,7 +73,28 @@ function renderNavigation(container) {
     svg.appendChild(path);
 
     logoLink.appendChild(svg);
-    logoLink.appendChild(document.createTextNode(" Cours IA"));
+
+    // Brand Container (New Styled Logo)
+    const brandContainer = document.createElement("div");
+    brandContainer.style.cssText = "display: flex; flex-direction: column; line-height: 1.1; margin-left: 10px;";
+
+    const brandName = document.createElement("span");
+    brandName.textContent = "ProfLambda";
+    brandName.style.cssText = "font-weight: 800; font-size: 1.1rem; color: var(--text-primary); letter-spacing: -0.02em;";
+
+    const brandSub = document.createElement("span");
+    brandSub.textContent = "Cours IA • Gemini";
+    brandSub.style.cssText = "font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); display: inline-block; position: relative; padding-bottom: 3px;";
+
+    // Underline effect
+    const underline = document.createElement("div");
+    underline.style.cssText = "height: 3px; width: 100%; background: linear-gradient(90deg, #38bdf8, #8b5cf6); border-radius: 2px;";
+
+    brandSub.appendChild(underline);
+    brandContainer.appendChild(brandName);
+    brandContainer.appendChild(brandSub);
+
+    logoLink.appendChild(brandContainer);
 
     // Menu
     const menuWrapper = document.createElement("div");
@@ -176,7 +197,7 @@ function renderFooter(container) {
     const brandSp = document.createElement("span");
     brandSp.style.fontWeight = "800";
     brandSp.style.color = "var(--primary-dark)";
-    brandSp.textContent = "Cours IA & Gemini";
+    brandSp.textContent = "ProfLambda | Cours IA";
 
     const separator = document.createElement("span");
     separator.style.color = "var(--text-secondary)";

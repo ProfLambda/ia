@@ -1,0 +1,17 @@
+{
+    "name": "Mistral Le Chat",
+    "publisher": "Mistral AI",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "L'interface conversationnelle du champion français de l'IA, offrant un accès fluide à ses modèles Pixtral et Mistral Large.",
+    "tag": "Gratuit",
+    "tag_class": "badge-green",
+    "url": "https://chat.mistral.ai/",
+    "features": [
+        "Modèles souverains performants",
+        "Multimodul : Texte et Images",
+        "Respectueux des données (RGPD)",
+        "Vitesse de réponse exceptionnelle"
+    ],
+    "icon": "assets/img/logos/logo-mistral.svg"
+}

@@ -10,7 +10,7 @@
 
 	<!-- Open Graph / Facebook -->
 	<meta property="og:type" content="website" />
-	<meta property="og:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="og:url" content="https://proflambda.github.io/ia/" />
 	<meta property="og:title" content="Guide Gemini - Optimisez vos prompts avec ProfLambda" />
 	<meta property="og:description"
 		content="Guide complet sur l'outil de Google : prompts, cas d'usage et astuces pédagogiques par ProfLambda." />
@@ -18,7 +18,7 @@
 
 	<!-- Twitter -->
 	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:url" content="https://github.com/ProfLambda/cours_ia" />
+	<meta property="twitter:url" content="https://proflambda.github.io/ia/" />
 	<meta property="twitter:title" content="Guide Gemini - Optimisez vos prompts avec ProfLambda" />
 	<meta property="twitter:description"
 		content="Guide complet sur l'outil de Google : prompts, cas d'usage et astuces pédagogiques par ProfLambda." />
@@ -27,11 +27,30 @@
 		@import url("css/fonts.css");
 
 		.hero {
-			background: linear-gradient(to bottom, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.9)), url("C:/Users/Bio/.gemini/antigravity/brain/baf7e3d1-96b4-44b7-823d-ad3adec5c744/hero_gemini_fix_v2.png");
+			background: linear-gradient(135deg, rgba(15, 23, 42, 0.9) 0%, rgba(30, 41, 59, 0.8) 100%), url('assets/img/heroes/hero-gemini.jpg');
 			background-size: cover;
-			background-position: center;
+			background-attachment: fixed;
+			position: relative;
+			overflow: hidden;
 			min-height: 50vh;
 			padding-top: 120px;
+		}
+
+		.hero::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: radial-gradient(circle at 70% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 60%),
+				radial-gradient(circle at 30% 70%, rgba(217, 70, 239, 0.1) 0%, transparent 60%);
+			z-index: 0;
+		}
+
+		.hero .container {
+			position: relative;
+			z-index: 1;
 		}
 
 		.nav-jump {

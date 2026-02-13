@@ -1,0 +1,17 @@
+{
+    "name": "Pika Art",
+    "publisher": "Pika Labs",
+    "category": "video",
+    "category_name": "Vidéo & Audio",
+    "description": "Une plateforme de génération vidéo IA puissante, connue pour sa fluidité et ses outils d'édition comme le Lip-sync et le Sound Effects.",
+    "tag": "Freemium",
+    "tag_class": "badge-orange",
+    "url": "https://pika.art/",
+    "features": [
+        "Génération de vidéos réalistes",
+        "Synchronisation labiale (Lip-sync)",
+        "Génération de bruitages",
+        "Modification de zones spécifiques"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

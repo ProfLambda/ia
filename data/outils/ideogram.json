@@ -1,0 +1,17 @@
+{
+    "name": "Ideogram 2.0",
+    "publisher": "Ideogram",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "Le meilleur outil pour intégrer du texte lisible et stylisé dans vos images générées par IA.",
+    "tag": "Freemium",
+    "tag_class": "badge-green",
+    "url": "https://ideogram.ai",
+    "features": [
+        "Rendu de texte parfait",
+        "Outils de mise en page graphique",
+        "Styles typographiques variés",
+        "Idéal pour les logos et posters"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

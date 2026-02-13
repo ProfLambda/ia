@@ -1,0 +1,17 @@
+{
+    "name": "DeepL Write",
+    "publisher": "DeepL",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "Bien plus qu'un traducteur : une IA qui corrige la grammaire, la ponctuation et propose des reformulations pour un ton parfait.",
+    "tag": "Gratuit",
+    "tag_class": "badge-green",
+    "url": "https://www.deepl.com/write",
+    "features": [
+        "Correction grammaticale avancée",
+        "Suggestions de style et de ton",
+        "Reformulation de phrases entières",
+        "Multilingue (Français, Anglais, etc.)"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Luma Dream Machine",
+    "publisher": "Luma AI",
+    "category": "video",
+    "category_name": "Vidéo & Audio",
+    "description": "Un modèle de génération vidéo ultra-rapide capable de transformer des images et des descriptions textuelles en scènes réalistes de haute qualité.",
+    "tag": "Gratuit (30/mois)",
+    "tag_class": "badge-green",
+    "url": "https://lumalabs.ai/dream-machine",
+    "features": [
+        "Texte vers vidéo haute résolution",
+        "Image vers vidéo (Image-to-Video)",
+        "Physique et mouvements fluides",
+        "Rendu ultra-réaliste"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

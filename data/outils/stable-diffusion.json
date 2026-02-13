@@ -1,0 +1,17 @@
+{
+    "name": "Stable Diffusion",
+    "publisher": "Stability AI",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "Le modèle de génération d'images open-source le plus populaire. Il offre un contrôle total sur la création et peut être exécuté localement.",
+    "tag": "Open Source",
+    "tag_class": "badge-green",
+    "url": "https://stability.ai/",
+    "features": [
+        "Contrôle total sur les prompts",
+        "Installable localement",
+        "Vaste écosystème de plugins",
+        "Génération ultra-rapide"
+    ],
+    "icon": "assets/img/logos/logo-stability.png"
+}

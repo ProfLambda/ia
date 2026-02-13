@@ -1,0 +1,17 @@
+{
+    "name": "Gemini",
+    "publisher": "Google",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "L'IA multimodale de Google, intégrée dans tout l'écosystème Workspace, capable de traiter du texte, du code, des images et des vidéos nativement.",
+    "tag": "Gratuit / Advanced",
+    "tag_class": "badge-blue",
+    "url": "https://gemini.google.com/",
+    "features": [
+        "Fenêtre de contexte massive (1M+ tokens)",
+        "Intégration native Google Drive/Docs",
+        "Génération d'images (Imagen 3)",
+        "Analyse de vidéos longues"
+    ],
+    "icon": "assets/img/logos/logo-gemini.svg"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Suno",
+    "publisher": "Suno AI",
+    "category": "video",
+    "category_name": "Vidéo & Audio",
+    "description": "L'IA qui révolutionne la création musicale : composez des chansons complètes avec paroles et chant dans n'importe quel style.",
+    "tag": "Freemium",
+    "tag_class": "badge-green",
+    "url": "https://suno.com",
+    "features": [
+        "Génération de chansons complètes (2 min+)",
+        "Styles musicaux illimités",
+        "Paroles générées ou personnalisées",
+        "Qualité studio"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

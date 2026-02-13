@@ -1,0 +1,17 @@
+{
+    "name": "Notion AI",
+    "publisher": "Notion",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "L'assistant IA intégré directement dans votre espace de travail pour rédiger, résumer et organiser vos idées.",
+    "tag": "Abonnement",
+    "tag_class": "badge-orange",
+    "url": "https://www.notion.so/product/ai",
+    "features": [
+        "Rédaction assistants (ébauches, corrections)",
+        "Résumés de pages automatiques",
+        "Extraction d'actions depuis des notes",
+        "Brainstorming intégré"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

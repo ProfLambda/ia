@@ -1,0 +1,17 @@
+{
+    "name": "Hugging Face",
+    "publisher": "Hugging Face Inc.",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "La plateforme collaborative de référence pour l'IA. Elle héberge des milliers de modèles, jeux de données et démos (Spaces) accessibles à tous.",
+    "tag": "Open Source",
+    "tag_class": "badge-green",
+    "url": "https://huggingface.co/",
+    "features": [
+        "Accès à des milliers de LLM",
+        "Bibliothèque Transformers",
+        "Démos interactives gratuites",
+        "Hébergement de datasets"
+    ],
+    "icon": "assets/img/logos/logo-huggingface.svg"
+}

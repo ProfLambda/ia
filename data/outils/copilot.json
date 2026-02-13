@@ -1,0 +1,17 @@
+{
+    "name": "Microsoft Copilot",
+    "publisher": "Microsoft",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "Votre compagnon IA quotidien, utilisant la puissance de GPT-4 et DALL-E 3 pour booster votre productivité dans Windows et Office.",
+    "tag": "Gratuit / Pro",
+    "tag_class": "badge-blue",
+    "url": "https://copilot.microsoft.com/",
+    "features": [
+        "Basé sur GPT-4 Turbo gratuitement",
+        "Recherche web en temps réel (Bing)",
+        "Génération d'images DALL-E 3",
+        "Intégration Windows 11"
+    ],
+    "icon": "assets/img/logos/logo-microsoft.png"
+}
