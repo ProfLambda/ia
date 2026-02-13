@@ -1,0 +1,40 @@
+:root {
+    /* --- Palette de Couleurs (Spring & Sun - Light & Airy) --- */
+    --bg-color: #fdfdfd;
+    /* Warm White / Cream */
+    --text-primary: #1e293b;
+    /* Slate 800 (Soft Dark) */
+    --text-secondary: #64748b;
+    /* Slate 500 (Soft Grey) */
+
+    --primary-color: #f59e0b;
+    /* Sun Amber */
+    --primary-dark: #d97706;
+    /* Deep Amber */
+    --secondary-color: #84cc16;
+    /* Grass Green */
+    --secondary-dark: #65a30d;
+    /* Darker Green */
+    --accent-color: #38bdf8;
+    /* Sky Blue */
+    --accent-light: #7dd3fc;
+    /* Light Blue */
+    --danger-color: #ef4444;
+    /* Alert Red */
+
+    /* --- Glassmorphism --- */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    /* Frosted White */
+    --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+    --glass-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+
+    /* --- Dimensions & Spacing --- */
+    --radius-sm: 12px;
+    --radius-md: 20px;
+    --radius-lg: 30px;
+    /* Softer, rounder corners */
+
+    /* --- Transitions --- */
+    --tr-speed: 0.3s;
+    --ease-bounce: cubic-bezier(0.16, 1, 0.3, 1);
+}

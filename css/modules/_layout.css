@@ -1,0 +1,75 @@
+/* =========================================
+   LAYOUT & CONTAINERS
+   ========================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+/* Glassmorphism Generic Class */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: var(--glass-border);
+    border-radius: var(--radius-md);
+    box-shadow: var(--glass-shadow);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.4);
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 10;
+    width: 100%;
+}
+
+/* =========================================
+   MEDIA QUERIES
+   ========================================= */
+@media (max-width: 768px) {
+    .split-layout {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
+        text-align: left;
+    }
+
+    .split-layout h2 {
+        font-size: 2rem !important;
+        margin-top: 1rem;
+    }
+
+    .split-layout ul {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .glass-panel {
+        padding: 2rem 1.5rem !important;
+    }
+
+    footer .container>div {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        align-items: center !important;
+    }
+}

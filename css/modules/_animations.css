@@ -1,0 +1,152 @@
+/* =========================================
+   BACKGROUND ANIMATIONS
+   ========================================= */
+/* Organic Background Blobs */
+.organic-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    background: var(--bg-color);
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.4;
+    animation: floating 20s infinite ease-in-out alternate;
+}
+
+.blob:nth-child(1) {
+    width: 60vw;
+    height: 60vw;
+    background: var(--primary-color);
+    top: -10%;
+    left: -10%;
+    animation-duration: 25s;
+    opacity: 0.15;
+}
+
+.blob:nth-child(2) {
+    width: 50vw;
+    height: 50vw;
+    background: var(--secondary-color);
+    bottom: -10%;
+    right: -10%;
+    animation-duration: 30s;
+    animation-delay: -5s;
+    opacity: 0.15;
+}
+
+.blob:nth-child(3) {
+    width: 40vw;
+    height: 40vw;
+    background: var(--accent-color);
+    top: 40%;
+    left: 30%;
+    animation-duration: 22s;
+    animation-delay: -2s;
+    opacity: 0.15;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(30px, -30px) scale(1.1);
+    }
+}
+
+/* =========================================
+   LOGO ANIMATION
+   ========================================= */
+#lelogo {
+    overflow: visible !important;
+}
+
+#lelogo polygon,
+#lelogo polyline {
+    transform-origin: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.top-nav:hover #lelogo polygon {
+    animation: bounce-logo-top 0.8s ease-in-out;
+}
+
+.top-nav:hover #lelogo polyline:nth-of-type(2) {
+    animation: bounce-logo-mid 0.8s ease-in-out 0.1s;
+}
+
+.top-nav:hover #lelogo polyline:nth-of-type(1) {
+    animation: bounce-logo-bot 0.8s ease-in-out 0.2s;
+}
+
+@keyframes bounce-logo-top {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-16px);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+
+    85% {
+        transform: translateY(-1px);
+        color: #ffffff;
+    }
+}
+
+@keyframes bounce-logo-mid {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+
+    85% {
+        transform: translateY(-1px);
+        color: #109116;
+    }
+}
+
+@keyframes bounce-logo-bot {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
+
+    70% {
+        transform: translateY(0);
+    }
+
+    85% {
+        transform: translateY(-1px);
+        color: #ff0000;
+    }
+}

@@ -1,0 +1,289 @@
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--tr-speed);
+    border: none;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    /* No underline for links */
+}
+
+/* Primary Button (Amber) */
+.btn-primary {
+    background: var(--primary-dark);
+    color: #fff !important;
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.5);
+    background: var(--primary-color);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    color: #fff !important;
+}
+
+/* Secondary Button (Ghost/White) */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-1px);
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Green Button */
+.btn-green {
+    background: var(--secondary-color);
+    color: #fff !important;
+    box-shadow: 0 0 15px rgba(132, 204, 22, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-green:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 0 25px rgba(132, 204, 22, 0.5);
+    background: var(--secondary-dark);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    color: #fff !important;
+}
+
+/* =========================================
+   CARDS & MEDIA
+   ========================================= */
+.card {
+    padding: 1.5rem;
+    transition: transform var(--tr-speed), box-shadow var(--tr-speed);
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+.card-media {
+    width: 100%;
+    background-color: #e5e5e5;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ratio-16-9 {
+    aspect-ratio: 16 / 9;
+}
+
+.ratio-1-1 {
+    aspect-ratio: 1 / 1;
+}
+
+.ratio-4-3 {
+    aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 600px) {
+    .card-media.ratio-16-9 {
+        aspect-ratio: 4/3;
+    }
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    color: white;
+}
+
+.card-overlay h3 {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* =========================================
+   BADGES
+   ========================================= */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid transparent;
+}
+
+.badge-green {
+    background: rgba(16, 185, 129, 0.1);
+    color: #34d399;
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.badge-orange {
+    background: rgba(245, 158, 11, 0.1);
+    color: #fbbf24;
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.badge-blue {
+    background: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.badge-accent {
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-light);
+    border-color: rgba(56, 189, 248, 0.2);
+}
+
+/* =========================================
+   MODAL COMPONENT
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s var(--ease-bounce);
+}
+
+.modal-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    background: #1e293b;
+    width: 90%;
+    max-width: 500px;
+    border-radius: var(--radius-md);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95) translateY(10px);
+    transition: all 0.3s var(--ease-bounce);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    position: relative;
+    color: var(--text-primary);
+}
+
+.modal-overlay.open .modal {
+    transform: scale(1) translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-header .close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+    transition: 0.2s;
+    padding: 0.5rem;
+    line-height: 1;
+}
+
+.modal-header .close-modal:hover {
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+    transform: rotate(90deg);
+}
+
+/* Prevent footer buttons from rotating if they share the class */
+button.close-modal.btn {
+    transform: none !important;
+}
+
+/* =========================================
+   TOAST NOTIFICATIONS
+   ========================================= */
+#toast-container {
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.toast {
+    padding: 0.8rem 1.2rem;
+    border-radius: var(--radius-sm);
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    font-weight: 500;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.toast::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-shadow: 0 0 8px currentColor;
+}
+
+.toast.success::before {
+    background: #10b981;
+    color: #10b981;
+}
+
+.toast.error::before {
+    background: #ef4444;
+    color: #ef4444;
+}
+
+.toast.info::before {
+    background: #3b82f6;
+    color: #3b82f6;
+}
