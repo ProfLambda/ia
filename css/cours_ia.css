@@ -1,7 +1,7 @@
-@import 'modules/_variables.css';
-@import 'modules/_base.css';
-@import 'modules/_layout.css';
-@import 'modules/_components.css';
-@import 'modules/_forms.css';
-@import 'modules/_animations.css';
-@import 'modules/_pages.css';
+@import 'modules/variables.css';
+@import 'modules/base.css';
+@import 'modules/layout.css';
+@import 'modules/components.css';
+@import 'modules/forms.css';
+@import 'modules/animations.css';
+@import 'modules/pages.css';
