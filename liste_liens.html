@@ -1,0 +1,283 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annuaire des Liens Externes - ProfLambda</title>
+    <link rel="stylesheet" href="css/cours_ia.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <style>
+        @import url("css/fonts.css");
+
+        /* Hero Link Directory */
+        .hero-links {
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)),
+                url("assets/img/heroes/hero-ai.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 0 4rem;
+            text-align: center;
+        }
+
+        .link-directory {
+            padding: 3rem 0;
+        }
+
+        .search-box {
+            margin-bottom: 2rem;
+            position: relative;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            background: var(--glass-bg);
+            border: var(--glass-border);
+            border-radius: 50px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .search-box input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .file-section {
+            margin-bottom: 1.5rem;
+            background: var(--glass-bg);
+            border: var(--glass-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .file-header {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 0.75rem 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .file-name {
+            font-family: 'Courier New', Courier, monospace;
+            color: var(--primary-light);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .link-list {
+            padding: 0;
+        }
+
+        .link-item {
+            padding: 0.5rem 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.2s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+        }
+
+        .link-item:last-child {
+            border-bottom: none;
+        }
+
+        .link-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .link-url {
+            color: var(--text-secondary);
+            text-decoration: none;
+            word-break: break-all;
+            font-size: 0.9rem;
+            flex-grow: 1;
+            transition: color 0.2s;
+        }
+
+        .link-url:hover {
+            color: var(--primary-color);
+        }
+
+        .link-tag {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--primary-light);
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            box-shadow: 0 0 10px var(--primary-color);
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding: 1.25rem 2rem;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: var(--radius-md);
+            font-size: 0.9rem;
+            border: var(--glass-border);
+            justify-content: center;
+        }
+
+        .stat-item {
+            color: var(--text-secondary);
+        }
+
+        .stat-item span {
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-left: 0.5rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav-placeholder"></div>
+
+    <section class="hero hero-links">
+        <div class="container text-center">
+            <span class="badge badge-green" style="margin-bottom: 1rem">Audit & Ressources</span>
+            <h1 class="gradient-text">Annuaire des Liens</h1>
+            <p style="max-width: 700px; margin: 1.5rem auto; opacity: 0.8;">Explorez la liste exhaustive des ressources,
+                sources et documentations citées dans le projet ProfLambda.</p>
+        </div>
+    </section>
+
+    <main class="container link-directory">
+        <div class="stats-bar">
+            <div class="stat-item">Fichiers analysés <span id="total-files">0</span></div>
+            <div class="stat-item">Liens détectés <span id="total-links">0</span></div>
+            <div class="stat-item">Domaines uniques <span id="unique-links">0</span></div>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="link-search" placeholder="Rechercher par fichier ou domaine..." />
+        </div>
+
+        <div id="links-container">
+            <!-- Chargement dynamique... -->
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const container = document.getElementById('links-container');
+            const totalFilesSpan = document.getElementById('total-files');
+            const totalLinksSpan = document.getElementById('total-links');
+            const uniqueLinksSpan = document.getElementById('unique-links');
+
+            // Liste de liens à exclure (redondants)
+            const excludedLinks = [
+                'https://proflambda.github.io/ia/',
+                'https://avatars.githubusercontent.com/u/234212850?v=4'
+            ];
+
+            try {
+                // Les données injectées
+                const rawDataString = '[{"File":"data/acteurs/alephalpha.json","Link":"https://aleph-alpha.com/luminous/"},{"File":"data/acteurs/alephalpha.json","Link":"https://sifted.eu/articles/aleph-alpha-series-b-500m-round"},{"File":"data/acteurs/alephalpha.json","Link":"https://en.wikipedia.org/wiki/Aleph_Alpha"},{"File":"data/acteurs/alephalpha.json","Link":"https://aleph-alpha.com"},{"File":"data/acteurs/alibaba.json","Link":"https://qwenlm.github.io/"},{"File":"data/acteurs/alibaba.json","Link":"https://github.com/QwenLM/Qwen"},{"File":"data/acteurs/alibaba.json","Link":"https://en.wikipedia.org/wiki/Alibaba_Cloud"},{"File":"data/acteurs/alibaba.json","Link":"https://www.modelscope.cn/home"},{"File":"data/acteurs/alibaba.json","Link":"https://www.alibabacloud.com/product/ai"},{"File":"data/acteurs/amazon.json","Link":"https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html"},{"File":"data/acteurs/amazon.json","Link":"https://www.aboutamazon.fr/actualites/innovation/comment-amazon-utilise-l-ia-pour-detecter-les-produits-fragiles"},{"File":"data/acteurs/amazon.json","Link":"https://aws.amazon.com/blogs/machine-learning/"},{"File":"data/acteurs/amazon.json","Link":"https://ir.aboutamazon.com/"},{"File":"data/acteurs/amazon.json","Link":"https://www.aboutamazon.com/news/company-news/amazon-ceo-andy-jassy-2024-letter-to-shareholders"},{"File":"data/acteurs/amazon.json","Link":"https://www.aboutamazon.com/news/tag/artificial-intelligence"},{"File":"data/acteurs/amazon.json","Link":"https://aws.amazon.com/bedrock/"},{"File":"data/acteurs/amazon.json","Link":"https://aws.amazon.com/sagemaker/"},{"File":"data/acteurs/amd.json","Link":"https://www.amd.com/fr/products/accelerators/instinct/mi300/mi300x.html"},{"File":"data/acteurs/amd.json","Link":"https://en.wikipedia.org/wiki/Advanced_Micro_Devices"},{"File":"data/acteurs/amd.json","Link":"https://www.amd.com"},{"File":"data/acteurs/anthropic.json","Link":"https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback"},{"File":"data/acteurs/anthropic.json","Link":"https://www.anthropic.com/constitution"},{"File":"data/acteurs/anthropic.json","Link":"https://www.anthropic.com/news"},{"File":"data/acteurs/anthropic.json","Link":"https://www.anthropic.com/research"},{"File":"data/acteurs/anthropic.json","Link":"https://arxiv.org/abs/2212.08073"},{"File":"data/acteurs/anthropic.json","Link":"https://claude.ai"},{"File":"data/acteurs/anthropic.json","Link":"https://console.anthropic.com/"},{"File":"data/acteurs/anthropic.json","Link":"https://docs.anthropic.com/"},{"File":"data/acteurs/apple.json","Link":"https://www.amazon.science/news-and-features/how-project-p-i-helps-amazon-remove-imperfect-products"},{"File":"data/acteurs/apple.json","Link":"https://www.apple.com/newsroom/"},{"File":"data/acteurs/apple.json","Link":"https://security.apple.com/blog/private-cloud-compute/"},{"File":"data/acteurs/apple.json","Link":"https://www.apple.com/apple-intelligence/"},{"File":"data/acteurs/apple.json","Link":"https://www.apple.com/apple-intelligence/"},{"File":"data/acteurs/apple.json","Link":"https://developer.apple.com/machine-learning/"},{"File":"data/acteurs/baidu.json","Link":"https://ernie.baidu.com/"},{"File":"data/acteurs/baidu.json","Link":"https://en.wikipedia.org/wiki/Baidu"},{"File":"data/acteurs/baidu.json","Link":"https://yiyan.baidu.com/"},{"File":"data/acteurs/baidu.json","Link":"https://cloud.baidu.com/"},{"File":"data/acteurs/cohere.json","Link":"https://en.wikipedia.org/wiki/Cohere"},{"File":"data/acteurs/cohere.json","Link":"https://arxiv.org/abs/1706.03762"},{"File":"data/acteurs/cohere.json","Link":"https://en.wikipedia.org/wiki/Cohere"},{"File":"data/acteurs/cohere.json","Link":"https://cohere.com"},{"File":"data/acteurs/deepl.json","Link":"https://www.deepl.com/fr/write"},{"File":"data/acteurs/deepl.json","Link":"https://en.wikipedia.org/wiki/DeepL_Translator"},{"File":"data/acteurs/deepl.json","Link":"https://www.deepl.com"},{"File":"data/acteurs/google.json","Link":"https://www.bbc.com/sounds/play/m001v9r6"},{"File":"data/acteurs/google.json","Link":"https://deepmind.google/about/"},{"File":"data/acteurs/google.json","Link":"https://deepmind.google/blog/"},{"File":"data/acteurs/google.json","Link":"https://www.nobelprize.org/prizes/chemistry/2024/summary/"},{"File":"data/acteurs/google.json","Link":"https://arxiv.org/abs/2403.05530"},{"File":"data/acteurs/google.json","Link":"https://deepmind.google"},{"File":"data/acteurs/google.json","Link":"https://blog.google/technology/ai/"},{"File":"data/acteurs/google.json","Link":"https://gemini.google.com"},{"File":"data/acteurs/huawei.json","Link":"https://www.huaweicloud.com/intl/en-us/product/pangu.html"},{"File":"data/acteurs/huawei.json","Link":"https://en.wikipedia.org/wiki/Huawei_PanGu"},{"File":"data/acteurs/huawei.json","Link":"https://www.huaweicloud.com/intl/en-us/product/pangu.html"},{"File":"data/acteurs/huawei.json","Link":"https://www.huawei.com/en/news"},{"File":"data/acteurs/huawei.json","Link":"https://www.huawei.com/en/"},{"File":"data/acteurs/huawei.json","Link":"https://www.huaweicloud.com/intl/en-us/"},{"File":"data/acteurs/huggingface.json","Link":"https://huggingface.co/learn/llm-course/fr/chapter4/1"},{"File":"data/acteurs/huggingface.json","Link":"https://huggingface.co/"},{"File":"data/acteurs/huggingface.json","Link":"https://en.wikipedia.org/wiki/Hugging_Face"},{"File":"data/acteurs/huggingface.json","Link":"https://en.wikipedia.org/wiki/Hugging_Face"},{"File":"data/acteurs/huggingface.json","Link":"https://huggingface.co"},{"File":"data/acteurs/ibm.json","Link":"https://en.wikipedia.org/wiki/Watson_(computer)#Jeopardy!"},{"File":"data/acteurs/ibm.json","Link":"https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)"},{"File":"data/acteurs/ibm.json","Link":"https://en.wikipedia.org/wiki/IBM"},{"File":"data/acteurs/ibm.json","Link":"https://www.ibm.com/watsonx"},{"File":"data/acteurs/intel.json","Link":"https://www.intel.fr/content/www/fr/fr/products/details/processors/ai-accelerators/gaudi.html"},{"File":"data/acteurs/intel.json","Link":"https://www.lemagit.fr/actualites/366619382/Puces-IA-dix-fournisseurs-proposent-une-alternative-a-Nvidia"},{"File":"data/acteurs/intel.json","Link":"https://www.intel.com/content/www/us/en/newsroom/home.html"},{"File":"data/acteurs/intel.json","Link":"https://www.intel.com/content/www/us/en/artificial-intelligence/overview.html"},{"File":"data/acteurs/intel.json","Link":"https://www.intel.com"},{"File":"data/acteurs/intel.json","Link":"https://www.intel.com/content/www/us/en/products/details/processors/ai-accelerators/gaudi-3.html"},{"File":"data/acteurs/meta.json","Link":"https://www.llama.com/llama-downloads/"},{"File":"data/acteurs/meta.json","Link":"https://ai.meta.com/blog/"},{"File":"data/acteurs/meta.json","Link":"https://ai.meta.com/research/publications/the-llama-3-herd-of-models/"},{"File":"data/acteurs/meta.json","Link":"https://www.facebook.com/zuck"},{"File":"data/acteurs/meta.json","Link":"https://llama.meta.com"},{"File":"data/acteurs/meta.json","Link":"https://huggingface.co/meta-llama"},{"File":"data/acteurs/meta.json","Link":"https://www.meta.ai/"},{"File":"data/acteurs/microsoft.json","Link":"https://blogs.microsoft.com/blog/2024/03/19/mustafa-suleyman-deepmind-and-inflection-co-founder-joins-microsoft-to-lead-copilot/"},{"File":"data/acteurs/microsoft.json","Link":"https://news.microsoft.com/"},{"File":"data/acteurs/microsoft.json","Link":"https://www.microsoft.com/en-us/investor"},{"File":"data/acteurs/microsoft.json","Link":"https://www.microsoft.com/en-us/worklab/work-trend-index/"},{"File":"data/acteurs/microsoft.json","Link":"https://www.usine-digitale.fr/article/guerre-des-talents-ia-microsoft-debauche-une-vingtaine-de-chercheurs-de-google-deepmind.N2235562"},{"File":"data/acteurs/microsoft.json","Link":"https://www.microsoft.com/ai"},{"File":"data/acteurs/microsoft.json","Link":"https://blogs.microsoft.com/ai/"},{"File":"data/acteurs/microsoft.json","Link":"https://learn.microsoft.com/azure/ai-services/"},{"File":"data/acteurs/midjourney.json","Link":"https://www.theregister.com/2022/08/01/david_holz_midjourney/"},{"File":"data/acteurs/midjourney.json","Link":"https://www.midjourney.com/"},{"File":"data/acteurs/midjourney.json","Link":"https://docs.midjourney.com/"},{"File":"data/acteurs/midjourney.json","Link":"https://www.contrary.com/research/midjourney"},{"File":"data/acteurs/midjourney.json","Link":"https://www.midjourney.com"},{"File":"data/acteurs/midjourney.json","Link":"https://discord.gg/midjourney"},{"File":"data/acteurs/mistral.json","Link":"https://mistral.ai/news/mistral-large"},{"File":"data/acteurs/mistral.json","Link":"https://mistral.ai"},{"File":"data/acteurs/mistral.json","Link":"https://mistral.ai/news/"},{"File":"data/acteurs/mistral.json","Link":"https://huggingface.co/mistralai"},{"File":"data/acteurs/mistral.json","Link":"https://console.mistral.ai/"},{"File":"data/acteurs/mistral.json","Link":"https://chat.mistral.ai/"},{"File":"data/acteurs/mistral.json","Link":"https://github.com/mistralai"},{"File":"data/acteurs/nvidia.json","Link":"https://www.presse-citron.net/de-plongeur-dans-un-restaurant-a-pdg-de-nvidia-lincroyable-histoire-de-jensen-huang/"},{"File":"data/acteurs/nvidia.json","Link":"https://www.inc.com/carmine-gallo/nvidias-founder-went-from-dishwasher-to-tech-titan-learned-power-of-storytelling-to-build-a-brand.html"},{"File":"data/acteurs/nvidia.json","Link":"https://nvidianews.nvidia.com/"},{"File":"data/acteurs/nvidia.json","Link":"https://www.nvidia.com/en-us/data-center/blackwell/"},{"File":"data/acteurs/nvidia.json","Link":"https://investor.nvidia.com/"},{"File":"data/acteurs/nvidia.json","Link":"https://www.nvidia.com/ai"},{"File":"data/acteurs/nvidia.json","Link":"https://developer.nvidia.com/blog/"},{"File":"data/acteurs/nvidia.json","Link":"https://docs.nvidia.com/cuda/"},{"File":"data/acteurs/openai.json","Link":"https://openai.com/sora/"},{"File":"data/acteurs/openai.json","Link":"https://openai.com/news/"},{"File":"data/acteurs/openai.json","Link":"https://openai.com/index/learning-to-reason-with-llms/"},{"File":"data/acteurs/openai.json","Link":"https://openai.com/charter/"},{"File":"data/acteurs/openai.json","Link":"https://www.numerama.com/tech/1815598-sora-larrivee-en-france-de-lia-video-dopenai-est-enfin-officielle.html"},{"File":"data/acteurs/openai.json","Link":"https://openai.com"},{"File":"data/acteurs/openai.json","Link":"https://chat.openai.com"},{"File":"data/acteurs/openai.json","Link":"https://platform.openai.com/docs/"},{"File":"data/acteurs/oracle.json","Link":"https://www.oracle.com/news/announcement/xai-oracle-cloud-infrastructure-2024-06-17/"},{"File":"data/acteurs/oracle.json","Link":"https://www.businessinsider.com/larry-ellison-elon-musk-friendship-oracle-tesla-spacex-2022-10"},{"File":"data/acteurs/oracle.json","Link":"https://en.wikipedia.org/wiki/Oracle_Corporation"},{"File":"data/acteurs/oracle.json","Link":"https://www.oracle.com/ai/"},{"File":"data/acteurs/qualcomm.json","Link":"https://www.qualcomm.com/products/technology/artificial-intelligence"},{"File":"data/acteurs/qualcomm.json","Link":"https://www.qualcomm.com/news/releases/2024/05/qualcomm-and-global-pc-ecosystem-usher-in-a-new-era-of-the-pc-wi"},{"File":"data/acteurs/qualcomm.json","Link":"https://en.wikipedia.org/wiki/Qualcomm"},{"File":"data/acteurs/qualcomm.json","Link":"https://www.qualcomm.com/products/technology/artificial-intelligence"},{"File":"data/acteurs/stabilityai.json","Link":"https://stability.ai/news/introducing-stable-diffusion-3-5"},{"File":"data/acteurs/stabilityai.json","Link":"https://stability.ai/news"},{"File":"data/acteurs/stabilityai.json","Link":"https://stability.ai/news"},{"File":"data/acteurs/stabilityai.json","Link":"https://huggingface.co/stabilityai"},{"File":"data/acteurs/stabilityai.json","Link":"https://stability.ai"},{"File":"data/acteurs/stabilityai.json","Link":"https://platform.stability.ai/"},{"File":"data/acteurs/tencent.json","Link":"https://www.tencent.com/en-us/about.html"},{"File":"data/acteurs/tencent.json","Link":"https://github.com/Tencent/Hunyuan"},{"File":"data/acteurs/tencent.json","Link":"https://siecledigital.fr/2019/03/19/tencent-le-geant-derriere-wechat/"},{"File":"data/acteurs/tencent.json","Link":"https://www.tencent.com"},{"File":"data/acteurs/tencent.json","Link":"https://3d.hunyuan.tencent.com/"},{"File":"data/acteurs/tsmc.json","Link":"https://fr.wikipedia.org/wiki/TSMC"},{"File":"data/acteurs/tsmc.json","Link":"https://en.wikipedia.org/wiki/TSMC"},{"File":"data/acteurs/tsmc.json","Link":"https://www.tsmc.com"},{"File":"data/acteurs/xai.json","Link":"https://x.ai/colossus"},{"File":"data/acteurs/xai.json","Link":"https://en.wikipedia.org/wiki/XAI_(company)"},{"File":"data/acteurs/xai.json","Link":"https://x.ai"},{"File":"data/outils/adobe-firefly.json","Link":"https://www.adobe.com/fr/products/firefly.html"},{"File":"data/outils/autodraw.json","Link":"https://www.autodraw.com/"},{"File":"data/outils/canva.json","Link":"https://www.canva.com/magic-studio/"},{"File":"data/outils/chatgpt.json","Link":"https://chatgpt.com"},{"File":"data/outils/claude.json","Link":"https://claude.ai"},{"File":"data/outils/copilot.json","Link":"https://copilot.microsoft.com/"},{"File":"data/outils/deepl-write.json","Link":"https://www.deepl.com/write"},{"File":"data/outils/deepseek.json","Link":"https://www.deepseek.com/"},{"File":"data/outils/elevenlabs.json","Link":"https://elevenlabs.io"},{"File":"data/outils/gamma.json","Link":"https://gamma.app/"},{"File":"data/outils/gemini.json","Link":"https://gemini.google.com/"},{"File":"data/outils/grok.json","Link":"https://x.ai/"},{"File":"data/outils/heygen.json","Link":"https://www.heygen.com/"},{"File":"data/outils/huggingface.json","Link":"https://huggingface.co/"},{"File":"data/outils/hunyuan-3d.json","Link":"https://3d.hunyuan.tencent.com/"},{"File":"data/outils/ideogram.json","Link":"https://ideogram.ai"},{"File":"data/outils/kling.json","Link":"https://klingai.com"},{"File":"data/outils/leonardo.json","Link":"https://leonardo.ai"},{"File":"data/outils/luma.json","Link":"https://lumalabs.ai/dream-machine"},{"File":"data/outils/midjourney.json","Link":"https://www.midjourney.com"},{"File":"data/outils/mistral.json","Link":"https://chat.mistral.ai/"},{"File":"data/outils/notebooklm.json","Link":"https://notebooklm.google.com/"},{"File":"data/outils/notion-ai.json","Link":"https://www.notion.so/product/ai"},{"File":"data/outils/perplexity.json","Link":"https://www.perplexity.ai"},{"File":"data/outils/pika.json","Link":"https://pika.art/"},{"File":"data/outils/runway.json","Link":"https://runwayml.com"},{"File":"data/outils/sora.json","Link":"https://openai.com/sora"},{"File":"data/outils/stable-diffusion.json","Link":"https://stability.ai/"},{"File":"data/outils/stitch.json","Link":"https://stitch.withgoogle.com/"},{"File":"data/outils/suno.json","Link":"https://suno.com"},{"File":"data/quizz/acteurs.json","Link":"https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html"},{"File":"data/quizz/acteurs.json","Link":"https://www.presse-citron.net/de-plongeur-dans-un-restaurant-a-pdg-de-nvidia-lincroyable-histoire-de-jensen-huang/"},{"File":"data/quizz/acteurs.json","Link":"https://www.inc.com/carmine-gallo/nvidias-founder-went-from-dishwasher-to-tech-titan-learned-power-of-storytelling-to-build-a-brand.html"},{"File":"data/quizz/acteurs.json","Link":"https://huggingface.co/learn/llm-course/fr/chapter4/1"},{"File":"data/quizz/acteurs.json","Link":"https://huggingface.gif/"},{"File":"data/quizz/acteurs.json","Link":"https://mistral.ai/news/mistral-large"},{"File":"data/quizz/acteurs.json","Link":"https://fr.wikipedia.org/wiki/TSMC"},{"File":"data/quizz/acteurs.json","Link":"https://www.huaweicloud.com/intl/en-us/product/pangu.html"},{"File":"data/quizz/acteurs.json","Link":"https://en.wikipedia.org/wiki/Huawei_PanGu"},{"File":"data/quizz/acteurs.json","Link":"https://www.theregister.com/2022/08/01/david_holz_midjourney/"},{"File":"data/quizz/acteurs.json","Link":"https://www.midjourney.com/"},{"File":"data/quizz/acteurs.json","Link":"https://x.ai/colossus"},{"File":"data/quizz/acteurs.json","Link":"https://www.tencent.com/en-us/about.html"},{"File":"data/quizz/acteurs.json","Link":"https://www.aboutamazon.fr/actualites/innovation/comment-amazon-utilise-l-ia-pour-detecter-les-produits-fragiles"},{"File":"data/quizz/acteurs.json","Link":"https://www.amazon.science/news-and-features/how-project-p-i-helps-amazon-remove-imperfect-products"},{"File":"data/quizz/acteurs.json","Link":"https://www.deepl.com/fr/write"},{"File":"data/quizz/acteurs.json","Link":"https://www.intel.fr/content/www/fr/fr/products/details/processors/ai-accelerators/gaudi.html"},{"File":"data/quizz/acteurs.json","Link":"https://www.amd.com/fr/products/accelerators/instinct/mi300/mi300x.html"},{"File":"data/quizz/acteurs.json","Link":"https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback"},{"File":"data/quizz/acteurs.json","Link":"https://www.anthropic.com/constitution"},{"File":"data/quizz/acteurs.json","Link":"https://www.llama.com/llama-downloads/"},{"File":"data/quizz/acteurs.json","Link":"https://ernie.baidu.com/"},{"File":"data/quizz/acteurs.json","Link":"https://qwenlm.github.io/"},{"File":"data/quizz/acteurs.json","Link":"https://github.com/QwenLM/Qwen"},{"File":"data/quizz/acteurs.json","Link":"https://blogs.microsoft.com/blog/2024/03/19/mustafa-suleyman-deepmind-and-inflection-co-founder-joins-microsoft-to-lead-copilot/"},{"File":"data/quizz/acteurs.json","Link":"https://openai.com/sora/"},{"File":"data/agents.json","Link":"https://blog.google/technology/developers/google-jules-agent/"},{"File":"data/agents.json","Link":"https://deepmind.google/about/"},{"File":"data/agents.json","Link":"https://antigravity.google/"},{"File":"data/agents.json","Link":"https://antigravity.google/docs"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=jV1vkHv4zq8"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/jV1vkHv4zq8/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=Fs0t6SdODd8"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/Fs0t6SdODd8/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=YcIbZGTRMjI"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/YcIbZGTRMjI/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=tdelUss-5hY"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/tdelUss-5hY/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=CsQNF9s78Nc"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/CsQNF9s78Nc/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=Ty3XRCS-Tyc"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/Ty3XRCS-Tyc/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=ZQcAavtxotw"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/ZQcAavtxotw/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=nVh_UrSuZs4"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/nVh_UrSuZs4/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=StqCCf6RJQo"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/StqCCf6RJQo/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=1RRHr3dFogQ"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/1RRHr3dFogQ/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=G1GX_CHVq6M"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/G1GX_CHVq6M/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=bbcsgl8WX_g"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/bbcsgl8WX_g/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=tIbuCv6JXRU"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/tIbuCv6JXRU/hqdefault.jpg"},{"File":"data/videos.json","Link":"https://www.youtube.com/watch?v=o-U9Wa4WvJI"},{"File":"data/videos.json","Link":"https://img.youtube.com/vi/o-U9Wa4WvJI/hqdefault.jpg"},{"File":"acteurs.html","Link":"https://proflambda.github.io/ia/"},{"File":"acteurs.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"acteurs.html","Link":"https://proflambda.github.io/ia/"},{"File":"acteurs.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"concepts.html","Link":"https://proflambda.github.io/ia/"},{"File":"concepts.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"concepts.html","Link":"https://proflambda.github.io/ia/"},{"File":"concepts.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"exercices.html","Link":"https://proflambda.github.io/ia/"},{"File":"exercices.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"exercices.html","Link":"https://proflambda.github.io/ia/"},{"File":"exercices.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"gemini.html","Link":"https://proflambda.github.io/ia/"},{"File":"gemini.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"gemini.html","Link":"https://proflambda.github.io/ia/"},{"File":"gemini.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"index.html","Link":"https://proflambda.github.io/ia/"},{"File":"index.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"index.html","Link":"https://proflambda.github.io/ia/"},{"File":"index.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"outils.html","Link":"https://proflambda.github.io/ia/"},{"File":"outils.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"outils.html","Link":"https://proflambda.github.io/ia/"},{"File":"outils.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"quizz-acteurs.html","Link":"https://proflambda.github.io/ia/"},{"File":"quizz-acteurs.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"quizz-acteurs.html","Link":"https://proflambda.github.io/ia/"},{"File":"quizz-acteurs.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"quizz-acteurs.html","Link":"https://fonts.googleapis.com"},{"File":"quizz-acteurs.html","Link":"https://fonts.gstatic.com"},{"File":"quizz-acteurs.html","Link":"https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800\u0026display=swap"},{"File":"ressources.html","Link":"https://proflambda.github.io/ia/"},{"File":"ressources.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"ressources.html","Link":"https://proflambda.github.io/ia/"},{"File":"ressources.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"securite.html","Link":"https://genai.owasp.org/llm-top-10/"},{"File":"securite.html","Link":"https://diffray.ai/fr/blog/owasp-top-10-llm-applications/"},{"File":"securite.html","Link":"https://www.theverge.com/2023/5/2/23707796/samsung-ban-chatgpt-generative-ai-bing-bard-employees-security-concerns"},{"File":"securite.html","Link":"https://www.francetvinfo.fr/internet/intelligence-artificielle/samsung-interdit-l-usage-de-chatgpt-a-ses-salaries-apres-des-fuites-de-donnees_5806496.html"},{"File":"securite.html","Link":"https://genai.owasp.org/llm-top-10/"},{"File":"securite.html","Link":"https://diffray.ai/fr/blog/owasp-top-10-llm-applications/"},{"File":"securite.html","Link":"https://www.cnil.fr/fr/technologies/intelligence-artificielle-ia"},{"File":"securite.html","Link":"https://www.cnil.fr/fr/intelligence-artificielle/ia-generative-les-conseils-de-la-cnil-pour-proteger-vos-donnees"},{"File":"securite.html","Link":"https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"},{"File":"securite.html","Link":"https://artificialintelligenceact.eu/fr/"},{"File":"videos.html","Link":"https://proflambda.github.io/ia/"},{"File":"videos.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"},{"File":"videos.html","Link":"https://proflambda.github.io/ia/"},{"File":"videos.html","Link":"https://avatars.githubusercontent.com/u/234212850?v=4"}]';
+                const allData = JSON.parse(rawDataString);
+
+                // Filtrage des liens redondants
+                const data = allData.filter(item => !excludedLinks.includes(item.Link));
+
+                if (data.length === 0) {
+                    container.innerHTML = '<p style="opacity:0.5; padding: 4rem; text-align: center;">Aucun lien détecté après filtrage.</p>';
+                    return;
+                }
+
+                // Groupement par fichier
+                const groups = data.reduce((acc, curr) => {
+                    const file = curr.File;
+                    if (!acc[file]) acc[file] = new Set();
+                    acc[file].add(curr.Link);
+                    return acc;
+                }, {});
+
+                const allUniqueLinks = new Set(data.map(d => d.Link));
+                totalFilesSpan.textContent = Object.keys(groups).length;
+                totalLinksSpan.textContent = data.length;
+                uniqueLinksSpan.textContent = allUniqueLinks.size;
+
+                const renderLinks = (filter = '') => {
+                    container.innerHTML = '';
+                    const filterLower = filter.toLowerCase();
+
+                    // Trier les fichiers par nom
+                    Object.entries(groups).sort().forEach(([file, links]) => {
+                        const filteredLinks = Array.from(links).filter(link =>
+                            link.toLowerCase().includes(filterLower) || file.toLowerCase().includes(filterLower)
+                        );
+
+                        if (filteredLinks.length > 0) {
+                            const section = document.createElement('section');
+                            section.className = 'file-section';
+
+                            const header = document.createElement('div');
+                            header.className = 'file-header';
+                            header.innerHTML = `
+                                <span class="file-name">${file}</span>
+                                <span class="link-tag">${filteredLinks.length} lien${filteredLinks.length > 1 ? 's' : ''}</span>
+                            `;
+
+                            const list = document.createElement('div');
+                            list.className = 'link-list';
+
+                            filteredLinks.forEach(link => {
+                                const item = document.createElement('div');
+                                item.className = 'link-item';
+                                let domain = 'link';
+                                try { domain = new URL(link).hostname.replace('www.', ''); } catch (e) { }
+
+                                item.innerHTML = `
+                                    <div class="status-indicator"></div>
+                                    <a href="${link}" target="_blank" class="link-url">${link}</a>
+                                    <span class="link-tag" style="background: rgba(255,255,255,0.03); color: #888; font-weight: normal; font-size: 0.65rem;">${domain}</span>
+                                `;
+                                list.appendChild(item);
+                            });
+
+                            section.appendChild(header);
+                            section.appendChild(list);
+                            container.appendChild(section);
+                        }
+                    });
+                };
+
+                renderLinks();
+                document.getElementById('link-search').addEventListener('input', (e) => renderLinks(e.target.value));
+
+            } catch (error) {
+                console.error("Erreur d'initialisation:", error);
+                container.innerHTML = `<p style="color: #ef4444; padding: 2rem; text-align:center;">Erreur critique lors du chargement des données.</p>`;
+            }
+        });
+    </script>
+</body>
+
+</html>

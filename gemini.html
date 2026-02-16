@@ -432,7 +432,8 @@
 			<div style="text-align: center; margin-bottom: 4rem;">
 				<span class="chapter-badge"
 					style="background: #d1fae5; color: #065f46; padding: 0.5rem 1rem; border-radius: 20px; font-weight: bold;">NIVEAU
-					3 : 2025+</span>
+					3 : 2026+</span>
+
 				<h2 style="font-size: 2.5rem; margin-top: 1rem;">Le Futur : Les Agents Autonomes</h2>
 				<p>L'IA ne se contente plus de parler, elle commence à **agir** à votre place.</p>
 			</div>
@@ -472,8 +473,7 @@
 
 			<!-- Agent Modal -->
 			<div id="agent-modal" class="modal-overlay">
-				<div class="modal"
-					style="max-width: 800px; padding: 0; overflow: hidden; display: flex; flex-direction: column; max-height: 90vh;">
+				<div class="modal" style="max-width: 800px; padding: 0;">
 					<div id="agent-modal-header" style="padding: 2.5rem; color: white; position: relative;">
 						<button class="close-modal" onclick="closeAgentModal()"
 							style="position: absolute; top: 1.5rem; right: 1.5rem; color: white; background: rgba(0,0,0,0.2); border-radius: 50%; width: 40px; height: 40px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button>
@@ -482,7 +482,7 @@
 						<h2 id="agent-name" style="margin: 0; color: white; font-size: 2.5rem;">Nom de l'Agent</h2>
 						<p id="agent-type" style="margin-top: 0.5rem; opacity: 0.9; font-weight: 500;">Type d'agent</p>
 					</div>
-					<div style="padding: 2.5rem; overflow-y: auto; background: white;">
+					<div class="modal-body" style="padding: 2.5rem; background: white;">
 						<div class="split-layout" style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem;">
 							<div>
 								<h4 style="color: var(--text-primary); margin-bottom: 1rem;">Description</h4>

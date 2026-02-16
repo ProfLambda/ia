@@ -102,8 +102,7 @@
 
 	<!-- Modal Cours (Apparaît au clic sur un tag) -->
 	<div id="course-modal" class="modal-overlay">
-		<div class="modal-content glass-panel"
-			style="max-width: 600px; padding: 0; background: #ffffff; overflow: hidden; display: flex; flex-direction: column; max-height: 90vh;">
+		<div class="modal glass-panel" style="max-width: 600px; padding: 0; background: #ffffff;">
 			<div
 				style="background: var(--primary-color); padding: 2rem; color: white; position: relative; flex-shrink: 0;">
 				<button class="modal-close" id="close-course-modal"
@@ -113,7 +112,7 @@
 				<h2 id="course-title" style="margin: 0; font-size: 2rem;">Thématique</h2>
 			</div>
 
-			<div style="padding: 2.5rem; overflow-y: auto; flex: 1;">
+			<div class="modal-body" style="padding: 2.5rem; flex: 1;">
 				<div class="course-section" style="margin-bottom: 2rem;">
 					<h4 style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary-dark);">
 						<span style="font-size: 1.2rem;">🧠</span> Ce qu'il faut savoir

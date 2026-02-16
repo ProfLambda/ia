@@ -194,7 +194,6 @@
     background: #1e293b;
     width: 90%;
     max-width: 500px;
-    max-height: 90vh;
     border-radius: var(--radius-md);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
     transform: scale(0.95) translateY(10px);
@@ -203,34 +202,6 @@
     padding: 2rem;
     position: relative;
     color: var(--text-primary);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.modal-body {
-    flex: 1;
-    overflow-y: auto;
-    padding-right: 0.5rem; /* Space for scrollbar */
-}
-
-/* Custom scrollbar for modal body */
-.modal-body::-webkit-scrollbar {
-    width: 6px;
-}
-
-.modal-body::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
-}
-
-.modal-body::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.modal-body::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.2);
 }
 
 .modal-overlay.open .modal {

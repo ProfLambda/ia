@@ -5,280 +5,308 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-    const navPlaceholder = document.getElementById("nav-placeholder");
-    const footerPlaceholder = document.getElementById("footer-placeholder");
+	const navPlaceholder = document.getElementById("nav-placeholder");
+	const footerPlaceholder = document.getElementById("footer-placeholder");
 
-    if (navPlaceholder) renderNavigation(navPlaceholder);
-    if (footerPlaceholder) renderFooter(footerPlaceholder);
+	if (navPlaceholder) renderNavigation(navPlaceholder);
+	if (footerPlaceholder) renderFooter(footerPlaceholder);
 
-    // La logique du menu mobile est initialisée après l'injection
-    initMobileMenu();
+	// La logique du menu mobile est initialisée après l'injection
+	initMobileMenu();
 
-    // Ecoute globale de la touche Echap pour fermer les modales
-    document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-            // Fermeture de la modal vidéo (si présente et active)
-            if (typeof closeModal === 'function') {
-                closeModal();
-            }
+	// Ecoute globale de la touche Echap pour fermer les modales
+	document.addEventListener("keydown", (e) => {
+		if (e.key === "Escape") {
+			// Fermeture de la modal vidéo (si présente et active)
+			if (typeof closeModal === "function") {
+				closeModal();
+			}
 
-            // Fermeture des autres modales (Acteurs, Cours, etc.)
-            const modals = [
-                document.getElementById('modal-overlay'),
-                document.getElementById('course-modal')
-            ];
+			// Fermeture des autres modales (Acteurs, Cours, etc.)
+			const modals = [
+				document.getElementById("modal-overlay"),
+				document.getElementById("course-modal"),
+			];
 
-            modals.forEach(m => {
-                if (m && (m.classList.contains('open') || m.classList.contains('active'))) {
-                    if (typeof closeModal === 'function' && m.id === 'modal-overlay') { // Pour Acteurs qui a aussi un closeModal
-                        closeModal();
-                    } else {
-                        m.classList.remove('open');
-                        m.classList.remove('active');
-                        document.body.style.overflow = 'auto';
-                    }
-                }
-            });
-        }
-    });
+			modals.forEach((m) => {
+				if (
+					m &&
+					(m.classList.contains("open") || m.classList.contains("active"))
+				) {
+					if (
+						typeof closeModal === "function" &&
+						m.id === "modal-overlay"
+					) {
+						// Pour Acteurs qui a aussi un closeModal
+						closeModal();
+					} else {
+						m.classList.remove("open");
+						m.classList.remove("active");
+						document.body.style.overflow = "auto";
+					}
+				}
+			});
+		}
+	});
 });
 
 function renderNavigation(container) {
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+	const currentPage =
+		window.location.pathname.split("/").pop() || "index.html";
 
-    const nav = document.createElement("nav");
-    nav.className = "top-nav";
+	const nav = document.createElement("nav");
+	nav.className = "top-nav";
 
-    const navContainer = document.createElement("div");
-    navContainer.className = "container nav-content";
+	const navContainer = document.createElement("div");
+	navContainer.className = "container nav-content";
 
-    // Logo
-    const logoLink = document.createElement("a");
-    logoLink.href = "index.html";
-    logoLink.className = "logo";
+	// Logo
+	const logoLink = document.createElement("a");
+	logoLink.href = "index.html";
+	logoLink.className = "logo";
 
-    // SVG Logo (using Namespace for SVG)
-    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-    svg.setAttribute("width", "24");
-    svg.setAttribute("height", "24");
-    svg.setAttribute("viewBox", "0 0 24 24");
-    svg.setAttribute("fill", "none");
-    svg.setAttribute("stroke", "currentColor");
-    svg.setAttribute("stroke-width", "2");
-    svg.setAttribute("stroke-linecap", "round");
-    svg.setAttribute("stroke-linejoin", "round");
+	// SVG Logo (using Namespace for SVG)
+	const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("width", "24");
+	svg.setAttribute("height", "24");
+	svg.setAttribute("viewBox", "0 0 24 24");
+	svg.setAttribute("fill", "none");
+	svg.setAttribute("stroke", "currentColor");
+	svg.setAttribute("stroke-width", "2");
+	svg.setAttribute("stroke-linecap", "round");
+	svg.setAttribute("stroke-linejoin", "round");
 
-    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-    path.setAttribute("d", "M12 3c.132 0 .263 0 .48.406C13.102 4.49 14.441 7.025 15.5 8c.975.975 3.51 2.398 4.594 2.844.407.167.406.348.406.48s0 .313-.406.48c-1.084.446-3.62 1.87-4.594 2.844-.975.975-2.398 3.51-2.844 4.594-.167.407-.348.406-.48.406s-.313 0-.48-.406c-.446-1.084-1.87-3.62-2.844-4.594-.975-.975-3.51-2.398-4.594-2.844-.407-.167-.406-.348-.406-.48s0-.313.406-.48c1.084-.446 3.62-1.87 4.594-2.844.975-.975 2.398-3.51 2.844-4.594.167-.407.348-.406.48-.406z");
-    svg.appendChild(path);
+	const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+	path.setAttribute(
+		"d",
+		"M12 3c.132 0 .263 0 .48.406C13.102 4.49 14.441 7.025 15.5 8c.975.975 3.51 2.398 4.594 2.844.407.167.406.348.406.48s0 .313-.406.48c-1.084.446-3.62 1.87-4.594 2.844-.975.975-2.398 3.51-2.844 4.594-.167.407-.348.406-.48.406s-.313 0-.48-.406c-.446-1.084-1.87-3.62-2.844-4.594-.975-.975-3.51-2.398-4.594-2.844-.407-.167-.406-.348-.406-.48s0-.313.406-.48c1.084-.446 3.62-1.87 4.594-2.844.975-.975 2.398-3.51 2.844-4.594.167-.407.348-.406.48-.406z",
+	);
+	svg.appendChild(path);
 
+	logoLink.appendChild(svg);
 
+	// Brand Container (New Styled Logo)
+	const brandContainer = document.createElement("div");
+	brandContainer.style.cssText =
+		"display: flex; flex-direction: column; line-height: 1.1; margin-left: 10px;";
 
-    logoLink.appendChild(svg);
+	const brandName = document.createElement("span");
+	brandName.textContent = "ProfLambda";
+	brandName.style.cssText =
+		"font-weight: 800; font-size: 1.1rem; color: var(--text-primary); letter-spacing: -0.02em;";
 
-    // Brand Container (New Styled Logo)
-    const brandContainer = document.createElement("div");
-    brandContainer.style.cssText = "display: flex; flex-direction: column; line-height: 1.1; margin-left: 10px;";
+	const brandSub = document.createElement("span");
+	brandSub.textContent = "Cours IA • Gemini";
+	brandSub.style.cssText =
+		"font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); display: inline-block; position: relative; padding-bottom: 3px;";
 
-    const brandName = document.createElement("span");
-    brandName.textContent = "ProfLambda";
-    brandName.style.cssText = "font-weight: 800; font-size: 1.1rem; color: var(--text-primary); letter-spacing: -0.02em;";
+	// Underline effect
+	const underline = document.createElement("div");
+	underline.style.cssText =
+		"height: 3px; width: 100%; background: linear-gradient(90deg, #38bdf8, #8b5cf6); border-radius: 2px;";
 
-    const brandSub = document.createElement("span");
-    brandSub.textContent = "Cours IA • Gemini";
-    brandSub.style.cssText = "font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); display: inline-block; position: relative; padding-bottom: 3px;";
+	brandSub.appendChild(underline);
+	brandContainer.appendChild(brandName);
+	brandContainer.appendChild(brandSub);
 
-    // Underline effect
-    const underline = document.createElement("div");
-    underline.style.cssText = "height: 3px; width: 100%; background: linear-gradient(90deg, #38bdf8, #8b5cf6); border-radius: 2px;";
+	logoLink.appendChild(brandContainer);
 
-    brandSub.appendChild(underline);
-    brandContainer.appendChild(brandName);
-    brandContainer.appendChild(brandSub);
+	// Menu
+	const menuWrapper = document.createElement("div");
+	menuWrapper.className = "nav-menu-wrapper";
 
-    logoLink.appendChild(brandContainer);
+	const ul = document.createElement("ul");
+	ul.className = "nav-links";
 
-    // Menu
-    const menuWrapper = document.createElement("div");
-    menuWrapper.className = "nav-menu-wrapper";
+	const pages = [
+		{ name: "Accueil", url: "index.html" },
+		{ name: "Acteurs", url: "acteurs.html" },
+		{ name: "Concepts", url: "concepts.html" },
+		{ name: "Outils", url: "outils.html" },
+		{ name: "Gemini", url: "gemini.html" },
+		{ name: "Sécurité", url: "securite.html" },
 
-    const ul = document.createElement("ul");
-    ul.className = "nav-links";
+		{
+			name: "Ressources",
+			url: "#",
+			subpages: [
+				{ name: "Glossaire & FAQ", url: "ressources.html" },
+				{ name: "Vidéos", url: "videos.html" },
+				{ name: "Exercices", url: "exercices.html" },
+				{ name: "Quizz Acteurs", url: "quizz-acteurs.html" },
+				{ name: "Liens utiles", url: "liste_liens.html" },
+			],
+		},
+	];
 
-    const pages = [
-        { name: "Accueil", url: "index.html" },
-        { name: "Acteurs", url: "acteurs.html" },
-        { name: "Concepts", url: "concepts.html" },
-        { name: "Outils", url: "outils.html" },
-        { name: "Gemini", url: "gemini.html" },
-        {
-            name: "Ressources",
-            url: "#",
-            subpages: [
-                { name: "Glossaire & FAQ", url: "ressources.html" },
-                { name: "Vidéos", url: "videos.html" },
-                { name: "Exercices", url: "exercices.html" },
-                { name: "Quizz Acteurs", url: "quizz-acteurs.html" }
-            ]
-        }
-    ];
+	pages.forEach((page) => {
+		const li = document.createElement("li");
+		li.className = "nav-item";
 
-    pages.forEach(page => {
-        const li = document.createElement("li");
-        li.className = "nav-item";
+		if (page.subpages) {
+			li.classList.add("has-dropdown");
+			const a = document.createElement("a");
+			a.href = page.url;
+			a.textContent = `${page.name} ▾`;
+			if (
+				currentPage === page.url ||
+				page.subpages.some((sp) => sp.url === currentPage)
+			)
+				a.className = "active";
+			li.appendChild(a);
 
-        if (page.subpages) {
-            li.classList.add("has-dropdown");
-            const a = document.createElement("a");
-            a.href = page.url;
-            a.textContent = `${page.name} ▾`;
-            if (currentPage === page.url || page.subpages.some(sp => sp.url === currentPage)) a.className = "active";
-            li.appendChild(a);
+			const dropdown = document.createElement("div");
+			dropdown.className = "dropdown-menu";
 
-            const dropdown = document.createElement("div");
-            dropdown.className = "dropdown-menu";
+			page.subpages.forEach((sub) => {
+				const subA = document.createElement("a");
+				subA.href = sub.url;
+				subA.className = "dropdown-item";
+				subA.textContent = sub.name;
+				if (currentPage === sub.url)
+					subA.style.color = "var(--primary-color)";
+				dropdown.appendChild(subA);
+			});
 
-            page.subpages.forEach(sub => {
-                const subA = document.createElement("a");
-                subA.href = sub.url;
-                subA.className = "dropdown-item";
-                subA.textContent = sub.name;
-                if (currentPage === sub.url) subA.style.color = "var(--primary-color)";
-                dropdown.appendChild(subA);
-            });
+			li.appendChild(dropdown);
+		} else {
+			const a = document.createElement("a");
+			a.href = page.url;
+			a.textContent = page.name;
+			if (currentPage === page.url) a.className = "active";
+			li.appendChild(a);
+		}
 
-            li.appendChild(dropdown);
-        } else {
-            const a = document.createElement("a");
-            a.href = page.url;
-            a.textContent = page.name;
-            if (currentPage === page.url) a.className = "active";
-            li.appendChild(a);
-        }
+		ul.appendChild(li);
+	});
 
-        ul.appendChild(li);
-    });
+	menuWrapper.appendChild(ul);
 
-    menuWrapper.appendChild(ul);
+	// Toggle Button
+	const toggleBtn = document.createElement("button");
+	toggleBtn.className = "mobile-menu-toggle";
+	toggleBtn.setAttribute("aria-label", "Menu");
+	for (let i = 0; i < 3; i++) {
+		toggleBtn.appendChild(document.createElement("span"));
+	}
 
-    // Toggle Button
-    const toggleBtn = document.createElement("button");
-    toggleBtn.className = "mobile-menu-toggle";
-    toggleBtn.setAttribute("aria-label", "Menu");
-    for (let i = 0; i < 3; i++) {
-        toggleBtn.appendChild(document.createElement("span"));
-    }
+	navContainer.appendChild(logoLink);
+	navContainer.appendChild(menuWrapper);
+	navContainer.appendChild(toggleBtn);
+	nav.appendChild(navContainer);
 
-    navContainer.appendChild(logoLink);
-    navContainer.appendChild(menuWrapper);
-    navContainer.appendChild(toggleBtn);
-    nav.appendChild(navContainer);
-
-    container.appendChild(nav);
+	container.appendChild(nav);
 }
 
 function renderFooter(container) {
-    const footer = document.createElement("footer");
+	const footer = document.createElement("footer");
 
-    const innerContainer = document.createElement("div");
-    innerContainer.className = "container";
+	const innerContainer = document.createElement("div");
+	innerContainer.className = "container";
 
-    const flexDiv = document.createElement("div");
-    flexDiv.style.display = "flex";
-    flexDiv.style.justifyContent = "space-between";
-    flexDiv.style.alignItems = "center";
-    flexDiv.style.flexWrap = "wrap";
-    flexDiv.style.gap = "2rem";
+	const flexDiv = document.createElement("div");
+	flexDiv.style.display = "flex";
+	flexDiv.style.justifyContent = "space-between";
+	flexDiv.style.alignItems = "center";
+	flexDiv.style.flexWrap = "wrap";
+	flexDiv.style.gap = "2rem";
 
-    // Info Side
-    const infoDiv = document.createElement("div");
-    infoDiv.style.display = "flex";
-    infoDiv.style.alignItems = "center";
-    infoDiv.style.gap = "1rem";
+	// Info Side
+	const infoDiv = document.createElement("div");
+	infoDiv.style.display = "flex";
+	infoDiv.style.alignItems = "center";
+	infoDiv.style.gap = "1rem";
 
-    const brandSp = document.createElement("span");
-    brandSp.style.fontWeight = "800";
-    brandSp.style.color = "var(--primary-dark)";
-    brandSp.textContent = "ProfLambda | Cours IA";
+	const brandSp = document.createElement("span");
+	brandSp.style.fontWeight = "800";
+	brandSp.style.color = "var(--primary-dark)";
+	brandSp.textContent = "ProfLambda | Cours IA";
 
-    const separator = document.createElement("span");
-    separator.style.color = "var(--text-secondary)";
-    separator.textContent = "|";
+	const separator = document.createElement("span");
+	separator.style.color = "var(--text-secondary)";
+	separator.textContent = "|";
 
-    const projectSp = document.createElement("span");
-    projectSp.style.fontSize = "0.9rem";
-    projectSp.textContent = "Projet pédagogique - © 2026 - zarbix.com";
+	const projectSp = document.createElement("span");
+	projectSp.style.fontSize = "0.9rem";
+	projectSp.textContent = "Projet pédagogique - © 2026 - proflambda.github.io";
 
-    infoDiv.appendChild(brandSp);
-    infoDiv.appendChild(separator);
-    infoDiv.appendChild(projectSp);
+	infoDiv.appendChild(brandSp);
+	infoDiv.appendChild(separator);
+	infoDiv.appendChild(projectSp);
 
-    // Links Side
-    const linksDiv = document.createElement("div");
-    linksDiv.style.display = "flex";
-    linksDiv.style.gap = "1.5rem";
+	// Links Side
+	const linksDiv = document.createElement("div");
+	linksDiv.style.display = "flex";
+	linksDiv.style.gap = "1.5rem";
 
-    const footLinks = [
-        { name: "FAQ", url: "ressources.html#faq" },
-        { name: "Contact", url: "ressources.html#contact" },
-        { name: "Zarbix.com", url: "https://zarbix.com" }
-    ];
+	const footLinks = [
+		{ name: "FAQ", url: "ressources.html#faq" },
+		{ name: "Contact", url: "ressources.html#contact" },
+		{
+			name: "Proflambda.github.io/ia",
+			url: "https://proflambda.github.io/ia",
+		},
+	];
 
-    footLinks.forEach(link => {
-        const a = document.createElement("a");
-        a.href = link.url;
-        a.style.fontSize = "0.9rem";
-        a.style.color = "var(--text-secondary)";
-        a.textContent = link.name;
-        linksDiv.appendChild(a);
-    });
+	footLinks.forEach((link) => {
+		const a = document.createElement("a");
+		a.href = link.url;
+		a.style.fontSize = "0.9rem";
+		a.style.color = "var(--text-secondary)";
+		a.textContent = link.name;
+		linksDiv.appendChild(a);
+	});
 
-    flexDiv.appendChild(infoDiv);
-    flexDiv.appendChild(linksDiv);
-    innerContainer.appendChild(flexDiv);
-    footer.appendChild(innerContainer);
+	flexDiv.appendChild(infoDiv);
+	flexDiv.appendChild(linksDiv);
+	innerContainer.appendChild(flexDiv);
+	footer.appendChild(innerContainer);
 
-    container.appendChild(footer);
+	container.appendChild(footer);
 }
 
 function initMobileMenu() {
-    // Petit délai pour s'assurer que le bouton est bien dans le DOM
-    setTimeout(() => {
-        const toggleBtn = document.querySelector(".mobile-menu-toggle");
-        const navWrapper = document.querySelector(".nav-menu-wrapper");
-        const navLinks = document.querySelectorAll(".nav-item a");
+	// Petit délai pour s'assurer que le bouton est bien dans le DOM
+	setTimeout(() => {
+		const toggleBtn = document.querySelector(".mobile-menu-toggle");
+		const navWrapper = document.querySelector(".nav-menu-wrapper");
+		const navLinks = document.querySelectorAll(".nav-item a");
 
-        if (toggleBtn && navWrapper) {
-            const handleToggle = () => {
-                navWrapper.classList.toggle("active");
-                toggleBtn.classList.toggle("open");
-            };
+		if (toggleBtn && navWrapper) {
+			const handleToggle = () => {
+				navWrapper.classList.toggle("active");
+				toggleBtn.classList.toggle("open");
+			};
 
-            toggleBtn.addEventListener("click", handleToggle);
+			toggleBtn.addEventListener("click", handleToggle);
 
-            navLinks.forEach((link) => {
-                link.addEventListener("click", () => {
-                    navWrapper.classList.remove("active");
-                    toggleBtn.classList.remove("open");
-                });
-            });
+			navLinks.forEach((link) => {
+				link.addEventListener("click", () => {
+					navWrapper.classList.remove("active");
+					toggleBtn.classList.remove("open");
+				});
+			});
 
-            document.addEventListener("click", (e) => {
-                if (!navWrapper.contains(e.target) && !toggleBtn.contains(e.target) && navWrapper.classList.contains("active")) {
-                    navWrapper.classList.remove("active");
-                    toggleBtn.classList.remove("open");
-                }
-            });
+			document.addEventListener("click", (e) => {
+				if (
+					!navWrapper.contains(e.target) &&
+					!toggleBtn.contains(e.target) &&
+					navWrapper.classList.contains("active")
+				) {
+					navWrapper.classList.remove("active");
+					toggleBtn.classList.remove("open");
+				}
+			});
 
-            // Prevent resize animations
-            let resizeTimer;
-            window.addEventListener("resize", () => {
-                document.body.classList.add("resize-animation-stopper");
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(() => {
-                    document.body.classList.remove("resize-animation-stopper");
-                }, 400);
-            });
-        }
-    }, 50);
+			// Prevent resize animations
+			let resizeTimer;
+			window.addEventListener("resize", () => {
+				document.body.classList.add("resize-animation-stopper");
+				clearTimeout(resizeTimer);
+				resizeTimer = setTimeout(() => {
+					document.body.classList.remove("resize-animation-stopper");
+				}, 400);
+			});
+		}
+	}, 50);
 }
