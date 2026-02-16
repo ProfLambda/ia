@@ -1,0 +1,17 @@
+{
+    "name": "Google Stitch",
+    "publisher": "Google",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "Un outil de conception assisté par l'IA qui génère des interfaces utilisateur (UI) mobiles et web à partir de prompts ou d'images.",
+    "tag": "Gratuit (BETA)",
+    "tag_class": "badge-blue",
+    "url": "https://stitch.withgoogle.com/",
+    "features": [
+        "Génération d'UI par IA (Gemini)",
+        "Itération et modification en direct",
+        "Export vers Figma et code HTML",
+        "Maquettes web et mobiles rapides"
+    ],
+    "icon": "assets/img/logos/logo-google.svg"
+}
