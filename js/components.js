@@ -147,7 +147,7 @@ function renderNavigation(container) {
 			li.classList.add("has-dropdown");
 			const a = document.createElement("a");
 			a.href = page.url;
-			a.textContent = `${page.name} ▾`;
+			a.textContent = page.name;
 			if (
 				currentPage === page.url ||
 				page.subpages.some((sp) => sp.url === currentPage)
@@ -281,9 +281,22 @@ function initMobileMenu() {
 			toggleBtn.addEventListener("click", handleToggle);
 
 			navLinks.forEach((link) => {
-				link.addEventListener("click", () => {
-					navWrapper.classList.remove("active");
-					toggleBtn.classList.remove("open");
+				link.addEventListener("click", (e) => {
+					const parent = link.closest(".nav-item");
+					if (parent && parent.classList.contains("has-dropdown") && window.innerWidth <= 900) {
+						// Only prevent default if clicking the main link or the arrow
+						if (link.getAttribute("href") === "#") {
+							e.preventDefault();
+							parent.classList.toggle("mobile-open");
+						} else {
+							// If it's a real link, let it navigate (and menu is closed by general logic)
+							navWrapper.classList.remove("active");
+							toggleBtn.classList.remove("open");
+						}
+					} else {
+						navWrapper.classList.remove("active");
+						toggleBtn.classList.remove("open");
+					}
 				});
 			});
 
