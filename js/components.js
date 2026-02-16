@@ -68,19 +68,10 @@ function renderNavigation(container) {
     svg.setAttribute("stroke-linecap", "round");
     svg.setAttribute("stroke-linejoin", "round");
 
-    const paths = [
-        "M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .52 8.105 3 3 0 1 0 5.997 0",
-        "M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.52 8.105 3 3 0 1 1-5.997 0",
-        "M9 14h6",
-        "M12 8v4",
-        "M12 14v4"
-    ];
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", "M12 3c.132 0 .263 0 .48.406C13.102 4.49 14.441 7.025 15.5 8c.975.975 3.51 2.398 4.594 2.844.407.167.406.348.406.48s0 .313-.406.48c-1.084.446-3.62 1.87-4.594 2.844-.975.975-2.398 3.51-2.844 4.594-.167.407-.348.406-.48.406s-.313 0-.48-.406c-.446-1.084-1.87-3.62-2.844-4.594-.975-.975-3.51-2.398-4.594-2.844-.407-.167-.406-.348-.406-.48s0-.313.406-.48c1.084-.446 3.62-1.87 4.594-2.844.975-.975 2.398-3.51 2.844-4.594.167-.407.348-.406.48-.406z");
+    svg.appendChild(path);
 
-    paths.forEach(d => {
-        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        path.setAttribute("d", d);
-        svg.appendChild(path);
-    });
 
 
     logoLink.appendChild(svg);

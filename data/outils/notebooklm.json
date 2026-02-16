@@ -1,0 +1,17 @@
+{
+    "name": "NotebookLM",
+    "publisher": "Google",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "L'assistant de recherche personnalisé de Google qui analyse vos propres documents pour créer des résumés, des guides d'étude et même des podcasts audio.",
+    "tag": "Gratuit",
+    "tag_class": "badge-blue",
+    "url": "https://notebooklm.google.com/",
+    "features": [
+        "Analyse de sources locales (PDF, Docs)",
+        "Génération d'Aperçus Audio (podcasts)",
+        "Citations précises des sources",
+        "Création de guides d'étude automatiques"
+    ],
+    "icon": "assets/img/logos/logo-google.svg"
+}

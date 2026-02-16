@@ -1,0 +1,17 @@
+{
+    "name": "AutoDraw",
+    "publisher": "Google Creative Lab",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "Un outil de dessin intelligent qui transforme vos gribouillis en icônes professionnelles en temps réel grâce au machine learning.",
+    "tag": "Gratuit",
+    "tag_class": "badge-blue",
+    "url": "https://www.autodraw.com/",
+    "features": [
+        "Reconnaissance de formes IA",
+        "Bibliothèque d'icônes d'artistes",
+        "Outil de dessin ultra-rapide",
+        "Sans inscription nécessaire"
+    ],
+    "icon": "assets/img/logos/logo-google.svg"
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Gamma",
+    "publisher": "Gamma Tech",
+    "category": "image",
+    "category_name": "Image & Design",
+    "description": "Une plateforme révolutionnaire qui génère des présentations, des sites web et des documents interactifs en quelques secondes à partir d'un simple prompt.",
+    "tag": "Freemium",
+    "tag_class": "badge-orange",
+    "url": "https://gamma.app/",
+    "features": [
+        "Création de slides IA instantanée",
+        "Mise en page fluide et flexible",
+        "Export PDF et Powerpoint",
+        "Interface web interactive"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

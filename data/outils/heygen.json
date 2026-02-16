@@ -1,0 +1,17 @@
+{
+    "name": "HeyGen",
+    "publisher": "HeyGen",
+    "category": "video",
+    "category_name": "Vidéo & Audio",
+    "description": "Le leader de la génération d'avatars vidéo réalistes. Permet de créer des vidéos professionnelles avec des porte-paroles virtuels qui parlent naturellement.",
+    "tag": "Essai Gratuit",
+    "tag_class": "badge-orange",
+    "url": "https://www.heygen.com/",
+    "features": [
+        "Avatars IA ultra-réalistes",
+        "Traduction vidéo avec clonage de voix",
+        "Lip-sync parfait en plusieurs langues",
+        "Modèles de vidéos marketing"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}

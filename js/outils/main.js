@@ -4,10 +4,11 @@
  */
 
 const toolsList = [
-    'gemini', 'stitch', 'chatgpt', 'claude', 'copilot', 'perplexity', 'mistral', 'grok', 'notion-ai', 'deepl-write', 'huggingface',
-    'midjourney', 'canva', 'adobe-firefly', 'leonardo', 'ideogram', 'stable-diffusion', 'hunyuan-3d',
-    'runway', 'elevenlabs', 'sora', 'luma', 'suno', 'kling', 'pika'
+    'gemini', 'stitch', 'notebooklm', 'deepseek', 'chatgpt', 'claude', 'copilot', 'perplexity', 'mistral', 'grok', 'notion-ai', 'deepl-write', 'huggingface',
+    'midjourney', 'canva', 'adobe-firefly', 'gamma', 'autodraw', 'leonardo', 'ideogram', 'stable-diffusion', 'hunyuan-3d',
+    'runway', 'heygen', 'elevenlabs', 'sora', 'luma', 'suno', 'kling', 'pika'
 ];
+
 
 
 async function initOutils() {

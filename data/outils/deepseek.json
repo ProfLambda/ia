@@ -1,0 +1,17 @@
+{
+    "name": "DeepSeek",
+    "publisher": "DeepSeek AI",
+    "category": "texte",
+    "category_name": "Texte & Productivité",
+    "description": "Un modèle de langage ultra-performant et open-source qui rivalise avec les meilleurs modèles mondiaux, notamment pour le raisonnement complexe et le code.",
+    "tag": "Gratuit",
+    "tag_class": "badge-blue",
+    "url": "https://www.deepseek.com/",
+    "features": [
+        "Raisonnement logique avancé (DeepThink)",
+        "Excellentes performances en programmation",
+        "Modèle open-source souverain",
+        "Accès gratuit et API abordable"
+    ],
+    "icon": "assets/img/logos/logo-ai-default.svg"
+}
