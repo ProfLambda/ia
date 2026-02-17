@@ -60,56 +60,27 @@ function renderNavigation(container) {
 	const navContainer = document.createElement("div");
 	navContainer.className = "container nav-content";
 
-	// Logo
+	// Logo ProfLambda
 	const logoLink = document.createElement("a");
 	logoLink.href = "index.html";
 	logoLink.className = "logo";
+	logoLink.style.cssText = "display: flex; align-items: center; gap: 12px; transition: opacity 0.3s ease;";
+	logoLink.onmouseover = () => logoLink.style.opacity = "0.8";
+	logoLink.onmouseout = () => logoLink.style.opacity = "1";
 
-	// SVG Logo (using Namespace for SVG)
-	const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-	svg.setAttribute("width", "24");
-	svg.setAttribute("height", "24");
-	svg.setAttribute("viewBox", "0 0 24 24");
-	svg.setAttribute("fill", "none");
-	svg.setAttribute("stroke", "currentColor");
-	svg.setAttribute("stroke-width", "2");
-	svg.setAttribute("stroke-linecap", "round");
-	svg.setAttribute("stroke-linejoin", "round");
+	// Thumbnail image (GitHub Avatar)
+	const logoImg = document.createElement("img");
+	logoImg.src = "https://github.com/proflambda.png";
+	logoImg.alt = "ProfLambda";
+	logoImg.style.cssText = "width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.1);";
 
-	const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-	path.setAttribute(
-		"d",
-		"M12 3c.132 0 .263 0 .48.406C13.102 4.49 14.441 7.025 15.5 8c.975.975 3.51 2.398 4.594 2.844.407.167.406.348.406.48s0 .313-.406.48c-1.084.446-3.62 1.87-4.594 2.844-.975.975-2.398 3.51-2.844 4.594-.167.407-.348.406-.48.406s-.313 0-.48-.406c-.446-1.084-1.87-3.62-2.844-4.594-.975-.975-3.51-2.398-4.594-2.844-.407-.167-.406-.348-.406-.48s0-.313.406-.48c1.084-.446 3.62-1.87 4.594-2.844.975-.975 2.398-3.51 2.844-4.594.167-.407.348-.406.48-.406z",
-	);
-	svg.appendChild(path);
+	// Add text next to it
+	const logoText = document.createElement("span");
+	logoText.textContent = "ProfLambda";
+	logoText.style.cssText = "font-weight: 800; font-size: 1.2rem; color: var(--text-primary); letter-spacing: -0.02em;";
 
-	logoLink.appendChild(svg);
-
-	// Brand Container (New Styled Logo)
-	const brandContainer = document.createElement("div");
-	brandContainer.style.cssText =
-		"display: flex; flex-direction: column; line-height: 1.1; margin-left: 10px;";
-
-	const brandName = document.createElement("span");
-	brandName.textContent = "ProfLambda";
-	brandName.style.cssText =
-		"font-weight: 800; font-size: 1.1rem; color: var(--text-primary); letter-spacing: -0.02em;";
-
-	const brandSub = document.createElement("span");
-	brandSub.textContent = "Cours IA • Gemini";
-	brandSub.style.cssText =
-		"font-size: 0.7rem; font-weight: 600; color: var(--text-secondary); display: inline-block; position: relative; padding-bottom: 3px;";
-
-	// Underline effect
-	const underline = document.createElement("div");
-	underline.style.cssText =
-		"height: 3px; width: 100%; background: linear-gradient(90deg, #38bdf8, #8b5cf6); border-radius: 2px;";
-
-	brandSub.appendChild(underline);
-	brandContainer.appendChild(brandName);
-	brandContainer.appendChild(brandSub);
-
-	logoLink.appendChild(brandContainer);
+	logoLink.appendChild(logoImg);
+	logoLink.appendChild(logoText);
 
 	// Menu
 	const menuWrapper = document.createElement("div");
