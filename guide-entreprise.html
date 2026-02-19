@@ -14,6 +14,14 @@
 
     <!-- Specific Guide CSS -->
     <link rel="stylesheet" href="css/resource-guide.css" />
+    <style>
+        .guide-hero {
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+                url("assets/img/heroes/guide-entreprise.webp");
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 
 </head>
 
@@ -34,10 +42,8 @@
         </p>
 
         <div class="guide-top-actions container">
-            <button class="guide-copy" id="copyLinksBtn" type="button">Copier tous les liens</button>
             <button class="guide-copy" id="printBtn" type="button" onclick="window.print()">Imprimer / PDF</button>
         </div>
-        <pre id="allLinks" class="guide-all-links-pre" aria-label="Tous les liens (copiables)"></pre>
     </header>
 
     <main class="guide-container">
@@ -208,17 +214,6 @@
     <div id="footer-placeholder"></div>
 
     <script src="js/components.js"></script>
-    <script>
-        document.getElementById('copyLinksBtn').addEventListener('click', () => {
-            const urls = Array.from(document.querySelectorAll('.guide-link-item .url')).map(u => u.textContent).join('\n');
-            navigator.clipboard.writeText(urls).then(() => {
-                const btn = document.getElementById('copyLinksBtn');
-                const originalText = btn.textContent;
-                btn.textContent = "Copié !";
-                setTimeout(() => btn.textContent = originalText, 2000);
-            });
-        });
-    </script>
 </body>
 
 </html>
