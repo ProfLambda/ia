@@ -68,9 +68,9 @@ function renderNavigation(container) {
 	logoLink.onmouseover = () => logoLink.style.opacity = "0.8";
 	logoLink.onmouseout = () => logoLink.style.opacity = "1";
 
-	// Thumbnail image (GitHub Avatar)
+	// Thumbnail image (Local Logo)
 	const logoImg = document.createElement("img");
-	logoImg.src = "https://github.com/proflambda.png";
+	logoImg.src = "assets/proflambda.png";
 	logoImg.alt = "ProfLambda";
 	logoImg.style.cssText = "width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid rgba(255, 255, 255, 0.1);";
 
@@ -95,12 +95,15 @@ function renderNavigation(container) {
 		{ name: "Concepts", url: "concepts.html" },
 		{ name: "Outils", url: "outils.html" },
 		{ name: "Gemini", url: "gemini.html" },
+		{ name: "Éthique", url: "ethique.html" },
 		{ name: "Sécurité", url: "securite.html" },
 
 		{
 			name: "Ressources",
 			url: "#",
 			subpages: [
+				{ name: "Guide Particulier", url: "guide-particulier.html" },
+				{ name: "Guide Entreprise", url: "guide-entreprise.html" },
 				{ name: "Glossaire & FAQ", url: "ressources.html" },
 				{ name: "Vidéos", url: "videos.html" },
 				{ name: "Exercices", url: "exercices.html" },

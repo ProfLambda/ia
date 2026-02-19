@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guide Cybersécurité & RGPD (Entreprise) — ProfLambda</title>
+    <meta name="description"
+        content="Guide pour sécuriser les données de l'entreprise, assurer la conformité RGPD et protéger l'image de marque." />
+
+    <!-- Original Site CSS -->
+    <link rel="stylesheet" href="css/cours_ia.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+
+    <!-- Specific Guide CSS -->
+    <link rel="stylesheet" href="css/resource-guide.css" />
+
+</head>
+
+<body>
+    <div class="organic-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <div id="nav-placeholder"></div>
+
+    <header class="guide-hero">
+        <div class="guide-badge"><span class="dot"></span> Guide Pratique — Entreprise</div>
+        <h1>Cybersécurité & Conformité RGPD</h1>
+        <p class="guide-subtitle">
+            Pilotez les risques numériques, assurez votre conformité légale et protégez la réputation de votre
+            organisation.
+        </p>
+
+        <div class="guide-top-actions container">
+            <button class="guide-copy" id="copyLinksBtn" type="button">Copier tous les liens</button>
+            <button class="guide-copy" id="printBtn" type="button" onclick="window.print()">Imprimer / PDF</button>
+        </div>
+        <pre id="allLinks" class="guide-all-links-pre" aria-label="Tous les liens (copiables)"></pre>
+    </header>
+
+    <main class="guide-container">
+        <div class="guide-grid">
+            <!-- TOC -->
+            <aside class="guide-card guide-toc" aria-label="Sommaire">
+                <div class="inner">
+                    <h2>Sommaire</h2>
+                    <a href="#e1">1) Gouvernance & Règles</a>
+                    <a href="#e2">2) RGPD & Données</a>
+                    <a href="#e3">3) Hygiène Cyber (Terrain)</a>
+                    <a href="#e4">4) Prestataires & Cloud</a>
+                    <a href="#e5">5) E-réputation & Crise</a>
+                    <a href="#e6">6) Sensibilisation</a>
+                    <a href="#e7">7) Directive NIS2</a>
+                    <a href="#liens-entreprise">Ressources utiles</a>
+                </div>
+            </aside>
+
+            <!-- CONTENT -->
+            <div class="guide-card">
+                <div class="inner">
+                    <section id="entreprise">
+                        <h2><span class="guide-pill">Entreprise</span> Stratégie & Conformité</h2>
+                        <p>Objectif : piloter le risque (cyber + RGPD), réduire les incidents, limiter l’impact
+                            réputationnel et assurer la conformité.</p>
+                    </section>
+
+                    <section id="e1">
+                        <h3>1) Gouvernance & règles internes (indispensable)</h3>
+                        <ul>
+                            <li><strong>Nommer des responsables</strong> : référent sécurité (RSSI ou équivalent) + un
+                                <strong>DPO</strong> si nécessaire.
+                            </li>
+                            <li>Écrire une <strong>PSSI</strong> (Politique de Sécurité du SI) + une <strong>charte
+                                    informatique</strong>.</li>
+                            <li>Tenir un <strong>inventaire</strong> : comptes, appareils, logiciels, données sensibles,
+                                prestataires, accès admin.</li>
+                        </ul>
+                        <p class="muted">
+                            Lien utile : <a
+                                href="https://messervices.cyber.gouv.fr/guides/pssi-guide-delaboration-de-politiques-de-securite-des-systemes-dinformation"
+                                target="_blank" rel="noopener">ANSSI – Guide PSSI</a>
+                        </p>
+                    </section>
+
+                    <section id="e2">
+                        <h3>2) RGPD (protection des données perso)</h3>
+                        <ul>
+                            <li>Tenir le <strong>registre des traitements</strong> (obligatoire).</li>
+                            <li>Appliquer : <strong>minimisation</strong>, <strong>durées de conservation</strong>,
+                                <strong>droits des personnes</strong>.
+                            </li>
+                            <li>Prévoir une procédure de <strong>notification de violation de données</strong> (délais
+                                et preuves).</li>
+                        </ul>
+                        <p class="muted">
+                            Liens utiles : <a href="https://www.cnil.fr/fr/RGPD-le-registre-des-activites-de-traitement"
+                                target="_blank" rel="noopener">CNIL – registre</a> •
+                            <a href="https://www.cnil.fr/sites/default/files/2024-03/cnil_guide_securite_personnelle_2024.pdf"
+                                target="_blank" rel="noopener">CNIL – guide sécurité (PDF)</a>
+                        </p>
+                    </section>
+
+                    <section id="e3">
+                        <h3>3) Hygiène cyber “terrain” (80% des incidents évités)</h3>
+                        <ul>
+                            <li><strong>MFA/2FA</strong> partout (messagerie, VPN, cloud).</li>
+                            <li><strong>Mises à jour</strong> systématiques de tout le parc informatique.</li>
+                            <li><strong>Sauvegardes 3-2-1</strong> avec au moins une copie <strong>déconnectée</strong>.
+                            </li>
+                            <li><strong>Moindre privilège</strong> : restreindre les droits administrateur.</li>
+                        </ul>
+                        <p class="muted">
+                            Références : <a
+                                href="https://cyber.gouv.fr/securisation/10-regles-or-s%C3%A9curit%C3%A9-num%C3%A9rique/"
+                                target="_blank" rel="noopener">10 règles d’or</a> •
+                            <a href="https://messervices.cyber.gouv.fr/documents-guides/guide_hygiene_informatique_anssi.pdf"
+                                target="_blank" rel="noopener">ANSSI – Guide d’hygiène</a>
+                        </p>
+                    </section>
+
+                    <section id="e4">
+                        <h3>4) Prestataires & cloud (souvent le point faible)</h3>
+                        <ul>
+                            <li>Faire une <strong>due diligence</strong> : hébergement, MFA, sauvegardes, réversibilité.
+                            </li>
+                            <li>Mettre des <strong>clauses sécurité/RGPD</strong> dans les contrats.</li>
+                        </ul>
+                    </section>
+
+                    <section id="e5">
+                        <h3>5) E-réputation (marque + salariés)</h3>
+                        <ul>
+                            <li>Écrire une <strong>politique réseaux sociaux</strong> et surveiller votre marque.</li>
+                            <li>Préparer une <strong>stratégie de communication de crise cyber</strong>.</li>
+                        </ul>
+                        <p class="muted">
+                            Référence : <a
+                                href="https://cyber.gouv.fr/securisation/gestion-de-crise/anticiper-gerer-une-crise-cyber/"
+                                target="_blank" rel="noopener">Gestion de crise cyber</a>
+                        </p>
+                    </section>
+
+                    <section id="e6">
+                        <h3>6) Sensibilisation (le plus rentable)</h3>
+                        <ul>
+                            <li>Former les salariés au phishing et aux bonnes pratiques d'hygiène numérique.</li>
+                            <li>Utiliser un <strong>kit de sensibilisation</strong> prêt à l’emploi.</li>
+                        </ul>
+                        <p class="muted">
+                            Lien : <a
+                                href="https://www.cybermalveillance.gouv.fr/tous-nos-contenus/kit-de-sensibilisation"
+                                target="_blank" rel="noopener">Kit de sensibilisation</a>
+                        </p>
+                    </section>
+
+                    <section id="e7">
+                        <h3>7) Directive NIS2</h3>
+                        <ul>
+                            <li>Vérifiez l’éligibilité de votre entreprise aux nouvelles exigences européennes.</li>
+                        </ul>
+                        <p class="muted">
+                            Lien : <a href="https://monespacenis2.cyber.gouv.fr/directive/" target="_blank"
+                                rel="noopener">MonEspaceNIS2 (officiel)</a>
+                        </p>
+                    </section>
+
+                    <section id="liens-entreprise">
+                        <h3>Sites et Ressources Entreprise</h3>
+                        <div class="guide-links">
+                            <div class="guide-link-item">
+                                <div class="title">ANSSI – Hygiène Informatique</div>
+                                <a href="https://messervices.cyber.gouv.fr/documents-guides/guide_hygiene_informatique_anssi.pdf"
+                                    target="_blank" rel="noopener">Télécharger le guide</a>
+                                <div class="url">https://messervices.cyber.gouv.fr/.../guide_hygiene.pdf</div>
+                            </div>
+                            <div class="guide-link-item">
+                                <div class="title">CNIL – TPE/PME</div>
+                                <a href="https://www.cnil.fr/fr/tpe-et-pme-comment-gerer-vos-donnees" target="_blank"
+                                    rel="noopener">Accéder aux guides</a>
+                                <div class="url">https://www.cnil.fr/fr/tpe-et-pme...</div>
+                            </div>
+                            <div class="guide-link-item">
+                                <div class="title">Cybermalveillance – Kit Sensibilisation</div>
+                                <a href="https://www.cybermalveillance.gouv.fr/medias/2023/06/230531_Kit_sensibilisation.pdf"
+                                    target="_blank" rel="noopener">Voir le kit (PDF)</a>
+                                <div class="url">https://www.cybermalveillance.gouv.fr/.../Kit.pdf</div>
+                            </div>
+                            <div class="guide-link-item">
+                                <div class="title">ANSSI – Guide PSSI</div>
+                                <a href="https://messervices.cyber.gouv.fr/guides/pssi-guide-delaboration-de-politiques-de-securite-des-systemes-dinformation"
+                                    target="_blank" rel="noopener">Consulter le guide</a>
+                                <div class="url">https://messervices.cyber.gouv.fr/.../PSSI</div>
+                            </div>
+                        </div>
+
+                        <div class="guide-note">
+                            <strong>Note :</strong> La cybersécurité n'est pas qu'un sujet technique, c'est un enjeu de
+                            pérennité pour toute entreprise moderne.
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+    <script>
+        document.getElementById('copyLinksBtn').addEventListener('click', () => {
+            const urls = Array.from(document.querySelectorAll('.guide-link-item .url')).map(u => u.textContent).join('\n');
+            navigator.clipboard.writeText(urls).then(() => {
+                const btn = document.getElementById('copyLinksBtn');
+                const originalText = btn.textContent;
+                btn.textContent = "Copié !";
+                setTimeout(() => btn.textContent = originalText, 2000);
+            });
+        });
+    </script>
+</body>
+
+</html>
