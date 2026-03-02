@@ -34,5 +34,45 @@
     {
         "term": "Multimodalité",
         "definition": "Capacité d'un modèle à traiter plusieurs types de données simultanément (texte, image, son, vidéo)."
+    },
+    {
+        "term": "DNVB (Digital Native Vertical Brand)",
+        "definition": "Marque née sur internet, qui gère sa production, sa distribution et sa communication sans intermédiaire (ex: Respire, Typology)."
+    },
+    {
+        "term": "UGC (User Generated Content)",
+        "definition": "Contenu (souvent vidéo) créé par les utilisateurs ou clients d'une marque, perçu comme plus authentique qu'une publicité classique (très populaire sur TikTok)."
+    },
+    {
+        "term": "C.R.T.F",
+        "definition": "Méthodologie de formulation de prompt (Contexte, Rôle, Tâche, Format) pour obtenir le résultat le plus précis possible d'une IA."
+    },
+    {
+        "term": "SEO (Search Engine Optimization)",
+        "definition": "Techniques visant à optimiser une page web pour qu'elle apparaisse dans les premiers résultats des moteurs de recherche comme Google."
+    },
+    {
+        "term": "Prompt Système",
+        "definition": "Instruction cachée (back-end) définissant la personnalité, le comportement et les règles strictes (garde-fous) d'un assistant IA avant même qu'il ne parle à l'utilisateur."
+    },
+    {
+        "term": "Copywriting",
+        "definition": "Art de rédiger des textes persuasifs dans le but spécifique d'inciter le lecteur à passer à l'action (acheter, s'inscrire, cliquer)."
+    },
+    {
+        "term": "Cold Emailing",
+        "definition": "Pratique consistant à envoyer un e-mail à une personne (influenceur, prospect) avec laquelle on n'a eu aucun contact préalable, dans le but d'initier une relation professionnelle."
+    },
+    {
+        "term": "Landing Page",
+        "definition": "Page web unique conçue spécifiquement pour une campagne marketing, dont le seul but est la conversion (transformer un visiteur en prospect ou client)."
+    },
+    {
+        "term": "Brand Strategist",
+        "definition": "Expert chargé de définir l'identité d'une marque (ses valeurs, son ton, sa cible) pour qu'elle se démarque de la concurrence."
+    },
+    {
+        "term": "Midjourney / DALL-E",
+        "definition": "Des IA génératives spécialisées dans la création d'images à partir de descriptions textuelles (prompts)."
     }
 ]
