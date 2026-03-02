@@ -1,0 +1,278 @@
+/* Styles spécifiques pour le Hackathon IA */
+.hackathon-hero {
+    min-height: 40vh;
+    padding-top: 100px;
+    background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.95)), url('../assets/img/heroes/hero-logiciels.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.hackathon-rules {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin-bottom: 4rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.hackathon-rules ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.hackathon-rules li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.role-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Timeline Styles */
+.timeline-section {
+    position: relative;
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem 0;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    right: -9px;
+    background-color: var(--background-dark);
+    border: 3px solid var(--accent-color);
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-item.left {
+    left: 0;
+}
+
+.timeline-item.right {
+    left: 50%;
+}
+
+.timeline-item.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 24px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid var(--panel-bg);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--panel-border);
+}
+
+.timeline-item.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 24px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid var(--panel-bg);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--panel-border) transparent transparent;
+}
+
+.timeline-item.right::after {
+    left: -9px;
+}
+
+.timeline-content {
+    padding: 1.5rem 2rem;
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.timeline-time {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.prompt-box {
+    background: rgba(0, 0, 0, 0.2);
+    border-left: 3px solid var(--accent-color);
+    padding: 1.2rem;
+    border-radius: 0 8px 8px 0;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.crtf-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.right {
+        left: 0%;
+    }
+
+    .timeline-item.left::after,
+    .timeline-item.right::after {
+        left: 23px;
+    }
+
+    .timeline-item.left::before,
+    .timeline-item.right::before {
+        left: 60px;
+        border: medium solid var(--panel-bg);
+        border-width: 10px 10px 10px 0;
+        border-color: transparent var(--panel-border) transparent transparent;
+    }
+}
+
+/* Styles pour les sections d'aide et exemples de prompts d�pliables */
+.prompt-help-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.prompt-help-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.prompt-help-content {
+    display: none;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 8px 8px 0;
+    animation: slideDown 0.3s ease-out;
+}
+
+.prompt-help-content.active {
+    display: block;
+}
+
+.prompt-help-content h4 {
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+    font-size: 1.05rem;
+}
+
+.prompt-example {
+    background: #0f172a;
+    padding: 1.2rem;
+    border-radius: 6px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #e2e8f0;
+    border: 1px solid #334155;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+}
+
+.crtf-highlight {
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

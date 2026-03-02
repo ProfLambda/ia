@@ -1,0 +1,717 @@
+﻿<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://proflambda.github.io/ia/" />
+    <meta property="og:title" content="Hackathon IA - Journée Immersive - ProfLambda" />
+    <meta property="og:description"
+        content="Support pédagogique pour la journée immersive de création d'agence digitale augmentée à l'IA." />
+    <meta property="og:image" content="assets/proflambda.png" />
+
+    <title>Hackathon IA - Agence Virtuelle</title>
+
+    <link rel="stylesheet" href="css/cours_ia.css" />
+    <link rel="stylesheet" href="css/navigation.css" />
+    <link rel="stylesheet" href="css/hackathon.css" />
+    <style>
+        @import url("css/fonts.css");
+    </style>
+</head>
+
+<body>
+    <!-- Nature Background -->
+    <div class="organic-bg">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <!-- Navigation Placeholder -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Hero Section -->
+    <section class="hackathon-hero">
+        <div class="container">
+            <span class="badge badge-accent"
+                style="margin-bottom: 1rem; border: 1px solid var(--accent-color); background: rgba(0,0,0,0.5);">🔥
+                Challenge Agence Digitale</span>
+            <h1 style="font-size: 3.5rem; text-shadow: 0 4px 20px rgba(0,0,0,0.5);">Hackathon IA</h1>
+            <p
+                style="max-width: 600px; margin: 1.5rem auto; font-size: 1.2rem; color: #e2e8f0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">
+                Vous n'êtes plus des étudiants. Vous êtes une agence digitale. Votre mission : concevoir une startup
+                innovante en une journée grâce à l'intelligence artificielle.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container" style="margin-top: -3rem; position: relative; z-index: 2;">
+
+        <!-- Boîte à Outils IA -->
+        <section class="glass-panel toolbox-section"
+            style="margin-bottom: 3rem; border-left: 4px solid var(--accent-color);">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2
+                    style="display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-size: 2rem; color: var(--primary-color);">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" style="color: var(--accent-color);">
+                        <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                    </svg>
+                    Boîte à Outils IA (Gratuits)
+                </h2>
+                <p
+                    style="color: var(--text-secondary); font-size: 1.1rem; max-width: 700px; margin: 0 auto; text-transform: none;">
+                    Voici les assistants recommandés pour ce projet. Ouvrez-en 2 ou 3 dans de nouveaux onglets pour
+                    comparer leurs réponses.</p>
+            </div>
+
+            <div class="grid"
+                style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem; padding: 1.5rem 0; margin: 0 1.5rem;">
+                <div class="card"
+                    style="text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3
+                        style="color: #10a37f; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-transform: none !important; letter-spacing: normal;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M22.28 9.68a6.3 6.3 0 0 0-1.87-4.66c-1.3-1.32-3.2-1.85-5.11-1.39A6.38 6.38 0 0 0 5.6 4.31a6.3 6.3 0 0 0-1.88 4.65c.04 1.58.74 3.07 1.93 4.09A6.4 6.4 0 0 0 10.6 20.6a6.3 6.3 0 0 0 5.12 1.39 6.38 6.38 0 0 0 4.14-2.58 6.3 6.3 0 0 0 1.88-4.65c-.04-1.58-.74-3.07-1.92-4.09l.46-.99zm-2.09-.76a4.57 4.57 0 0 1 .46 2.37c-.12 1.45-.88 2.75-2.06 3.51-.1-.85-.45-1.65-1.02-2.31a5.62 5.62 0 0 0-1.72-1.33c.48-.94.75-1.97.77-3.03V6.7a4.67 4.67 0 0 1 3.57 2.22zM12 4.47a4.62 4.62 0 0 1 3.73 1.9c-.8.58-1.51 1.25-2.12 2a5.52 5.52 0 0 0-1.12 3.69v5.9A4.65 4.65 0 0 1 8.27 16a4.63 4.63 0 0 1-1.42-3.18v-.03a5.5 5.5 0 0 0 2.2-2.78c.45-.96.7-2.01.73-3.07V4.47h2.22zm-7.9 3.44A4.6 4.6 0 0 1 7.23 6a5.5 5.5 0 0 0-1.9 2.59 5.51 5.51 0 0 0-.25 3.32v.03c-.68.61-1.55.97-2.46 1.02A4.57 4.57 0 0 1 4.1 7.91zM7.22 18.5a4.65 4.65 0 0 1-2.9-2.73 4.63 4.63 0 0 1 .18-3.4 5.5 5.5 0 0 0 2.8 1.48 5.61 5.61 0 0 0 3.32-.23c.85-.41 1.6-1.01 2.2-1.74v2.7a5.5 5.5 0 0 0-1.27 2.92A4.6 4.6 0 0 1 7.22 18.5zm10.74 2.1c-.96.44-2.05.65-3.12.58a5.54 5.54 0 0 0 1.96-2.58 5.51 5.51 0 0 0 .25-3.32v-.03c.69-.61 1.55-.97 2.45-1.03a4.57 4.57 0 0 1-.37 3.55 4.6 4.6 0 0 1-1.17 2.83zM12 13a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                        </svg>
+                        ChatGPT
+                    </h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: none !important;">L'outil
+                        polyvalent ultime pour structurer les idées, générer du code ou faire du brainstorming dirigé.
+                    </p>
+                    <a href="https://chatgpt.com/" target="_blank" class="prompt-help-btn mt-auto"
+                        style="text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box; background: transparent; color: #10a37f; border-color: #10a37f; text-transform: none !important;">Ouvrir
+                        ChatGPT</a>
+                </div>
+                <div class="card"
+                    style="text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3
+                        style="color: #d97757; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-transform: none !important; letter-spacing: normal;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <circle cx="12" cy="12" r="10" />
+                        </svg>
+                        Claude
+                    </h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: none !important;">Le meilleur de
+                        sa catégorie pour la rédaction créative (Copywriting), donner du style et analyser des
+                        documents.</p>
+                    <a href="https://claude.ai/" target="_blank" class="prompt-help-btn mt-auto"
+                        style="text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box; background: transparent; color: #d97757; border-color: #d97757; text-transform: none !important;">Ouvrir
+                        Claude</a>
+                </div>
+                <!-- Perplexity -->
+                <div class="card"
+                    style="text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3
+                        style="color: #22d3ee; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-transform: none !important; letter-spacing: normal;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        Perplexity
+                    </h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: none !important;">Votre moteur
+                        de recherche
+                        intelligent. L'outil
+                        idéal pour sourcer vos informations et chercher des statistiques réelles.</p>
+                    <a href="https://www.perplexity.ai/" target="_blank" class="prompt-help-btn mt-auto"
+                        style="text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box; background: transparent; color: #22d3ee; border-color: #22d3ee; text-transform: none !important;">Ouvrir
+                        Perplexity</a>
+                </div>
+                <!-- Gemini -->
+                <div class="card"
+                    style="text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3
+                        style="color: #4285f4; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-transform: none !important; letter-spacing: normal;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z" />
+                        </svg>
+                        Google Gemini
+                    </h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: none !important;">Connecté à
+                        internet et
+                        ultrarapide. Excellent
+                        pour la veille de la concurrence et l'organisation dans l'écosystème Google.</p>
+                    <a href="https://gemini.google.com/" target="_blank" class="prompt-help-btn mt-auto"
+                        style="text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box; background: transparent; color: #4285f4; border-color: #4285f4; text-transform: none !important;">Ouvrir
+                        Gemini</a>
+                </div>
+                <div class="card"
+                    style="text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3
+                        style="color: #f26622; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-transform: none !important; letter-spacing: normal;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 12h4l3-9 5 18 3-9h5" />
+                        </svg>
+                        Mistral Le Chat
+                    </h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: none !important;">Notre pépite
+                        européenne.
+                        Un modèle direct,
+                        nuancé, parfait pour trancher une décision sans censure ni fioritures.</p>
+                    <a href="https://chat.mistral.ai/chat" target="_blank" class="prompt-help-btn mt-auto"
+                        style="text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box; background: transparent; color: #f26622; border-color: #f26622; text-transform: none !important;">Ouvrir
+                        Mistral</a>
+                </div>
+                <!-- DeepSeek -->
+                <div class="card"
+                    style="text-align: center; padding: 2rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between;">
+                    <h3
+                        style="color: #0284c7; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; text-transform: none !important; letter-spacing: normal;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            <path d="M2 12h20" />
+                        </svg>
+                        DeepSeek
+                    </h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 1.5rem; text-transform: none !important;">L'IA émergente
+                        surpuissante et open-source.
+                        Spécialisée dans la résolution de problèmes techniques complexes et l'analyse.</p>
+                    <a href="https://chat.deepseek.com/" target="_blank" class="prompt-help-btn mt-auto"
+                        style="text-decoration: none; display: inline-block; width: 100%; box-sizing: border-box; background: transparent; color: #0284c7; border-color: #0284c7; text-transform: none !important;">Ouvrir
+                        DeepSeek</a>
+                </div>
+            </div>
+            <p
+                style="text-align: center; margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-secondary); text-transform: none;">
+                📝
+                Astuce : Vous pouvez utiliser les versions gratuites de chacun de ces outils. Créez un compte
+                rapidement, aucun paiement requis.</p>
+        </section>
+
+        <!-- Les Règles du Jeu -->
+        <section class="hackathon-rules glass-panel">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2>📋 Briefing de Mission</h2>
+                <p style="color: var(--text-secondary);">Règles de production pour les équipes concurrentes.</p>
+            </div>
+
+            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div>
+                    <h3 style="color: var(--primary-color);">Les Livrables Attendus</h3>
+                    <p
+                        style="font-size: 0.95rem; color: var(--accent-color); font-weight: bold; margin-bottom: 1rem; text-transform: none; line-height: 1.4;">
+                        ⚠️ IMPORTANT : Vous êtes évalués sur la qualité de vos requêtes. Pour chaque livrable, vous
+                        devez impérativement indiquer le (ou les) prompt(s) exact(s) utilisé(s).
+                    </p>
+                    <ul>
+                        <li style="display: flex; gap: 0.5rem; align-items: flex-start;"><span>🚀</span>
+                            <div style="display: flex; flex-direction: column;"><strong>Concept produit :</strong>
+                                Proposition de valeur unique.<p
+                                    style="margin: 0; font-size: 0.85rem; color: var(--accent-color); font-weight: bold;">
+                                    + Le Prompt C.R.T.F utilisé</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; align-items: flex-start;"><span>🎨</span>
+                            <div style="display: flex; flex-direction: column;"><strong>Identité visuelle :</strong>
+                                Logo, palette couleurs, typo.<p
+                                    style="margin: 0; font-size: 0.85rem; color: var(--accent-color); font-weight: bold;">
+                                    + Le Prompt de direction et de génération utilisé</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; align-items: flex-start;"><span>💻</span>
+                            <div style="display: flex; flex-direction: column;"><strong>Landing page :</strong> Page web
+                                fonctionnelle et marketing.<p
+                                    style="margin: 0; font-size: 0.85rem; color: var(--accent-color); font-weight: bold;">
+                                    + Le Prompt UX Copywriting utilisé</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; align-items: flex-start;"><span>📊</span>
+                            <div style="display: flex; flex-direction: column;"><strong>Étude de marché :</strong>
+                                Opportunités et SWOT.<p
+                                    style="margin: 0; font-size: 0.85rem; color: var(--accent-color); font-weight: bold;">
+                                    + Le Prompt d'Analyse marché utilisé</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; align-items: flex-start;"><span>🔮</span>
+                            <div style="display: flex; flex-direction: column;"><strong>Veille stratégique :</strong>
+                                Tendances et futurs du secteur.<p
+                                    style="margin: 0; font-size: 0.85rem; color: var(--accent-color); font-weight: bold;">
+                                    + Le Prompt Stratégique utilisé</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; align-items: flex-start;"><span>🎬</span>
+                            <div style="display: flex; flex-direction: column;"><strong>Vidéo pitch :</strong> Script
+                                vidéo + storyboard promo.<p
+                                    style="margin: 0; font-size: 0.85rem; color: var(--accent-color); font-weight: bold;">
+                                    + Le Prompt de création de Script utilisé</p>
+                            </div>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem; align-items: flex-start;"><span>🤖</span>
+                            <div style="display: flex; flex-direction: column;"><strong>Agent conversationnel métier
+                                    :</strong> Prompt système complet.<p
+                                    style="margin: 0; font-size: 0.85rem; color: var(--accent-color); font-weight: bold;">
+                                    Ce livrable *EST* un Prompt par définition.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="color: var(--accent-color);">Grille d'Évaluation</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem;">Le copier-coller
+                        brut ("Fais ça pour moi") est sanctionné. Nous évaluons :</p>
+                    <ul>
+                        <li
+                            style="display: flex; gap: 0.5rem; align-items: flex-start; text-transform: none !important;">
+                            <span>🎯</span> <strong>Structure C.R.T.F :</strong>
+                            <div style="display: flex; flex-direction: column;">Pertinence du prompt d'entrée.</div>
+                        </li>
+                        <li
+                            style="display: flex; gap: 0.5rem; align-items: flex-start; text-transform: none !important;">
+                            <span>✨</span>
+                            <div style="display: flex; flex-direction: column;"><strong>Créativité :</strong> Demande
+                                générique vs proposition hors du cadre.</div>
+                        </li>
+                        <li
+                            style="display: flex; gap: 0.5rem; align-items: flex-start; text-transform: none !important;">
+                            <span>🔄</span>
+                            <div style="display: flex; flex-direction: column;"><strong>Itération (V1 > V2) :</strong>
+                                Amélioration de la première réponse.</div>
+                        </li>
+                        <li
+                            style="display: flex; gap: 0.5rem; align-items: flex-start; text-transform: none !important;">
+                            <span>⚖️</span> <strong>Esprit critique :</strong>
+                            <div style="display: flex; flex-direction: column;">Capacité à défier les choix de
+                                l'IA.</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Le Framework CRTF -->
+        <section style="margin-bottom: 5rem; text-align: center;">
+            <span class="badge badge-green" style="margin-bottom: 1rem;">Méthodologie Obligatoire</span>
+            <h2>Le Framework C.R.T.F</h2>
+            <p style="margin-bottom: 3rem; color: var(--text-secondary);">Chaque interaction décisive avec l'IA doit
+                justifier sa structure.</p>
+
+            <div class="grid" style="grid-template-columns: repeat(4, 1fr); gap: 1rem; margin: 0 1.5rem;">
+                <div class="card" style="text-align: left; padding: 1.5rem;">
+                    <h3
+                        style="color: var(--primary-color); text-transform: none !important; letter-spacing: normal; margin-bottom: 0.5rem;">
+                        <span class="crtf-badge" style="margin-right: 2px;">C</span>ontexte
+                    </h3>
+                    <p style="font-size: 0.9rem; text-transform: none !important;">Qui est l'utilisateur final ? Quel
+                        est
+                        l'environnement (Startup
+                        étudiante, budget serré, etc.) ?</p>
+                </div>
+                <div class="card" style="text-align: left; padding: 1.5rem;">
+                    <h3
+                        style="color: var(--secondary-color); text-transform: none !important; letter-spacing: normal; margin-bottom: 0.5rem;">
+                        <span class="crtf-badge" style="margin-right: 2px;">R</span>ôle
+                    </h3>
+                    <p style="font-size: 0.9rem; text-transform: none !important;">Dans la peau de qui l'IA doit-elle se
+                        mettre ?
+                        (Consultant senior,
+                        directeur artistique...)</p>
+                </div>
+                <div class="card" style="text-align: left; padding: 1.5rem;">
+                    <h3
+                        style="color: var(--accent-color); text-transform: none !important; letter-spacing: normal; margin-bottom: 0.5rem;">
+                        <span class="crtf-badge" style="margin-right: 2px;">T</span>âche
+                    </h3>
+                    <p style="font-size: 0.9rem; text-transform: none !important;">L'action précise verbale : Rédige,
+                        propose,
+                        analyse, code un
+                        prototype...</p>
+                </div>
+                <div class="card" style="text-align: left; padding: 1.5rem;">
+                    <h3
+                        style="color: #10b981; text-transform: none !important; letter-spacing: normal; margin-bottom: 0.5rem;">
+                        <span class="crtf-badge" style="margin-right: 2px;">F</span>ormat
+                    </h3>
+                    <p style="font-size: 0.9rem; text-transform: none !important;">Structure attendue : Tableau
+                        Markdown, code HTML
+                        avec variables,
+                        script avec timing...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Déroulé de la Journée -->
+        <section class="timeline-section">
+            <h2 style="text-align: center; margin-bottom: 3rem;">Le Grand Déroulé</h2>
+
+            <div class="timeline">
+                <!-- Brief -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-time">09h00</span>
+                        <h3>Brief Client & Agences</h3>
+                        <p>Formation des agences (CEO, UX/UI, Dév, Marketing, Expert IA). Distribution du contexte de
+                            mission.</p>
+                    </div>
+                </div>
+
+                <!-- Atelier 1 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-time">09h30</span>
+                        <h3>Atelier 1 : Concept Produit</h3>
+                        <p style="font-weight: bold; color: var(--primary-color);">Votre Mission Pédagogique :</p>
+                        <p>Ne vous lancez pas à l'aveugle. L'objectif est de trouver <strong>UNE idée claire de
+                                service</strong>. Définissez : Quel problème résolvez-vous ? Pour qui ? Comment le
+                            résolvez-vous concrètement ?</p>
+                        <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">🤖 <strong>Outil conseillé :</strong> ChatGPT ou Claude
+                                pour l'échange créatif.</li>
+                            <li style="margin-bottom: 0.5rem;">🎯 <strong>L'ordre d'action :</strong> Donnez-lui le
+                                thème imposé (le contexte), demandez-lui d'être un consultant en innovation (le Rôle).
+                            </li>
+                            <li style="margin-bottom: 0.5rem;">✍️ <strong>La demande claire :</strong> "Propose 3 idées
+                                de services technologiques viables pour [votre cible cible / thème]. Fais une fiche très
+                                brève pour chaque avec le problème et la solution."</li>
+                        </ul>
+                        <div class="prompt-box">
+                            <strong>🎯 Exemple de Rôle attendu :</strong> "Tu es consultant senior en innovation..."<br>
+                            <strong>📝 Livrable :</strong> Fiche projet structurée (concept réaliste à 5 ans).
+
+                            <button class="prompt-help-btn" onclick="toggleHelp('help-1')">💡 Voir un Exemple
+                                Expert</button>
+                            <div id="help-1" class="prompt-help-content">
+                                <h4>Prompt C.R.T.F Recommandé</h4>
+                                <div class="prompt-example"><span class="crtf-highlight">[CONTEXTE]</span> Je crée une
+                                    startup étudiante visant à réduire le gaspillage alimentaire. Nous avons peu de
+                                    budget mais une forte conscience écologique.
+                                    <span class="crtf-highlight">[RÔLE]</span> Tu es consultant senior en stratégie
+                                    d'innovation et mentor de startup technologique.
+                                    <span class="crtf-highlight">[TÂCHE]</span> Propose 3 concepts de startup réalistes
+                                    (faisables d'ici 5 ans) qui résolvent ce problème. Pour chaque concept, définis la
+                                    solution, la cible, et la proposition de valeur unique.
+                                    <span class="crtf-highlight">[FORMAT]</span> Fiches projet structurées avec titres
+                                    clairs et un bref résumé exécutif.
+                                </div>
+                                <h4>🧠 Le Conseil de l'Agence</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">Ne prenez pas la première
+                                    idée. Demandez toujours à l'IA d'affiner : "L'idée 2 est bonne, mais comment la
+                                    rendre rentable sans faire payer les étudiants ?"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atelier 2 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-time">10h30</span>
+                        <h3>Atelier 2 : Branding & Direction</h3>
+                        <p style="font-weight: bold; color: var(--accent-color);">Votre Mission Pédagogique :</p>
+                        <p>L'identité visuelle est le visage de votre produit. Vous devez collecter des éléments clés
+                            pour construire l'univers de votre marque, <strong>notamment pour que l'IA puisse générer le
+                                logo</strong> par la suite.</p>
+                        <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">🎨 <strong>Ce qu'il faut obtenir :</strong> 4 couleurs
+                                précises (Codes HEX type #FF0000), 2 propositions de polices Google Fonts, et le ton
+                                global (Sérieux, Fun, Futuriste ?).</li>
+                            <li style="margin-bottom: 0.5rem;">🤖 <strong>Outil conseillé :</strong> Claude ou ChatGPT
+                                The Chat.</li>
+                            <li style="margin-bottom: 0.5rem;">⚙️ <strong>Préparez le terrain :</strong> Demandez
+                                explicitement à l'IA qu'à la fin, elle vous crée "le prompt idéal en anglais" que vous
+                                irez copier-coller dans un générateur d'images gratuit (comme Bing Image Creator ou
+                                Midjourney) pour votre logo.</li>
+                        </ul>
+                        <div class="prompt-box">
+                            <strong>🎯 Attendu :</strong> Demander à l'IA des *prompts optimisés* pour générer votre
+                            logo ensuite. <br>
+                            <strong>📝 Livrable :</strong> Brand book express et charte graphique.
+
+                            <button class="prompt-help-btn" onclick="toggleHelp('help-2')">💡 Voir un Exemple
+                                Expert</button>
+                            <div id="help-2" class="prompt-help-content">
+                                <h4>Prompt C.R.T.F Recommandé</h4>
+                                <div class="prompt-example"><span class="crtf-highlight">[CONTEXTE]</span> Ma startup
+                                    "EcoStudent" aide les étudiants à gérer leur budget alimentaire.
+                                    <span class="crtf-highlight">[RÔLE]</span> Tu es directeur artistique senior
+                                    spécialisé en branding de startups digitales.
+                                    <span class="crtf-highlight">[TÂCHE]</span> Définis notre identité visuelle complète
+                                    : personnalité de la marque, 4 valeurs clés, une palette de 5 couleurs (avec code
+                                    HEX) et 2 typographies Google Fonts. Enfin, fournis un prompt en anglais optimisé
+                                    pour Midjourney/DALL-E pour générer notre logo minimaliste.
+                                    <span class="crtf-highlight">[FORMAT]</span> Mini Brand-Book professionnel et
+                                    structuré.
+                                </div>
+                                <h4>🧠 Le Conseil de l'Agence</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">Pour un logo réussi via IA,
+                                    précisez : "vectoriel, fond blanc, flat design, minimaliste, sans texte (no text)".
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atelier 3 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-time">11h30</span>
+                        <h3>Atelier 3 : Landing Page</h3>
+                        <p style="font-weight: bold; color: var(--primary-color);">Votre Mission Pédagogique :</p>
+                        <p>Vous devez concevoir les textes de la vitrine marketing de votre projet afin de convaincre
+                            des visiteurs de l'essayer. <strong>On ne code pas le design ici, on prépare le fond, le
+                                discours commercial.</strong></p>
+                        <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">📝 <strong>Exigence pédagogique :</strong> Vous devez
+                                appliquer la méthode copywriting. Pas de pavés de texte ! Des titres courts et
+                                accrocheurs.</li>
+                            <li style="margin-bottom: 0.5rem;">🤖 <strong>Outil conseillé :</strong> Claude est le
+                                maître de la rédaction (Copywriting).</li>
+                            <li style="margin-bottom: 0.5rem;">❌ <strong>Ne dites PAS à l'IA :</strong> "Fais-moi un
+                                site pour mon app".</li>
+                            <li style="margin-bottom: 0.5rem;">✅ <strong>Dites à l'IA :</strong> "Tu es Copywriter.
+                                Rédige la structure textuelle de notre landing page : Un Titre d'accroche (H1) avec un
+                                bénéfice fort, 3 arguments clés, et un Call-to-Action (texte du bouton court)."</li>
+                        </ul>
+                        <div class="prompt-box">
+                            <strong>🎯 Piège à éviter :</strong> "Fais le site de mon app." Privilégiez un prompt d'UX
+                            writer spécialisé conversion.<br>
+                            <strong>📝 Livrable :</strong> Code HTML structuré et copywritingu percutant.
+
+                            <button class="prompt-help-btn" onclick="toggleHelp('help-3')">💡 Voir un Exemple
+                                Expert</button>
+                            <div id="help-3" class="prompt-help-content">
+                                <h4>Prompt C.R.T.F Recommandé</h4>
+                                <div class="prompt-example"><span class="crtf-highlight">[CONTEXTE]</span> Notre
+                                    application "EcoStudent" doit convaincre les étudiants de s'inscrire à la version
+                                    bêta.
+                                    <span class="crtf-highlight">[RÔLE]</span> Tu es UX writer senior et expert en
+                                    conversion spécialisé SaaS.
+                                    <span class="crtf-highlight">[TÂCHE]</span> Rédige le contenu d'une Landing Page à
+                                    fort taux de conversion : Un grand Titre (H1), un sous-titre rassurant, 3 bénéfices
+                                    majeurs, 2 témoignages fictifs, et un Call-To-Action (bouton) motivant.
+                                    <span class="crtf-highlight">[FORMAT]</span> Structure HTML logique (sans balises
+                                    HTML, juste le texte) avec des sections clairement découpées.
+                                </div>
+                                <h4>🧠 Le Conseil de l'Agence</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">Testez l'émotion ! Demandez
+                                    à l'IA : "Génère 5 variations du Titre H1 en jouant sur l'urgence, la curiosité ou
+                                    la peur de manquer (FOMO)."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pause -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-time" style="background: var(--text-secondary);">12h30 - Pause
+                            Déjeuner</span>
+                        <h3>Rechargement des batteries & API</h3>
+                    </div>
+                </div>
+
+                <!-- Atelier 4 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-time">13h30</span>
+                        <h3>Atelier 4 : Étude de Marché</h3>
+                        <p style="font-weight: bold; color: #10b981;">Votre Mission Pédagogique :</p>
+                        <p>Il ne s'agit pas de produire 50 pages. L'objectif est d'interroger l'IA pour qu'elle simule
+                            qui sont vos réels concurrents et comment vous démarquer. Vous devez repartir de cet atelier
+                            avec un document de synthèse.</p>
+                        <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">🤖 <strong>Outil conseillé :</strong> Gemini (idéal pour
+                                avoir des infos connectées au web) ou ChatGPT.</li>
+                            <li style="margin-bottom: 0.5rem;">📊 <strong>Demande précise :</strong> "Agis comme un
+                                analyste marché. Liste les 3 concurrents mondiaux de [notre idée], identifie leurs
+                                faiblesses, et propose-nous un modèle économique original pour les contourner."</li>
+                            <li style="margin-bottom: 0.5rem;">📑 Formatez la sortie en <strong>tableau
+                                    comparatif</strong> (grâce au format Markdown) pour que ce soit lisible pour le
+                                jury.</li>
+                        </ul>
+                        <div class="prompt-box">
+                            <button class="prompt-help-btn" onclick="toggleHelp('help-4')">💡 Voir un Exemple
+                                Expert</button>
+                            <div id="help-4" class="prompt-help-content">
+                                <h4>Prompt C.R.T.F Recommandé</h4>
+                                <div class="prompt-example"><span class="crtf-highlight">[CONTEXTE]</span> Avant de
+                                    lever des fonds pour "EcoStudent" (anti-gaspi), je dois vérifier la viabilité
+                                    commerciale du projet.
+                                    <span class="crtf-highlight">[RÔLE]</span> Tu es analyste marketing senior
+                                    spécialisé en startups Tech.
+                                    <span class="crtf-highlight">[TÂCHE]</span> Réalise une étude de marché fictive mais
+                                    vraisemblable contenant : segmentation des cibles, analyse des 3 principaux
+                                    concurrents, matrice SWOT, et une proposition de modèle économique (Freemium,
+                                    abonnement ?).
+                                    <span class="crtf-highlight">[FORMAT]</span> Rapport structuré avec tableaux
+                                    synthétiques pour faciliter la lecture.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atelier 5 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-time">14h30</span>
+                        <h3>Atelier 5 : Veille Stratégique</h3>
+                        <p style="font-weight: bold; color: var(--secondary-color);">Votre Mission Pédagogique :</p>
+                        <p>Identifier les tendances technologiques à venir (d'ici 3-5 ans) qui pourraient rendre votre
+                            produit obsolète ou le booster, incluant les risques éthiques et la sécurité des données
+                            (RGPD).</p>
+                        <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">🤖 <strong>Outil conseillé :</strong> Gemini (connecté au
+                                web) ou Perplexity AI.</li>
+                            <li style="margin-bottom: 0.5rem;">🚀 <strong>Astuce de recherche :</strong> Demandez à l'IA
+                                d'agir comme un lanceur d'alerte ou un auditeur en cybersécurité pour déceler "tous les
+                                risques de fuite de données de notre app".</li>
+                        </ul>
+                        <div class="prompt-box">
+                            <button class="prompt-help-btn" onclick="toggleHelp('help-5')">💡 Voir un Exemple
+                                Expert</button>
+                            <div id="help-5" class="prompt-help-content">
+                                <h4>Prompt C.R.T.F Recommandé</h4>
+                                <div class="prompt-example"><span class="crtf-highlight">[CONTEXTE]</span> Notre agence
+                                    doit anticiper l'évolution technologique dans la gestion alimentaire étudiante.
+                                    <span class="crtf-highlight">[RÔLE]</span> Tu es un analyste en prospective
+                                    technologique réputé.
+                                    <span class="crtf-highlight">[TÂCHE]</span> Dresse un bilan des innovations IA
+                                    actuelles et futures qui pourraient impacter notre domaine. Identifie les risques
+                                    (Biais, Confidentialité) et les opportunités.
+                                    <span class="crtf-highlight">[FORMAT]</span> Note stratégique avec bullet points
+                                    clairs, destinée à la direction générale.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atelier 6 -->
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <span class="timeline-time">15h30</span>
+                        <h3>Atelier 6 : Vidéo Marketing</h3>
+                        <p style="font-weight: bold; color: var(--primary-color);">Votre Mission Pédagogique :</p>
+                        <p>Préparer le script visuel d'une publicité courte (type TikTok ou Reels Instagram) pour
+                            attirer votre audience de manière virale et percutante (Max 30 secondes).</p>
+                        <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">📝 <strong>Exigence pédagogique :</strong> Vous ne devez
+                                pas juste demander "Rédige une pub". Vous devez contraindre l'IA à utiliser une mise en
+                                page précise (le tableau de Storyboarding).</li>
+                            <li style="margin-bottom: 0.5rem;">🎬 <strong>Indication à donner :</strong> Demandez un
+                                format en tableau avec les colonnes : "Timing", "Idée de visuel", "Texte affiché",
+                                "Audio/Musique".</li>
+                        </ul>
+                        <div class="prompt-box">
+                            <strong>📝 Format attendu :</strong> Storyboard en tableau (Scène | Visuel | Texte |
+                            Voix-off).
+
+                            <button class="prompt-help-btn" onclick="toggleHelp('help-6')">💡 Voir un Exemple
+                                Expert</button>
+                            <div id="help-6" class="prompt-help-content">
+                                <h4>Prompt C.R.T.F Recommandé</h4>
+                                <div class="prompt-example"><span class="crtf-highlight">[CONTEXTE]</span> Nous lançons
+                                    notre campagne publicitaire "EcoStudent" destinée à Instagram et TikTok.
+                                    <span class="crtf-highlight">[RÔLE]</span> Tu es concepteur-rédacteur et réalisateur
+                                    publicitaire spécialiste des formats très courts et viraux.
+                                    <span class="crtf-highlight">[TÂCHE]</span> Rédige le script d'une publicité de 30
+                                    secondes. Il doit y avoir une accroche immédiate (les 3 premières secondes), le
+                                    problème, la solution, et un appel à l'action.
+                                    <span class="crtf-highlight">[FORMAT]</span> Un tableau avec 4 colonnes : Durée | Ce
+                                    qu'on voit (Visuel) | Texte à l'écran | Voix-off.
+                                </div>
+                                <h4>🧠 Le Conseil de l'Agence</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">Précisez le ton musical
+                                    voulu ou donnez une référence existante : "Dans le style des vidéos dynamiques de
+                                    Red Bull".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atelier 7 -->
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <span class="timeline-time" style="background: var(--accent-color);">16h30</span>
+                        <h3>Atelier 7 : Agent IA Métier</h3>
+                        <p style="font-weight: bold; color: var(--accent-color);">Votre Mission Finale :</p>
+                        <p>Démontrer que vous savez concevoir le cœur intelligent de votre application, c'est-à-dire
+                            l'instruction système (le Prompt de configuration) de l'Agent IA qui sera intégré à votre
+                            service (ex: chatbot, assistant de tri...).</p>
+                        <ul style="margin: 1rem 0 1.5rem 1.5rem; font-size: 0.95rem; color: var(--text-secondary);">
+                            <li style="margin-bottom: 0.5rem;">⚠️ <strong>Le point critique :</strong> La sécurisation
+                                (Garde-fous). Un "Prompt Système" définit ce que l'IA DOIT faire, mais surtout ce
+                                qu'elle NE DOIT JAMAIS faire.</li>
+                            <li style="margin-bottom: 0.5rem;">🛡️ Lors de cette étape, rédigez des règles strictes (ex:
+                                "Tu refuseras systématiquement de répondre si l'utilisateur te demande des conseils
+                                financiers ou insultants").</li>
+                        </ul>
+                        <div class="prompt-box">
+                            <strong>🎯 Tâche finale :</strong> Rédiger un système (Prompt) complet. Personnalité,
+                            limites d'interaction, cas de "fallback" (échec).
+
+                            <button class="prompt-help-btn" onclick="toggleHelp('help-7')">💡 Voir un Exemple
+                                Expert</button>
+                            <div id="help-7" class="prompt-help-content">
+                                <h4>Prompt C.R.T.F Recommandé</h4>
+                                <div class="prompt-example"><span class="crtf-highlight">[CONTEXTE]</span> Nous
+                                    intégrons un chatbot cuisinier anti-gaspi dans notre app étudiante.
+                                    <span class="crtf-highlight">[RÔLE]</span> Tu es Lead Architect en IA
+                                    conversationnelle.
+                                    <span class="crtf-highlight">[TÂCHE]</span> Rédige le "Prompt Système" (les
+                                    instructions invisibles qui donnent sa personnalité à l'IA) : définis son nom, son
+                                    ton de voix jovial, ses compétences (proposer des recettes avec des restes), et
+                                    surtout Pose ses limites strictes (Il ne doit JAMAIS donner de conseils médicaux ou
+                                    diététiques).
+                                    <span class="crtf-highlight">[FORMAT]</span> Instructions claires encadrées par des
+                                    balises XML.
+                                </div>
+                                <h4>🧠 Le Conseil de l'Agence</h4>
+                                <p style="font-size: 0.9rem; color: var(--text-secondary);">L'étape de la limite
+                                    (garde-fou) est primordiale pour ne pas engager la responsabilité de votre fausse
+                                    entreprise !</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pitch -->
+                <div class="timeline-item right">
+                    <span class="timeline-time" style="background: var(--secondary-color);">17h15</span>
+                    <h3>Pitch Final & Jury Enseignant</h3>
+                    <p>5 minutes de présentation (Shark Tank) par agence, suivies de questions/réponses sur vos
+                        itérations de prompts.</p>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Placeholder -->
+    <div id="footer-placeholder"></div>
+
+    <script src="js/components.js"></script>
+
+    <script>
+        function toggleHelp(id) {
+            const content = document.getElementById(id);
+            const btn = content.previousElementSibling;
+
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                btn.innerHTML = "💡 Voir un Exemple Expert";
+            } else {
+                content.classList.add('active');
+                btn.innerHTML = "🔽 Masquer les conseils";
+            }
+        }
+    </script>
+</body>
+
+</html>

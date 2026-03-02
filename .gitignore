@@ -1,1 +1,4 @@
 ia.code-workspace
+word_a_traiter/
+fix_encoding.py
+.gitignore

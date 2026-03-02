@@ -106,6 +106,7 @@ function renderNavigation(container) {
 				{ name: "Guide Entreprise", url: "guide-entreprise.html" },
 				{ name: "Glossaire & FAQ", url: "ressources.html" },
 				{ name: "Vidéos", url: "videos.html" },
+				{ name: "Hackathon IA", url: "journee-ia.html" },
 				{ name: "Exercices", url: "exercices.html" },
 				{ name: "Quizz Acteurs", url: "quizz-acteurs.html" },
 				{ name: "Liens utiles", url: "liste_liens.html" },
